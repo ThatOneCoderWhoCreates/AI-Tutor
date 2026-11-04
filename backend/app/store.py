@@ -13,6 +13,7 @@ from __future__ import annotations
 import json
 import re
 import threading
+import time
 from pathlib import Path
 from typing import Any
 
@@ -39,7 +40,15 @@ def write_json(path: Path, data: Any) -> None:
     with _lock:
         with open(tmp, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
-        tmp.replace(path)
+        for attempt in range(5):
+            try:
+                tmp.replace(path)
+                break
+            except PermissionError:
+                # Windows refuses to replace a file another process is reading at that moment. Try again shortly.
+                if attempt == 4:
+                    raise
+                time.sleep(0.1 * (attempt + 1))
 
 
 def lecture_dir(lecture_id: str) -> Path:

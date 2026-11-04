@@ -17,7 +17,7 @@
 
 Run from the backend folder:
     python -m eval.run_eval eval/questions_demo.json
-    python -m eval.run_eval eval/questions_demo.json --answers --quiz --verify --models qwen2.5:3b qwen2.5:7b
+    python -m eval.run_eval eval/questions_lecture1.json --answers --quiz --lecture lecture1 --models qwen2.5:7b qwen3.5:9b
     python -m eval.run_eval eval/questions_demo.json --embedding-models BAAI/bge-small-en-v1.5 finetuned
 """
 from __future__ import annotations
@@ -198,7 +198,7 @@ def main() -> None:
     args = p.parse_args()
 
     RESULTS.mkdir(exist_ok=True)
-    questions = json.loads(args.questions.read_text())
+    questions = json.loads(args.questions.read_text(encoding="utf-8"))
     chunks = load_chunks()
     retriever = Retriever()
     retriever.build(chunks)
@@ -241,7 +241,7 @@ def main() -> None:
         llm.use_model(None)
 
     report = write_report(len(questions), len(chunks), retriever.embedder.name, args.k, ret, per_model)
-    (RESULTS / "latest.json").write_text(json.dumps({"retrieval": ret, "models": per_model}, indent=2))
+    (RESULTS / "latest.json").write_text(json.dumps({"retrieval": ret, "models": per_model}, indent=2), encoding="utf-8")
     print(f"\nReport written to {report}")
 
 

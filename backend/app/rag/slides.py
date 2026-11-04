@@ -7,21 +7,18 @@ Near-duplicate slides (animations, small camera moves) are merged.
 from __future__ import annotations
 
 import re
-import shutil
-import subprocess
 from pathlib import Path
 
 import numpy as np
 
 from ..config import settings
+from ..platform_tools import find_tool, install_hint, run_tool
 from .transcribe import run_ffmpeg
 
 
 def video_duration(video: Path) -> float:
-    proc = subprocess.run(
-        ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=nw=1:nk=1", str(video)],
-        capture_output=True, text=True,
-    )
+    proc = run_tool("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "default=nw=1:nk=1",
+                                str(video)])
     try:
         return float(proc.stdout.strip())
     except ValueError:
@@ -39,12 +36,9 @@ def detect_changes(video: Path, threshold: float, fps: float = 1.0) -> list[floa
     is far more sensitive than ffmpeg's scene score. False alarms (webcam
     movement, cursor) are removed later when OCR text turns out identical.
     """
-    proc = subprocess.run(
-        ["ffmpeg", "-hide_banner", "-loglevel", "error", "-i", str(video),
-         "-vf", f"fps={fps},scale={SAMPLE_W}:{SAMPLE_H},format=gray",
-         "-an", "-f", "rawvideo", "-"],
-        capture_output=True,
-    )
+    proc = run_tool("ffmpeg", ["-hide_banner", "-loglevel", "error", "-i", str(video),
+                               "-vf", f"fps={fps},scale={SAMPLE_W}:{SAMPLE_H},format=gray",
+                               "-an", "-f", "rawvideo", "-"], binary=True)
     if proc.returncode != 0:
         raise RuntimeError(f"ffmpeg failed: {proc.stderr.decode(errors='ignore')[-800:]}")
     frame_size = SAMPLE_W * SAMPLE_H
@@ -58,9 +52,12 @@ def detect_changes(video: Path, threshold: float, fps: float = 1.0) -> list[floa
 
 
 def ocr_image(path: Path) -> str:
-    if not shutil.which("tesseract"):
+    if not find_tool("tesseract"):
+        if not getattr(ocr_image, "_warned", False):
+            print(f"[tutor] Tesseract not found, slide text will be skipped. Install it with: {install_hint('tesseract')}")
+            ocr_image._warned = True
         return ""
-    proc = subprocess.run(["tesseract", str(path), "stdout", "--psm", "3"], capture_output=True, text=True)
+    proc = run_tool("tesseract", [str(path), "stdout", "--psm", "3"])
     lines = [ln.strip() for ln in proc.stdout.splitlines()]
     return "\n".join(ln for ln in lines if len(re.findall(r"[A-Za-z]", ln)) >= 2)
 

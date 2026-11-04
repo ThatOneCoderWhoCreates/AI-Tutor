@@ -1,0 +1,7 @@
+# Keep line endings consistent between macOS and Windows teammates
+* text=auto eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.png binary
+*.jpg binary
+*.mp4 binary

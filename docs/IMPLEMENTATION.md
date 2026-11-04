@@ -6,7 +6,7 @@ The roles share three agreements, described in `docs/CONTRACT.md`: the chunk for
 
 **What is trained in this project.** Two parts learn from data: the search model is fine-tuned on the course's lectures (Role A), and the four BKT numbers are learned from student answers with Expectation-Maximization (Role B). Whisper, Qwen and Tesseract are used as pretrained models without changes.
 
-**Testing status.** There are 49 automated tests, and all of them pass. The tests replace Whisper, Qwen and YouTube with fake versions. The first real run of those three on a Mac is still to be done; see "Still to do" at the end.
+**Testing status.** There are 58 automated tests, and all of them pass. The tests replace Whisper, Qwen and YouTube with fake versions. All three have also been run for real on a Mac with a YouTube lecture. The Windows setup is covered by tests that simulate Windows, but it has not yet been run on a real Windows computer.
 
 ---
 
@@ -170,6 +170,7 @@ BKT direction tests and the quiz validator test in `tests/test_tutor.py`; the fu
 | Local model | All model calls go through `ask_llm()`. It uses Ollama's own API so the context window can be raised to 8192 tokens (Ollama's default is smaller and silently cuts long prompts). It also removes the `<think>` blocks that some Qwen models add | `app/llm.py` |
 | Offline mode | A fake model (`LLM_PROVIDER=mock`) gives correctly shaped replies, so the interface and tests work without Ollama | `app/llm_mock.py` |
 | Web app | React app with a sidebar and five pages. **Study:** video, chapter list and chat. **Practice:** topic cards that open a quiz. **Progress:** stats, mastery chart and a table of all topics. **Lectures:** library, adding lectures from YouTube or a file, editing topic names, deleting. **Lab:** runs both training jobs and shows their results. The "recommended next" topic loads automatically and updates after every answer | `frontend/src/pages/`, `frontend/src/components/` |
+| Cross-platform | `install.py` and `start.py` set up and run the app the same way on macOS and Windows. `app/platform_tools.py` finds ffmpeg and Tesseract on PATH or in their usual install folders (Homebrew, Program Files, winget), decodes their output as UTF-8 (the Windows default encoding would crash on special characters), and picks the speech-to-text engine (mlx-whisper on Apple-silicon Macs, faster-whisper elsewhere) | `install.py`, `start.py`, `app/platform_tools.py` |
 | Lab API | Starts and reports on the two training jobs. Search model training runs in the background with a progress bar | `app/main.py` (`/lab/...`), `app/jobs.py` |
 | Model status | The badge in the top bar shows whether Ollama is running and whether the model is downloaded. Model errors are shown as readable messages instead of crashes | `app/main.py`, `frontend/src/App.jsx` |
 | Evaluation | Measures search quality, answer accuracy, refusals, claim support, quiz reliability and speed, for one or more local models, and writes a report | `eval/run_eval.py` |
@@ -178,10 +179,28 @@ BKT direction tests and the quiz validator test in `tests/test_tutor.py`; the fu
 ### How to demonstrate
 
 ```
-python -m eval.run_eval eval/questions_demo.json --answers --quiz --verify --models qwen2.5:3b qwen2.5:7b
+python -m eval.run_eval eval/questions_lecture1.json --answers --quiz --lecture lecture1 --models qwen2.5:7b qwen3.5:9b
 ```
 
-This prints the results and writes `eval/results/report.md` with tables ready for the final report. Comparing a 3B and a 7B model shows the trade-off between speed and quality on a laptop.
+This prints the results and writes `eval/results/report.md` with tables ready for the final report.
+
+### Model comparison: Qwen 2.5 7B vs Qwen 3.5 9B
+
+Run on a MacBook Pro (24 GB RAM) with the "DSA in 25 mins" lecture (71 chunks): 35 questions with the time range of the answer, plus 4 questions the lecture does not cover. Qwen 3.5 ran with thinking turned off.
+
+| | qwen2.5:7b | qwen3.5:9b |
+|---|---|---|
+| Answer cites the right part of the lecture (35) | 35/35 | 35/35 |
+| Wrongly said "not covered" (35) | 0/35 | 0/35 |
+| Correctly said "not covered" (4 off-topic) | 4/4 | 4/4 |
+| Median time per answer | 2.05 s | 2.67 s |
+| Average answer length | 226 characters | 368 characters |
+| Quiz JSON valid on the first try | 95% | 100% |
+| Median time to write 3 quiz questions | 9.9 s | 9.8 s |
+
+Search, same for both models: Hit@1 0.69 (vector only), 0.69 (keyword only), 0.74 (hybrid); Hit@4 0.97, 0.97 and 1.00.
+
+The two models were equal on accuracy. Qwen 3.5 9B was chosen as the default because its answers are more detailed and its JSON output (quizzes, topic labels) was more reliable, at the cost of about 0.6 seconds per answer. With 39 questions the differences are small, so this is a reasonable choice, not a strong measured win. Qwen 3.5's off-topic score was first reported as 3/4 because its refusal was a long reply with citations; the refusal detector was fixed and both models' saved answers were re-scored.
 
 In the app: walk through the full student journey. Add a lecture on the Lectures page, ask a question on the Study page, click the timestamp, follow the recommended topic, practice, and open Progress. Finish on the Lab page to show the two training jobs.
 
@@ -203,4 +222,4 @@ In the app: walk through the full student journey. Add a lecture on the Lectures
 |---|---|
 | A | Run 2 to 3 real lectures through the pipeline. Check that slide detection and chunk lengths look sensible. Fine-tune the search model and compare it with the base model on the hand-written test questions |
 | B | Review the topic names Qwen gives and fix bad ones in the app. Read 10 to 20 generated questions and adjust the quiz prompt if they are too easy or unclear. Collect real answers from at least 5 people, then learn the BKT numbers from them |
-| C | Write 30 to 50 test questions with time ranges for the real lectures. Run the evaluation with Qwen 3B and 7B and put `report.md` and the charts in the final report |
+| C | Write 30 to 50 test questions with time ranges for the real lectures. Extend the test questions to the other lectures, rerun the evaluation with the chosen model, and put `report.md` and the charts in the final report |

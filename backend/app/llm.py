@@ -3,7 +3,7 @@
     from app.llm import ask_llm, ask_llm_json
 
 Provider is chosen in .env:
-    LLM_PROVIDER=ollama   -> local model through Ollama (default, e.g. qwen2.5:3b)
+    LLM_PROVIDER=ollama   -> local model through Ollama (default qwen3.5:9b)
     LLM_PROVIDER=mock     -> offline fake model for development and tests
 
 Ollama's native /api/chat endpoint is used (not the OpenAI-compatible one)

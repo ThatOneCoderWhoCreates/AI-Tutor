@@ -13,47 +13,109 @@ Two parts of the system are trained on your own data: the search model is fine-t
 
 For a role-by-role explanation of what was built (Role A, B and C), see `docs/IMPLEMENTATION.md`.
 
-## Setup (macOS, Apple silicon, run once)
+## Setup (run once)
+
+The app works on macOS and Windows. Two scripts do the same steps on both: `install.py` sets everything up, and `start.py` runs the app.
+
+### macOS
+
+In Terminal:
 
 ```
-brew install python@3.12 ffmpeg tesseract node ollama
+brew install python@3.12 ffmpeg tesseract node ollama git
 brew services start ollama
-ollama pull qwen2.5:7b
-cd lecture-tutor/backend
-/opt/homebrew/bin/python3.12 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-python -m pytest -q
+cd ~/Downloads/lecture-tutor
+/opt/homebrew/bin/python3.12 install.py
 ```
 
-All tests should pass. The tests use a built-in fake model, so they do not need Ollama.
+### Windows
 
-`ollama pull qwen2.5:7b` downloads about 4.7 GB and needs about 6 GB of free memory while running. On a Mac with 8 GB of RAM, use `qwen2.5:3b` instead (set `LLM_MODEL=qwen2.5:3b` in `backend/.env`). For the model comparison in the evaluation, also run `ollama pull qwen2.5:3b`.
+In PowerShell. After the `winget` lines, close PowerShell and open a new one so the new programs are found:
+
+```
+winget install Python.Python.3.12 Gyan.FFmpeg UB-Mannheim.TesseractOCR OpenJS.NodeJS.LTS Ollama.Ollama Git.Git
+```
+
+Then, in the new PowerShell window (change the path to where the project is):
+
+```
+cd $HOME\Downloads\lecture-tutor
+py -3.12 install.py
+```
+
+### What install.py does
+
+1. Creates the Python environment in `backend/.venv` and installs the Python packages (several minutes the first time).
+2. Creates `backend/.env` from `.env.example` (an existing `.env` is never overwritten).
+3. Installs the frontend packages.
+4. Checks for ffmpeg, Tesseract and Ollama and prints the install command for anything missing. On Windows it also looks in the usual install folders, so it works before PATH is updated.
+5. Downloads the local model named in `backend/.env` (`qwen3.5:9b`, several GB).
+
+Running it again is safe.
 
 ## Run the app
 
-Terminal 1 (backend):
+macOS:
 
 ```
-cd lecture-tutor/backend
+cd ~/Downloads/lecture-tutor
+python3 start.py
+```
+
+Windows (PowerShell):
+
+```
+cd $HOME\Downloads\lecture-tutor
+py start.py
+```
+
+`start.py` starts Ollama if it is not running, then the backend (port 8000) and the frontend (port 5173), and opens http://localhost:5173. Press Ctrl+C once to stop everything. The first start downloads the search model BAAI/bge-small-en-v1.5 (about 130 MB).
+
+<details>
+<summary>Running the two parts by hand instead</summary>
+
+Backend, macOS:
+
+```
+cd ~/Downloads/lecture-tutor/backend
 source .venv/bin/activate
 python -m uvicorn app.main:app --reload --port 8000
 ```
 
-The first start downloads the search model BAAI/bge-small-en-v1.5 (about 130 MB).
+Backend, Windows (PowerShell):
 
-Terminal 2 (frontend):
+```
+cd $HOME\Downloads\lecture-tutor\backend
+.venv\Scripts\python.exe -m uvicorn app.main:app --reload --port 8000
+```
+
+Frontend, both systems (second terminal):
 
 ```
 cd lecture-tutor/frontend
-npm install
 npm run dev
 ```
 
-Open http://localhost:5173. The sidebar has five pages: **Study** (video, chapters, chat), **Practice** (quizzes), **Progress**, **Lectures** (add and manage lectures) and **Lab** (training). The badge at the bottom of the sidebar shows the model. If it says "Ollama offline", run `brew services start ollama`.
+</details>
+
+The sidebar has five pages: **Study** (video, chapters, chat), **Practice** (quizzes), **Progress**, **Lectures** (add and manage lectures) and **Lab** (training). The badge at the bottom of the sidebar shows the model. If it says "Ollama offline", open the Ollama app (or run `ollama serve`).
 
 The demo lecture uses fake chunks and has no video, so the player shows a simulated timeline. API documentation is at http://localhost:8000/docs.
+
+**Model size.** `qwen3.5:9b` needs about 16 GB of RAM to run comfortably. On a computer with 8 GB, set `LLM_MODEL=qwen2.5:3b` in `backend/.env` and run `ollama pull qwen2.5:3b`.
+
+**Speech to text.** `WHISPER_BACKEND=auto` uses mlx-whisper on Apple-silicon Macs (uses the Mac's GPU) and faster-whisper on Windows, Intel Macs and Linux. faster-whisper runs on the CPU, so transcribing a long lecture takes longer on Windows laptops; `WHISPER_MODEL=base` is faster if needed.
+
+**Tests** (optional): macOS `backend/.venv/bin/python -m pytest -q backend/tests`, Windows `backend\.venv\Scripts\python.exe -m pytest -q backend\tests`. They use a built-in fake model, so they do not need Ollama.
+
+## Commands on Windows
+
+The commands in the rest of this file are written for macOS. On Windows (PowerShell), make two changes:
+
+- Instead of `source .venv/bin/activate`, run `.venv\Scripts\Activate.ps1`. If PowerShell says running scripts is disabled, run `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` once and try again.
+- Use backslashes in paths (`backend\eval\results`) and `$HOME\Downloads` instead of `~/Downloads`.
+
+Everything else (`python -m ...`, `ollama ...`, `npm ...`, `curl ...`) is the same.
 
 ## Add a lecture from YouTube
 
@@ -108,13 +170,13 @@ GEMINI_API_KEY=your-gemini-key
 GROQ_API_KEY=your-groq-key
 ```
 
-4. Restart the backend. The bottom of the sidebar shows the chain, for example "Outside-lecture answers: Gemini → Groq → Local qwen2.5:3b".
+4. Restart the backend. The bottom of the sidebar shows the chain, for example "Outside-lecture answers: Gemini → Groq → Local qwen3.5:9b".
 
 To pick a specific model, write `provider:model`, for example `FALLBACK_PROVIDER=gemini:gemini-3.8-flash,gemini,groq,local`. Two Gemini models have separate free limits, so this also adds capacity. Other options: `openrouter:<free model name>` with `OPENROUTER_API_KEY`. Keep keys only in `.env`. It is listed in `.gitignore`, so it is not uploaded to GitHub.
 
 ## Change the model
 
-Edit `backend/.env`, then restart the backend:
+The default is `qwen3.5:9b`, chosen after comparing it with `qwen2.5:7b` (see `docs/IMPLEMENTATION.md`). To use another model, edit `backend/.env` and restart the backend, for example:
 
 ```
 LLM_MODEL=qwen2.5:7b
@@ -149,7 +211,7 @@ curl -X POST http://localhost:8000/reindex
 ```
 cd lecture-tutor/backend
 source .venv/bin/activate
-python -m eval.run_eval eval/questions_demo.json --answers --quiz --verify --models qwen2.5:3b qwen2.5:7b
+python -m eval.run_eval eval/questions_lecture1.json --answers --quiz --lecture lecture1 --models qwen2.5:7b qwen3.5:9b
 python -m eval.mock_student --rounds 8
 ```
 

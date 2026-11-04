@@ -62,6 +62,6 @@ Supporting endpoints:
 
 Every module calls `ask_llm(prompt)` or `ask_llm_json(prompt, validate=...)` from `backend/app/llm.py`. Nothing else talks to a model directly.
 
-The provider (`ollama` or `mock`) and the model name (for example `qwen2.5:3b`) live only in `backend/.env`. That file is listed in `.gitignore`, so each teammate can use a different model without changing code.
+The provider (`ollama` or `mock`) and the model name (for example `qwen3.5:9b`) live only in `backend/.env`. That file is listed in `.gitignore`, so each teammate can use a different model without changing code.
 
 Every prompt starts with a line `TASK: <name>` (answer, quiz, concepts, verify). The offline mock model uses this to reply in the right format, so keep it when you edit prompts.

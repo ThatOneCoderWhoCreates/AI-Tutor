@@ -1,7 +1,7 @@
 """Single place for every setting.
 
 All values come from backend/.env (copy .env.example to .env).
-Switching models (for example qwen2.5:3b to qwen2.5:7b) means editing .env only.
+Switching models (for example qwen3.5:9b to qwen2.5:7b) means editing .env only.
 """
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ def _get(name: str, default: str) -> str:
 @dataclass(frozen=True)
 class Settings:
     llm_provider: str = _get("LLM_PROVIDER", "ollama")
-    llm_model: str = _get("LLM_MODEL", "qwen2.5:7b")
+    llm_model: str = _get("LLM_MODEL", "qwen3.5:9b")
     ollama_host: str = _get("OLLAMA_HOST", "http://localhost:11434").rstrip("/")
     llm_num_ctx: int = int(_get("LLM_NUM_CTX", "8192"))
     llm_timeout: float = float(_get("LLM_TIMEOUT", "300"))
@@ -47,7 +47,7 @@ class Settings:
     embedding_model: str = _get("EMBEDDING_MODEL", "BAAI/bge-small-en-v1.5")
     vector_store: str = _get("VECTOR_STORE", "chroma")
 
-    whisper_backend: str = _get("WHISPER_BACKEND", "mlx")
+    whisper_backend: str = _get("WHISPER_BACKEND", "auto")
     whisper_model: str = _get("WHISPER_MODEL", "small")
     scene_threshold: float = float(_get("SCENE_THRESHOLD", "0.01"))
     max_chunk_seconds: float = float(_get("MAX_CHUNK_SECONDS", "90"))

@@ -12,6 +12,7 @@ import subprocess
 from pathlib import Path
 
 from ..config import settings
+from ..platform_tools import default_whisper_backend, run_tool
 
 
 MLX_REPOS = {
@@ -25,8 +26,7 @@ MLX_REPOS = {
 
 
 def run_ffmpeg(args: list[str]) -> subprocess.CompletedProcess:
-    cmd = ["ffmpeg", "-hide_banner", "-y", *args]
-    proc = subprocess.run(cmd, capture_output=True, text=True)
+    proc = run_tool("ffmpeg", ["-hide_banner", "-y", *args])
     if proc.returncode != 0:
         raise RuntimeError(f"ffmpeg failed: {proc.stderr[-800:]}")
     return proc
@@ -48,12 +48,19 @@ def _clean(segments: list[dict]) -> list[dict]:
 
 def transcribe(video: Path, work_dir: Path) -> list[dict]:
     backend = settings.whisper_backend
+    if backend == "auto":
+        backend = default_whisper_backend()
     model = settings.whisper_model
     work_dir.mkdir(parents=True, exist_ok=True)
 
     if backend == "mlx":
-        import mlx_whisper
-
+        try:
+            import mlx_whisper
+        except ImportError:
+            # mlx only exists on Apple-silicon Macs (for example a Windows teammate with WHISPER_BACKEND=mlx)
+            print("[tutor] mlx-whisper is not available here, using faster-whisper instead")
+            backend = "faster"
+    if backend == "mlx":
         wav = extract_audio(video, work_dir / "audio.wav")
         repo = model if "/" in model else MLX_REPOS.get(model, f"mlx-community/whisper-{model}-mlx")
         result = mlx_whisper.transcribe(str(wav), path_or_hf_repo=repo)
