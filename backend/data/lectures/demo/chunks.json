@@ -1,0 +1,92 @@
+[
+  {
+    "id": "demo_001",
+    "lecture_id": "demo",
+    "text": "Welcome back. Today we are going to talk about how a model actually learns from data. Last week we defined a loss function, which measures how wrong the model's predictions are. Training a model simply means finding the parameters that make this loss as small as possible. So the question for today is: how do we find those parameters efficiently?",
+    "slide_text": "Training a Model\nGoal: minimize the loss function L(w)",
+    "start": 0,
+    "end": 75,
+    "concept": "loss minimization"
+  },
+  {
+    "id": "demo_002",
+    "lecture_id": "demo",
+    "text": "The loss depends on the parameters, so we can picture it as a surface, like a hilly landscape. Each point on the landscape is one choice of parameters, and the height is the loss. We want to reach the lowest valley. For a simple model with two parameters you can draw this as a bowl shape. For real models there are millions of parameters, so we cannot draw it, but the idea is the same.",
+    "slide_text": "The Loss Landscape\nheight = loss, position = parameters",
+    "start": 75,
+    "end": 160,
+    "concept": "loss minimization"
+  },
+  {
+    "id": "demo_003",
+    "lecture_id": "demo",
+    "text": "Gradient descent is the method we use to walk downhill on this landscape. The gradient tells us the direction in which the loss increases fastest. So we take a small step in the opposite direction of the gradient. We repeat this many times, and each step brings the parameters a little closer to a minimum of the loss.",
+    "slide_text": "Gradient Descent\nw = w - eta * gradient of L(w)",
+    "start": 160,
+    "end": 245,
+    "concept": "gradient descent"
+  },
+  {
+    "id": "demo_004",
+    "lecture_id": "demo",
+    "text": "Let us write the update rule. The new weight equals the old weight minus the learning rate times the gradient. Notice that we subtract, because we want to go downhill, not uphill. In batch gradient descent the gradient is computed on the whole training set, which is accurate but slow when the dataset is large.",
+    "slide_text": "Gradient Descent\nUpdate rule and batch gradient descent",
+    "start": 245,
+    "end": 330,
+    "concept": "gradient descent"
+  },
+  {
+    "id": "demo_005",
+    "lecture_id": "demo",
+    "text": "Stochastic gradient descent, or SGD, estimates the gradient using only one example or a small mini-batch at a time. Each step is noisier, but it is much cheaper, so we can take many more steps. In practice almost all deep learning uses mini-batch SGD or one of its variants such as Adam.",
+    "slide_text": "Stochastic Gradient Descent\nmini-batches, noisy but fast",
+    "start": 330,
+    "end": 410,
+    "concept": "stochastic gradient descent"
+  },
+  {
+    "id": "demo_006",
+    "lecture_id": "demo",
+    "text": "The learning rate controls how big each step is. If the learning rate is too small, training is extremely slow and may look like it is stuck. If the learning rate is too large, the steps overshoot the minimum and the loss can bounce around or even explode. A common approach is to start with a moderate value and reduce it over time, which is called a learning rate schedule.",
+    "slide_text": "Choosing the Learning Rate\ntoo small: slow, too large: diverges",
+    "start": 410,
+    "end": 500,
+    "concept": "learning rate"
+  },
+  {
+    "id": "demo_007",
+    "lecture_id": "demo",
+    "text": "Now a different problem. A model can get a very low loss on the training data but perform badly on new data. This is called overfitting. The model has memorized the noise in the training set instead of learning the general pattern. A typical sign is that training error keeps going down while validation error starts going up.",
+    "slide_text": "Overfitting\ntraining error down, validation error up",
+    "start": 500,
+    "end": 590,
+    "concept": "overfitting"
+  },
+  {
+    "id": "demo_008",
+    "lecture_id": "demo",
+    "text": "Underfitting is the opposite situation. The model is too simple to capture the pattern, so both training error and validation error are high. The goal is a model that sits between the two, complex enough to learn the pattern but not so flexible that it memorizes noise. This trade-off is often called the bias-variance trade-off.",
+    "slide_text": "Underfitting and the Bias-Variance Trade-off",
+    "start": 590,
+    "end": 670,
+    "concept": "overfitting"
+  },
+  {
+    "id": "demo_009",
+    "lecture_id": "demo",
+    "text": "Regularization is one way to fight overfitting. With L2 regularization we add a penalty to the loss that grows with the size of the weights. This pushes the model toward smaller weights and smoother functions. The strength of the penalty is controlled by a hyperparameter usually called lambda. A larger lambda means a simpler model.",
+    "slide_text": "Regularization\nL2 penalty: loss + lambda * ||w||^2",
+    "start": 670,
+    "end": 760,
+    "concept": "regularization"
+  },
+  {
+    "id": "demo_010",
+    "lecture_id": "demo",
+    "text": "Another very simple tool is early stopping. We keep checking the validation error during training and stop as soon as it stops improving. To summarize today: gradient descent finds good parameters, the learning rate controls the step size, and regularization and early stopping help the model generalize to new data.",
+    "slide_text": "Early Stopping and Summary",
+    "start": 760,
+    "end": 845,
+    "concept": "regularization"
+  }
+]

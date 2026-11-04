@@ -1,0 +1,228 @@
+[
+ {
+  "question": "What is an array?",
+  "lecture_id": "lecture1",
+  "start": 22,
+  "end": 65
+ },
+ {
+  "question": "Why is reading an element from an array instant?",
+  "lecture_id": "lecture1",
+  "start": 43,
+  "end": 85
+ },
+ {
+  "question": "Why is inserting an element in the middle of an array slow?",
+  "lecture_id": "lecture1",
+  "start": 85,
+  "end": 134
+ },
+ {
+  "question": "What happens when an array needs to grow beyond its size?",
+  "lecture_id": "lecture1",
+  "start": 65,
+  "end": 108
+ },
+ {
+  "question": "What does each node in a linked list store?",
+  "lecture_id": "lecture1",
+  "start": 158,
+  "end": 185
+ },
+ {
+  "question": "Why is inserting into a linked list fast?",
+  "lecture_id": "lecture1",
+  "start": 185,
+  "end": 207
+ },
+ {
+  "question": "Why is finding an item in a linked list slow?",
+  "lecture_id": "lecture1",
+  "start": 227,
+  "end": 280
+ },
+ {
+  "question": "What is a stack?",
+  "lecture_id": "lecture1",
+  "start": 280,
+  "end": 302
+ },
+ {
+  "question": "What do push and pop do?",
+  "lecture_id": "lecture1",
+  "start": 302,
+  "end": 324
+ },
+ {
+  "question": "Where are stacks used in real software?",
+  "lecture_id": "lecture1",
+  "start": 280,
+  "end": 351
+ },
+ {
+  "question": "What is the difference between a stack and a queue?",
+  "lecture_id": "lecture1",
+  "start": 351,
+  "end": 424
+ },
+ {
+  "question": "What are enqueue and dequeue?",
+  "lecture_id": "lecture1",
+  "start": 381,
+  "end": 403
+ },
+ {
+  "question": "Give a real-life example of a queue",
+  "lecture_id": "lecture1",
+  "start": 403,
+  "end": 448
+ },
+ {
+  "question": "What is a deque?",
+  "lecture_id": "lecture1",
+  "start": 448,
+  "end": 499
+ },
+ {
+  "question": "What can a double-ended queue be used for?",
+  "lecture_id": "lecture1",
+  "start": 499,
+  "end": 544
+ },
+ {
+  "question": "How does a hash map store data?",
+  "lecture_id": "lecture1",
+  "start": 544,
+  "end": 564
+ },
+ {
+  "question": "What does a hash function do?",
+  "lecture_id": "lecture1",
+  "start": 564,
+  "end": 606
+ },
+ {
+  "question": "Why is lookup in a hash map fast even with millions of items?",
+  "lecture_id": "lecture1",
+  "start": 584,
+  "end": 632
+ },
+ {
+  "question": "What is a hash collision?",
+  "lecture_id": "lecture1",
+  "start": 606,
+  "end": 658
+ },
+ {
+  "question": "How is a hash set different from a hash map?",
+  "lecture_id": "lecture1",
+  "start": 658,
+  "end": 704
+ },
+ {
+  "question": "What are hash sets used for?",
+  "lecture_id": "lecture1",
+  "start": 682,
+  "end": 754
+ },
+ {
+  "question": "What is a leaf node in a tree?",
+  "lecture_id": "lecture1",
+  "start": 754,
+  "end": 798
+ },
+ {
+  "question": "Where are tree data structures used?",
+  "lecture_id": "lecture1",
+  "start": 774,
+  "end": 820
+ },
+ {
+  "question": "How does searching work in a binary search tree?",
+  "lecture_id": "lecture1",
+  "start": 918,
+  "end": 963
+ },
+ {
+  "question": "What is the weakness of a binary search tree?",
+  "lecture_id": "lecture1",
+  "start": 940,
+  "end": 987
+ },
+ {
+  "question": "What is the difference between a max heap and a min heap?",
+  "lecture_id": "lecture1",
+  "start": 1030,
+  "end": 1053
+ },
+ {
+  "question": "Where are heaps used in the real world?",
+  "lecture_id": "lecture1",
+  "start": 1073,
+  "end": 1117
+ },
+ {
+  "question": "What are vertices and edges in a graph?",
+  "lecture_id": "lecture1",
+  "start": 1138,
+  "end": 1158
+ },
+ {
+  "question": "What is the difference between an adjacency matrix and an adjacency list?",
+  "lecture_id": "lecture1",
+  "start": 1192,
+  "end": 1264
+ },
+ {
+  "question": "Why is a trie good for autocomplete?",
+  "lecture_id": "lecture1",
+  "start": 1264,
+  "end": 1357
+ },
+ {
+  "question": "How does union find check if two elements are in the same group?",
+  "lecture_id": "lecture1",
+  "start": 1383,
+  "end": 1455
+ },
+ {
+  "question": "What is a false positive in a bloom filter?",
+  "lecture_id": "lecture1",
+  "start": 1476,
+  "end": 1542
+ },
+ {
+  "question": "Why would someone use a bloom filter?",
+  "lecture_id": "lecture1",
+  "start": 1518,
+  "end": 1588
+ },
+ {
+  "question": "How does an LRU cache decide what to remove?",
+  "lecture_id": "lecture1",
+  "start": 1588,
+  "end": 1659
+ },
+ {
+  "question": "Which data structures are combined to build an LRU cache?",
+  "lecture_id": "lecture1",
+  "start": 1634,
+  "end": 1681
+ },
+ {
+  "question": "How does Dijkstra's shortest path algorithm work?",
+  "expect": "not_covered"
+ },
+ {
+  "question": "How does quicksort work?",
+  "expect": "not_covered"
+ },
+ {
+  "question": "What is the time complexity of merge sort?",
+  "expect": "not_covered"
+ },
+ {
+  "question": "How do I reverse a string in Python?",
+  "expect": "not_covered"
+ }
+]

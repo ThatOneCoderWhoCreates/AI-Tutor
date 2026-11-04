@@ -1,0 +1,1862 @@
+[
+  {
+    "start": 0.0,
+    "frame": "slide_0000.png",
+    "text": "This video is sponsored by InsForge",
+    "title": "This video is sponsored by InsForge"
+  },
+  {
+    "start": 2.0,
+    "frame": "slide_0001.png",
+    "text": "This video is sponsored by InsForge — the backend built for AI coding agents",
+    "title": "This video is sponsored by InsForge — the backend built for AI coding agents"
+  },
+  {
+    "start": 12.0,
+    "frame": "slide_0002.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 21.0,
+    "frame": "slide_0003.png",
+    "text": "ARRAY",
+    "title": "ARRAY"
+  },
+  {
+    "start": 40.0,
+    "frame": "slide_0009.png",
+    "text": "Seat 47?",
+    "title": "Seat 47?"
+  },
+  {
+    "start": 42.0,
+    "frame": "slide_0010.png",
+    "text": "ARRAY\nvstiv.st mx pual eel",
+    "title": "ARRAY"
+  },
+  {
+    "start": 44.0,
+    "frame": "slide_0011.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 46.0,
+    "frame": "slide_0012.png",
+    "text": "Seat 47",
+    "title": "Seat 47"
+  },
+  {
+    "start": 49.0,
+    "frame": "slide_0013.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 53.0,
+    "frame": "slide_0014.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 56.0,
+    "frame": "slide_0015.png",
+    "text": "0x10C\nOx110",
+    "title": ""
+  },
+  {
+    "start": 62.0,
+    "frame": "slide_0016.png",
+    "text": "wn\n0x100 0x104\n0x10C\nOx110\nOx114\nee\nContiguous Block\nAddress = Base + (.",
+    "title": "Contiguous Block"
+  },
+  {
+    "start": 65.0,
+    "frame": "slide_0017.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 73.0,
+    "frame": "slide_0018.png",
+    "text": "Time\nInput Size (n)",
+    "title": "Time"
+  },
+  {
+    "start": 78.0,
+    "frame": "slide_0019.png",
+    "text": "0 Up 203 4, 5\nFixed Siz",
+    "title": "Fixed Siz"
+  },
+  {
+    "start": 85.0,
+    "frame": "slide_0020.png",
+    "text": "iT\nFixed Size\nNew Block o",
+    "title": "Fixed Size"
+  },
+  {
+    "start": 93.0,
+    "frame": "slide_0021.png",
+    "text": "Allocated\n_o° ERB\nSa\n- ~ New Block of Memory\nFixed Size",
+    "title": "Allocated"
+  },
+  {
+    "start": 99.0,
+    "frame": "slide_0022.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 106.0,
+    "frame": "slide_0023.png",
+    "text": "Fast Access\nCostly Modification",
+    "title": "Fast Access"
+  },
+  {
+    "start": 111.0,
+    "frame": "slide_0024.png",
+    "text": "Cost",
+    "title": "Cost"
+  },
+  {
+    "start": 122.0,
+    "frame": "slide_0026.png",
+    "text": "RIGID\nSlow and Rigid when the data keeps changing.",
+    "title": "RIGID"
+  },
+  {
+    "start": 129.0,
+    "frame": "slide_0027.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 136.0,
+    "frame": "slide_0028.png",
+    "text": "flexible data\nstructure",
+    "title": "flexible data"
+  },
+  {
+    "start": 141.0,
+    "frame": "slide_0029.png",
+    "text": "it solves the exact\nproblem arrays can't",
+    "title": "it solves the exact"
+  },
+  {
+    "start": 146.0,
+    "frame": "slide_0030.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 156.0,
+    "frame": "slide_0031.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 159.0,
+    "frame": "slide_0032.png",
+    "text": "Linked List",
+    "title": "Linked List"
+  },
+  {
+    "start": 161.0,
+    "frame": "slide_0033.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 165.0,
+    "frame": "slide_0034.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 183.0,
+    "frame": "slide_0035.png",
+    "text": "ly\nInserting into an array meant shifting\nthousands of items?",
+    "title": "Inserting into an array meant shifting"
+  },
+  {
+    "start": 186.0,
+    "frame": "slide_0036.png",
+    "text": "HEAD\n12 e7; > 37 e7;, > 4 e7 > “+91 er ~»+455 e@——> NULL\nOx3A1F 0x7C82 0x1D40 OxBFQ3 Ox52EA\nInserting? Jus”",
+    "title": "HEAD"
+  },
+  {
+    "start": 207.0,
+    "frame": "slide_0037.png",
+    "text": "HEAD\nNULL\n@x3A1F\n0x7C82\nOxBFO3\n@x52EA\nRemoving an item? Same idea.\nUpdate a pointer — the chain reconnects.",
+    "title": "HEAD"
+  },
+  {
+    "start": 209.0,
+    "frame": "slide_0038.png",
+    "text": "HEAD\nmc hsco\n0x3A1F 0x7C82 OxBFO3 @x52EA\nThe chain reconnects around it.\nThe item is simply... gone.",
+    "title": "HEAD"
+  },
+  {
+    "start": 214.0,
+    "frame": "slide_0039.png",
+    "text": "HEAD\nmcs\n@x3A1F 0x7C82 OxBFO3 @x52EA\nThe chain reconnects around it.\nThe item is simply... gone.",
+    "title": "HEAD"
+  },
+  {
+    "start": 217.0,
+    "frame": "slide_0040.png",
+    "text": "A small, local adjustment,\nwith no effect on the rest of the structure",
+    "title": "A small, local adjustment,"
+  },
+  {
+    "start": 225.0,
+    "frame": "slide_0041.png",
+    "text": "Arrays\nO(1) random access\nCachesriendy VS\nO(n) insert / delete\nFixed size (static)\nLinked Lists\nO(1) insert / delete\nDynamic size\nO(n) random access\nExtra mem ory (pointers)\nTwo different tools for two different jobs.",
+    "title": "Arrays"
+  },
+  {
+    "start": 228.0,
+    "frame": "slide_0042.png",
+    "text": "HEAD\np22 Pee fet Pett [ets | oe\nThe pointer in each node points to the NEXT node.",
+    "title": "HEAD"
+  },
+  {
+    "start": 234.0,
+    "frame": "slide_0043.png",
+    "text": "HEAD\neS pee eg ci i ee\nOx3A1F\nIn real memory — nodes live at random addresses.\nThat's fine. The pointers know where to look.",
+    "title": "HEAD"
+  },
+  {
+    "start": 239.0,
+    "frame": "slide_0044.png",
+    "text": "HEAD\n12 | 37/ ae 4 | Sil came 5S) of ent\nOx3A1F 0x7C82 @x1040 OxBFO3 @x52EA\nTo find a specific node — start at HEAD.\nFollow the chain, one step at a time.",
+    "title": "HEAD"
+  },
+  {
+    "start": 247.0,
+    "frame": "slide_0045.png",
+    "text": "HEAD\neS pig pag ing BO peg\n@x3A1F @x7C82 0x1D40 OxBFO3 @x52EA\nNo shortcuts. No jumping to position 847.\n10,000 nodes? Walk all 10,000. That's O(n).",
+    "title": "HEAD"
+  },
+  {
+    "start": 251.0,
+    "frame": "slide_0046.png",
+    "text": "HEAD\n12 4] 37 4 chk 55 NULL\n@x3A1F 0x7C82 @x1040 OxBFO3 0x52EA\nBut insertion is a completely different stor.",
+    "title": "HEAD"
+  },
+  {
+    "start": 257.0,
+    "frame": "slide_0047.png",
+    "text": "HEAD\n12 37 91 NULL\n@x3A1F @x7C82 @x1D40 @xBFO3 @x52EA",
+    "title": "HEAD"
+  },
+  {
+    "start": 262.0,
+    "frame": "slide_0048.png",
+    "text": "Arrays — fast to read, ~",
+    "title": "Arrays — fast to read, ~"
+  },
+  {
+    "start": 275.0,
+    "frame": "slide_0049.png",
+    "text": "e's",
+    "title": ""
+  },
+  {
+    "start": 280.0,
+    "frame": "slide_0050.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 283.0,
+    "frame": "slide_0051.png",
+    "text": "Undo\nFeature",
+    "title": "Undo"
+  },
+  {
+    "start": 286.0,
+    "frame": "slide_0052.png",
+    "text": "STACK\nLast In, First Out",
+    "title": "STACK"
+  },
+  {
+    "start": 288.0,
+    "frame": "slide_0053.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 301.0,
+    "frame": "slide_0054.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 305.0,
+    "frame": "slide_0055.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 309.0,
+    "frame": "slide_0056.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 311.0,
+    "frame": "slide_0057.png",
+    "text": "TOP ONLY",
+    "title": "TOP ONLY"
+  },
+  {
+    "start": 313.0,
+    "frame": "slide_0058.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 315.0,
+    "frame": "slide_0059.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 324.0,
+    "frame": "slide_0060.png",
+    "text": "eoeo ‘S) { pagel.com",
+    "title": "eoeo ‘S) { pagel.com"
+  },
+  {
+    "start": 328.0,
+    "frame": "slide_0061.png",
+    "text": "eee ‘S) { page2.com",
+    "title": "eee ‘S) { page2.com"
+  },
+  {
+    "start": 331.0,
+    "frame": "slide_0062.png",
+    "text": "The Call Stack\nfunctions layer on top of each other",
+    "title": "The Call Stack"
+  },
+  {
+    "start": 337.0,
+    "frame": "slide_0063.png",
+    "text": "most recent — finishes first\ndraw_pixel() || { top\nrender()\nmain()",
+    "title": "most recent — finishes first"
+  },
+  {
+    "start": 350.0,
+    "frame": "slide_0064.png",
+    "text": "Last In, First Out\nthe rhythm of a stack — everywhere, once you see it",
+    "title": "Last In, First Out"
+  },
+  {
+    "start": 360.0,
+    "frame": "slide_0065.png",
+    "text": "What if you need the opposite?",
+    "title": "What if you need the opposite?"
+  },
+  {
+    "start": 365.0,
+    "frame": "slide_0066.png",
+    "text": "For that, you flip the logic entirely.\nsTack\nQUEUE\nLe\nout\nFirst In, F”",
+    "title": "For that, you flip the logic entirely."
+  },
+  {
+    "start": 370.0,
+    "frame": "slide_0067.png",
+    "text": "STACK\nserves the newest first",
+    "title": "STACK"
+  },
+  {
+    "start": 380.0,
+    "frame": "slide_0068.png",
+    "text": "First In, First Out",
+    "title": "First In, First Out"
+  },
+  {
+    "start": 384.0,
+    "frame": "slide_0069.png",
+    "text": "First In, First Out\nSimple as a line at a coffee shop.",
+    "title": "First In, First Out"
+  },
+  {
+    "start": 393.0,
+    "frame": "slide_0070.png",
+    "text": "Two Operations\nEnqueue Dequeue\nadds to the back removes from the front",
+    "title": "Two Operations"
+  },
+  {
+    "start": 397.0,
+    "frame": "slide_0071.png",
+    "text": "Two Operations\nEnqueue Dequeue\nadds to the back removes from the front\nBoth operations are O(1)",
+    "title": "Two Operations"
+  },
+  {
+    "start": 400.0,
+    "frame": "slide_0072.png",
+    "text": "Stack vs Queue",
+    "title": "Stack vs Queue"
+  },
+  {
+    "start": 403.0,
+    "frame": "slide_0073.png",
+    "text": "Stack vs Queue\nSTACK\nwork here\nNewest\nMiddle\nOldest",
+    "title": "Stack vs Queue"
+  },
+  {
+    "start": 406.0,
+    "frame": "slide_0074.png",
+    "text": "Stack vs Queue\nSTACK, ok new QUEUE\nNewest\n| Middle | aire Oldest | Middte | Newest\nOldest\nalways works on\nthe newest task",
+    "title": "Stack vs Queue"
+  },
+  {
+    "start": 413.0,
+    "frame": "slide_0075.png",
+    "text": "A shared printer.\nqueue\nprinter",
+    "title": "A shared printer."
+  },
+  {
+    "start": 419.0,
+    "frame": "slide_0077.png",
+    "text": "A web server, slammed.\nthousands of requests\nserver",
+    "title": "A web server, slammed."
+  },
+  {
+    "start": 422.0,
+    "frame": "slide_0078.png",
+    "text": "A web server, slammed.\nlined up, processed one by one.\nserver",
+    "title": "A web server, slammed."
+  },
+  {
+    "start": 426.0,
+    "frame": "slide_0079.png",
+    "text": "And everywhere else.\nQ0G000 —\nQOOLL0 = )\nOOOO ~—_\nkeyboard inputs game loading support tickets",
+    "title": "And everywhere else."
+  },
+  {
+    "start": 430.0,
+    "frame": "slide_0080.png",
+    "text": "All queues.",
+    "title": "All queues."
+  },
+  {
+    "start": 433.0,
+    "frame": "slide_0081.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 441.0,
+    "frame": "slide_0082.png",
+    "text": "both s",
+    "title": "both s"
+  },
+  {
+    "start": 445.0,
+    "frame": "slide_0083.png",
+    "text": "Oldest Newest\nboth ends",
+    "title": "Oldest Newest"
+  },
+  {
+    "start": 448.0,
+    "frame": "slide_0084.png",
+    "text": "Deque\nDouble-Ended Queue",
+    "title": "Deque"
+  },
+  {
+    "start": 450.0,
+    "frame": "slide_0085.png",
+    "text": "Deque\nDouble-Ended Queue\na layer of versatility",
+    "title": "Deque"
+  },
+  {
+    "start": 456.0,
+    "frame": "slide_0086.png",
+    "text": "Deque\nDouble-Ended Queue\na layer of versatility\nDynamic at both ends.",
+    "title": "Deque"
+  },
+  {
+    "start": 462.0,
+    "frame": "slide_0087.png",
+    "text": "Deque\nDouble-Ended Queue",
+    "title": "Deque"
+  },
+  {
+    "start": 471.0,
+    "frame": "slide_0089.png",
+    "text": "Deque\nDouble-Ended Queue\nAdd / Remove Add / Remove\nBoth ends are live — all the time.",
+    "title": "Deque"
+  },
+  {
+    "start": 473.0,
+    "frame": "slide_0090.png",
+    "text": "Deque\nDouble-Ended Queue",
+    "title": "Deque"
+  },
+  {
+    "start": 475.0,
+    "frame": "slide_0091.png",
+    "text": "Deque\nDouble-Ended Queue\nLike a train — board or exit from either end.",
+    "title": "Deque"
+  },
+  {
+    "start": 477.0,
+    "frame": "slide_0092.png",
+    "text": "Deque\nDouble-Ended Queue\nLike a train — board or exit from either end.\nMore flexible than a Queue. More flexible than a Stack.",
+    "title": "Deque"
+  },
+  {
+    "start": 481.0,
+    "frame": "slide_0093.png",
+    "text": "Deque\nDouble-Ended Queue\nA Deque is both at once.",
+    "title": "Deque"
+  },
+  {
+    "start": 483.0,
+    "frame": "slide_0094.png",
+    "text": "Deque\nDouble-Ended Queue\nA Deque is both at once.\n: : 2 | BACK\nUse only the BACK ~— behaves like a Stack",
+    "title": "Deque"
+  },
+  {
+    "start": 495.0,
+    "frame": "slide_0095.png",
+    "text": "Data Stream —\nbPEPEEPEerET I",
+    "title": "Data Stream —"
+  },
+  {
+    "start": 497.0,
+    "frame": "slide_0096.png",
+    "text": "Data Stream —\nEE\nWindow (size 3)",
+    "title": "Data Stream —"
+  },
+  {
+    "start": 500.0,
+    "frame": "slide_0097.png",
+    "text": "Data Stream —\n-o.- EEE PEE\nWindow (size 3)",
+    "title": "Data Stream —"
+  },
+  {
+    "start": 503.0,
+    "frame": "slide_0098.png",
+    "text": "Data Stream —\nWindow (size 3)",
+    "title": "Data Stream —"
+  },
+  {
+    "start": 514.0,
+    "frame": "slide_0099.png",
+    "text": "Undo and redo.\nme O-@OL{O-O-© =",
+    "title": "Undo and redo."
+  },
+  {
+    "start": 520.0,
+    "frame": "slide_0100.png",
+    "text": "Scheduling.\nregular",
+    "title": "Scheduling."
+  },
+  {
+    "start": 524.0,
+    "frame": "slide_0101.png",
+    "text": "Deque.\nA specialist.\nMost problems don't need one.",
+    "title": "Deque."
+  },
+  {
+    "start": 534.0,
+    "frame": "slide_0102.png",
+    "text": "Mom\nYou didn't scroll.\nMomhxxxxxxxx!",
+    "title": "Mom"
+  },
+  {
+    "start": 544.0,
+    "frame": "slide_0103.png",
+    "text": "Key - Value\nKEY VALUE",
+    "title": "Key - Value"
+  },
+  {
+    "start": 553.0,
+    "frame": "slide_0104.png",
+    "text": "Key - Value\nKEY VALUE\nGive the key — get the value. Every time. Instantly.",
+    "title": "Key - Value"
+  },
+  {
+    "start": 561.0,
+    "frame": "slide_0105.png",
+    "text": "The Hash Function",
+    "title": "The Hash Function"
+  },
+  {
+    "start": 563.0,
+    "frame": "slide_0106.png",
+    "text": "The Hash Function\nA mathematical formula that converts any key into anumber.",
+    "title": "The Hash Function"
+  },
+  {
+    "start": 570.0,
+    "frame": "slide_0108.png",
+    "text": "Hasn Function\nrmula that converts any key into anumber.\nash( key | | 4827 |\nfunction slot number",
+    "title": "Hasn Function"
+  },
+  {
+    "start": 576.0,
+    "frame": "slide_0109.png",
+    "text": "Memory Slots\n\"Mom\" runs through the hash function —> slot 4,827",
+    "title": "Memory Slots"
+  },
+  {
+    "start": 580.0,
+    "frame": "slide_0110.png",
+    "text": "Memory Slots\nViom\" runs through the hash function — slot 4,827",
+    "title": "Memory Slots"
+  },
+  {
+    "start": 584.0,
+    "frame": "slide_0111.png",
+    "text": "Memory Slots\n\"Mom\" runs through the hash function — slot 4,827\nLoL ee\nSearch\"Mom\" — same formula — same slot > direct jump.",
+    "title": "Memory Slots"
+  },
+  {
+    "start": 589.0,
+    "frame": "slide_0112.png",
+    "text": "Why It Feels Magical",
+    "title": "Why It Feels Magical"
+  },
+  {
+    "start": 591.0,
+    "frame": "slide_0113.png",
+    "text": "Why It Feels Magical\nIt doesn't matter if you have 10 contacts or 10,000,000.",
+    "title": "Why It Feels Magical"
+  },
+  {
+    "start": 599.0,
+    "frame": "slide_0115.png",
+    "text": "Without a Hash Map\nScan every item or ~ Alice\nBob\nCarol\n‘Ll you find a match.\nDave\nEve\nFrank\nGrace\nHank\nTric",
+    "title": "Without a Hash Map"
+  },
+  {
+    "start": 605.0,
+    "frame": "slide_0116.png",
+    "text": "With a Hash Map",
+    "title": "With a Hash Map"
+  },
+  {
+    "start": 610.0,
+    "frame": "slide_0117.png",
+    "text": "Hash Maps in the Real World",
+    "title": "Hash Maps in the Real World"
+  },
+  {
+    "start": 615.0,
+    "frame": "slide_0118.png",
+    "text": "Hash Maps in the Real World\nea JavaScript Perea\ndict object index",
+    "title": "Hash Maps in the Real World"
+  },
+  {
+    "start": 618.0,
+    "frame": "slide_0119.png",
+    "text": "Python JavaScript Database\ndict object index\nArguably the most important data structure\nin everyday programming.",
+    "title": "Python JavaScript Database"
+  },
+  {
+    "start": 622.0,
+    "frame": "slide_0120.png",
+    "text": "But —",
+    "title": "But —"
+  },
+  {
+    "start": 625.0,
+    "frame": "slide_0121.png",
+    "text": "But —\nMore Memory\nHash maps use more memory than plain lists.",
+    "title": "But —"
+  },
+  {
+    "start": 630.0,
+    "frame": "slide_0122.png",
+    "text": "But —\nCollision",
+    "title": "But —"
+  },
+  {
+    "start": 632.0,
+    "frame": "slide_0123.png",
+    "text": "Collision\nTwo different keys produce the same slot number.",
+    "title": "Collision"
+  },
+  {
+    "start": 634.0,
+    "frame": "slide_0124.png",
+    "text": "Collision\nTwo different keys produce the same slot number.\nTae\nace |",
+    "title": "Collision"
+  },
+  {
+    "start": 636.0,
+    "frame": "slide_0125.png",
+    "text": "Collision\nTwo different keys produce the same slot number.\ncar,\nraces |",
+    "title": "Collision"
+  },
+  {
+    "start": 649.0,
+    "frame": "slide_0126.png",
+    "text": "A data structure built purely for\nchecking membership.",
+    "title": "A data structure built purely for"
+  },
+  {
+    "start": 651.0,
+    "frame": "slide_0127.png",
+    "text": "A data structure built purely for\nchecking membership.\nCaer | [7 Yes",
+    "title": "A data structure built purely for"
+  },
+  {
+    "start": 658.0,
+    "frame": "slide_0128.png",
+    "text": "Hash Map vs Hash Set\nKey Value\nalice admin\nbob user\ncarol mod\nHash Map stores key — value pairs",
+    "title": "Hash Map vs Hash Set"
+  },
+  {
+    "start": 660.0,
+    "frame": "slide_0129.png",
+    "text": "Hash Map vs Hash Set\nKey\nalice\nbob\nHash Set\ncarol\nHash Set — keys only. No values.",
+    "title": "Hash Map vs Hash Set"
+  },
+  {
+    "start": 668.0,
+    "frame": "slide_0130.png",
+    "text": "The Nightclub Analogy",
+    "title": "The Nightclub Analogy"
+  },
+  {
+    "start": 671.0,
+    "frame": "slide_0131.png",
+    "text": "The Nightclub Analogy\nGUEST LIST\nAlice\nBob\nCharlie\nDiana\nEve",
+    "title": "The Nightclub Analogy"
+  },
+  {
+    "start": 680.0,
+    "frame": "slide_0133.png",
+    "text": "Frank ae Analogy\nGUEST LIST\nAlice\nBob\nCharlie\nDiana\nAre you on the list?\nYES — Come in!\nNO ~— Step aside.",
+    "title": "Frank ae Analogy"
+  },
+  {
+    "start": 682.0,
+    "frame": "slide_0134.png",
+    "text": "Weve Analogy\nya Are you on the list?\nGUEST LIST\nAlice YES — Come in!\nBob\nCharlie\nDiana\nEve\nNO — Step aside.\nThat is the essence of a Hash Set.",
+    "title": "Weve Analogy"
+  },
+  {
+    "start": 686.0,
+    "frame": "slide_0135.png",
+    "text": "Hash Set Operations\nontains( x ) add(x ) remove( x )\n1eck membership Insert an element Delete an elemer\nOd) Instant Od) Instant Od) Instant",
+    "title": "Hash Set Operations"
+  },
+  {
+    "start": 690.0,
+    "frame": "slide_0136.png",
+    "text": "No Duplicates — By Design\nSOOO",
+    "title": "No Duplicates — By Design"
+  },
+  {
+    "start": 696.0,
+    "frame": "slide_0137.png",
+    "text": "No Duplicates — By Design\nfm |] dled]\nAlready exist.",
+    "title": "No Duplicates — By Design"
+  },
+  {
+    "start": 699.0,
+    "frame": "slide_0138.png",
+    "text": "No Duplicates — By Design\nfm |] dled]\nAlready exists — ignored!\nEvery item appears exactly once.",
+    "title": "No Duplicates — By Design"
+  },
+  {
+    "start": 702.0,
+    "frame": "slide_0139.png",
+    "text": "Linear Scan .vs Hash Set",
+    "title": "Linear Scan .vs Hash Set"
+  },
+  {
+    "start": 705.0,
+    "frame": "slide_0140.png",
+    "text": "Linear Scan vs Hash Set\nWithout Hash Set\nItem 1\nItem 2\nItem 3\nItem 4\nItem N",
+    "title": "Linear Scan vs Hash Set"
+  },
+  {
+    "start": 708.0,
+    "frame": "slide_0141.png",
+    "text": "Linear Scan\nWithout Hash Set\nItem 1\nItem 2\nItem 3\nItem 4\nItem N\nScan every item...\nO(N) — Slow\nvs Hash Set\nWith Hash Set\nHast Sey\nSS oa\ne Alice\n— eBob —\ne Charlie\n7 eDiana ~\\",
+    "title": "Linear Scan"
+  },
+  {
+    "start": 711.0,
+    "frame": "slide_0142.png",
+    "text": "e Tracking which users have seen a notification",
+    "title": "e Tracking which users have seen a notification"
+  },
+  {
+    "start": 714.0,
+    "frame": "slide_0143.png",
+    "text": "e Tracking which users have seen a notification\ne Filtering duplicates from a Dataset\ne Checking if a username is already taken",
+    "title": "e Tracking which users have seen a notification"
+  },
+  {
+    "start": 718.0,
+    "frame": "slide_0144.png",
+    "text": "e Tracking which users have seen a notification\ne Filtering duplicates from a Dataset\ne Checking if a username is already taken\nAgain and again, the same idea appears —",
+    "title": "e Tracking which users have seen a notification"
+  },
+  {
+    "start": 724.0,
+    "frame": "slide_0145.png",
+    "text": "Hash Set",
+    "title": "Hash Set"
+  },
+  {
+    "start": 730.0,
+    "frame": "slide_0146.png",
+    "text": "Hash Set\nSmaller and simpler than a hash map —\nbut for this one job, it's perfect.",
+    "title": "Hash Set"
+  },
+  {
+    "start": 751.0,
+    "frame": "slide_0147.png",
+    "text": "Open your file explorer.",
+    "title": "Open your file explorer."
+  },
+  {
+    "start": 756.0,
+    "frame": "slide_0148.png",
+    "text": "From there, it splits — into folders.",
+    "title": "From there, it splits — into folders."
+  },
+  {
+    "start": 765.0,
+    "frame": "slide_0149.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 772.0,
+    "frame": "slide_0150.png",
+    "text": "A quiet hierarchy, organizing everything you store.",
+    "title": "A quiet hierarchy, organizing everything you store."
+  },
+  {
+    "start": 776.0,
+    "frame": "slide_0151.png",
+    "text": "This is a\nTree Data Structure",
+    "title": "This is a"
+  },
+  {
+    "start": 797.0,
+    "frame": "slide_0152.png",
+    "text": "Trees in the Real World\nFile HTML\nSystems DOM\nComment ML Decision\nThreads Trees\nNatural for anything with a parent-child relationship.",
+    "title": "Trees in the Real World"
+  },
+  {
+    "start": 803.0,
+    "frame": "slide_0153.png",
+    "text": "A Plain Tree",
+    "title": "A Plain Tree"
+  },
+  {
+    "start": 807.0,
+    "frame": "slide_0154.png",
+    "text": "A Plain Tree\nNo rules about where values go.",
+    "title": "A Plain Tree"
+  },
+  {
+    "start": 815.0,
+    "frame": "slide_0155.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 820.0,
+    "frame": "slide_0156.png",
+    "text": "What if you could take a tree,\nimpose one simple rule on it,\nsuddenly make searching dramatically fas",
+    "title": "What if you could take a tree,"
+  },
+  {
+    "start": 825.0,
+    "frame": "slide_0157.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 833.0,
+    "frame": "slide_0158.png",
+    "text": "Fa\nBST\nRemoves guesswork\nfrom searching",
+    "title": "BST"
+  },
+  {
+    "start": 835.0,
+    "frame": "slide_0159.png",
+    "text": "gb\nBST\nRemoves guesswork Removes guesswork\nfrom searching from your backend\n4 \\nsForge",
+    "title": "BST"
+  },
+  {
+    "start": 838.0,
+    "frame": "slide_0160.png",
+    "text": "Here's the thing — if you're building apps with:",
+    "title": "Here's the thing — if you're building apps with:"
+  },
+  {
+    "start": 843.0,
+    "frame": "slide_0161.png",
+    "text": "Here's the thing — if you're building apps with:\n7 Cursor | Claude Code B GitHub Copilot",
+    "title": "Here's the thing — if you're building apps with:"
+  },
+  {
+    "start": 848.0,
+    "frame": "slide_0162.png",
+    "text": "BUT WHEN IT HITS THE BACKEND...",
+    "title": "BUT WHEN IT HITS THE BACKEND..."
+  },
+  {
+    "start": 856.0,
+    "frame": "slide_0163.png",
+    "text": "4 \\nsForge\ngiving your agent a fully-featured b",
+    "title": "4 \\nsForge"
+  },
+  {
+    "start": 863.0,
+    "frame": "slide_0164.png",
+    "text": "AAU SEV Asa URS ESD\nPostgres\nDatabase\nEdge\nFunctions\nAuth\nRealtime\nUpdates\nBACKEND\nFile\nStorage\nAI Model\nAccess",
+    "title": "AAU SEV Asa URS ESD"
+  },
+  {
+    "start": 874.0,
+    "frame": "slide_0165.png",
+    "text": "You just build.",
+    "title": "You just build."
+  },
+  {
+    "start": 879.0,
+    "frame": "slide_0166.png",
+    "text": "e Your prompt\nENGINE\n“ InsForge\n— DB - Auth - Storage - Edge",
+    "title": "e Your prompt"
+  },
+  {
+    "start": 885.0,
+    "frame": "slide_0167.png",
+    "text": "¢@xeNaAsese QGgaauaw oe 6g ~*",
+    "title": "¢@xeNaAsese QGgaauaw oe 6g ~*"
+  },
+  {
+    "start": 888.0,
+    "frame": "slide_0168.png",
+    "text": "BENCHMARKS SHOW",
+    "title": "BENCHMARKS SHOW"
+  },
+  {
+    "start": 894.0,
+    "frame": "slide_0169.png",
+    "text": "BENCHMARKS SHOW\nFaster Fewer tokens Higher accuracy",
+    "title": "BENCHMARKS SHOW"
+  },
+  {
+    "start": 903.0,
+    "frame": "slide_0170.png",
+    "text": "Check it out at\ninsforge.dev\n/ Link in the description",
+    "title": "Check it out at"
+  },
+  {
+    "start": 910.0,
+    "frame": "slide_0171.png",
+    "text": "The Number Guessing Game\nSomeone picks a number between 1 and 1,000.",
+    "title": "The Number Guessing Game"
+  },
+  {
+    "start": 912.0,
+    "frame": "slide_0172.png",
+    "text": "The Number Guessing Game\nSomeone picks a number between 1 and 1,000.\nil = 250) 251 — 500 501 — 750 751 — 1000",
+    "title": "The Number Guessing Game"
+  },
+  {
+    "start": 917.0,
+    "frame": "slide_0173.png",
+    "text": "Someone picks a number between | and 1,000.\nGuess: 500\nToo High!\nRemaining: 1 — 499",
+    "title": "Someone picks a number between | and 1,000."
+  },
+  {
+    "start": 920.0,
+    "frame": "slide_0174.png",
+    "text": "Someone picks a number between | and 1,000.\nGuess: 250",
+    "title": "Someone picks a number between | and 1,000."
+  },
+  {
+    "start": 924.0,
+    "frame": "slide_0175.png",
+    "text": "Someone picks a number between | and 1,000.\nEvery guess cuts the possibilities exactly in half.",
+    "title": "Someone picks a number between | and 1,000."
+  },
+  {
+    "start": 934.0,
+    "frame": "slide_0176.png",
+    "text": "Searching in a BST\nSearch for: 37\nFound! v",
+    "title": "Searching in a BST"
+  },
+  {
+    "start": 939.0,
+    "frame": "slide_0177.png",
+    "text": "BST\n~20 steps",
+    "title": "BST"
+  },
+  {
+    "start": 942.0,
+    "frame": "slide_0178.png",
+    "text": "Regular Tree BST\nUp to 1,000,000\n~20 steps\nchecks\nTwenty,",
+    "title": "Regular Tree BST"
+  },
+  {
+    "start": 945.0,
+    "frame": "slide_0179.png",
+    "text": "Compared to a regular tree, a BST is on another level.",
+    "title": "Compared to a regular tree, a BST is on another level."
+  },
+  {
+    "start": 948.0,
+    "frame": "slide_0180.png",
+    "text": "Compared to a regular tree, a BST is on another level.\nThe structure of the data\ndoes the work for you.",
+    "title": "Compared to a regular tree, a BST is on another level."
+  },
+  {
+    "start": 954.0,
+    "frame": "slide_0181.png",
+    "text": "The Hidden Weakness",
+    "title": "The Hidden Weakness"
+  },
+  {
+    "start": 957.0,
+    "frame": "slide_0182.png",
+    "text": "Sorted Insertion: 1727374",
+    "title": "Sorted Insertion: 1727374"
+  },
+  {
+    "start": 962.0,
+    "frame": "slide_0184.png",
+    "text": "Sorted Insertion: 1 727374\neo No Branching.\nNo Halving.",
+    "title": "Sorted Insertion: 1 727374"
+  },
+  {
+    "start": 970.0,
+    "frame": "slide_0185.png",
+    "text": "Self-Balancing BST",
+    "title": "Self-Balancing BST"
+  },
+  {
+    "start": 973.0,
+    "frame": "slide_0186.png",
+    "text": "Self-Balancing BST\nee\nSON SON",
+    "title": "Self-Balancing BST"
+  },
+  {
+    "start": 975.0,
+    "frame": "slide_0187.png",
+    "text": "Self-Balancing BST\nSo\na oN\nlan Mm\nLeft < Root < Right",
+    "title": "Self-Balancing BST"
+  },
+  {
+    "start": 984.0,
+    "frame": "slide_0188.png",
+    "text": "But sometimes...\nSearching is not the goal.",
+    "title": "But sometimes..."
+  },
+  {
+    "start": 988.0,
+    "frame": "slide_0189.png",
+    "text": "What matters is:\nInstant access to the\nMost Important Element",
+    "title": "What matters is:"
+  },
+  {
+    "start": 994.0,
+    "frame": "slide_0191.png",
+    "text": "HEAP\nData Structure",
+    "title": "HEAP"
+  },
+  {
+    "start": 999.0,
+    "frame": "slide_0192.png",
+    "text": "An Emergency Room.",
+    "title": "An Emergency Room."
+  },
+  {
+    "start": 1009.0,
+    "frame": "slide_0193.png",
+    "text": "An Emergency Room.\n¥ O O\nheart attack headache\nUrgency beats arrival time.",
+    "title": "An Emergency Room."
+  },
+  {
+    "start": 1015.0,
+    "frame": "slide_0194.png",
+    "text": "That's a Heap.\nhighest priority — always at the top.",
+    "title": "That's a Heap."
+  },
+  {
+    "start": 1020.0,
+    "frame": "slide_0195.png",
+    "text": "A tree that sorts itself.",
+    "title": "A tree that sorts itself."
+  },
+  {
+    "start": 1026.0,
+    "frame": "slide_0197.png",
+    "text": "Self-reorganizing.",
+    "title": "Self-reorganizing."
+  },
+  {
+    "start": 1032.0,
+    "frame": "slide_0198.png",
+    "text": "Max-Heap\nlargest rises to top",
+    "title": "Max-Heap"
+  },
+  {
+    "start": 1036.0,
+    "frame": "slide_0200.png",
+    "text": "most important — always immediately accessible.\nMax-Heap Min-Heap\nlargest rises to top smallest rises to top",
+    "title": "most important — always immediately accessible."
+  },
+  {
+    "start": 1044.0,
+    "frame": "slide_0201.png",
+    "text": "When the root is removed...\nHeap reorganizes itself (heapify down)...",
+    "title": "When the root is removed..."
+  },
+  {
+    "start": 1051.0,
+    "frame": "slide_0202.png",
+    "text": "Without a heap...\nasn-ai",
+    "title": "Without a heap..."
+  },
+  {
+    "start": 1056.0,
+    "frame": "slide_0203.png",
+    "text": "Without a heap...\nae\n[ia\nFinding the top priority? Sort the whole list.\nToo prioritv found — but at what cost?",
+    "title": "Without a heap..."
+  },
+  {
+    "start": 1059.0,
+    "frame": "slide_0204.png",
+    "text": "Imagine millions of tasks...",
+    "title": "Imagine millions of tasks..."
+  },
+  {
+    "start": 1061.0,
+    "frame": "slide_0205.png",
+    "text": "Imagine millions of tasks...\nNew, task!\noc ecco ee ec ee eo eee oe eo eee ee oe 6 Oo\n© © © © © © © © © © © © © © oo 8 oo 8 8 8 8 8 ow 8\noc eo eo ee eo eee ee eo oe eo eo eo oo eo oo oO\neo © © © © © © © © © © © 0 0 ow © 0 ow 0 0 ow 0 8 8\nCe\nCe\nCd\nCe",
+    "title": "Imagine millions of tasks..."
+  },
+  {
+    "start": 1063.0,
+    "frame": "slide_0206.png",
+    "text": "Imagine millions of tasks...\nNew task!\nCe }\noe © 06 © © © © © © © 0 eo ww ew we ew ew wo 8 8 8 8 8\noe eee ee eo eo © oe oo wo oo wo ew ow 8 8 ow 8\noe ee © © © © © © 0 0 ew 8 ew ew ew 8 8 8 8 8 8 8 8\noe cece eee eo ee eo eo wo ew oo ww ow ow ow 8\nCe ee }\nRe-sort everything... again.",
+    "title": "Imagine millions of tasks..."
+  },
+  {
+    "start": 1072.0,
+    "frame": "slide_0207.png",
+    "text": "A heap solves this.\nVly",
+    "title": "A heap solves this."
+  },
+  {
+    "start": 1075.0,
+    "frame": "slide_0208.png",
+    "text": "A heap solves this.\nMost important task — always at the top.\nAccessedhinstantly.",
+    "title": "A heap solves this."
+  },
+  {
+    "start": 1079.0,
+    "frame": "slide_0209.png",
+    "text": "Where the heap shows its magic",
+    "title": "Where the heap shows its magic"
+  },
+  {
+    "start": 1082.0,
+    "frame": "slide_0210.png",
+    "text": "Where the heap shows its magic\nTask Schedulers\nProcess A\nProcess B\nPriority 3",
+    "title": "Where the heap shows its magic"
+  },
+  {
+    "start": 1084.0,
+    "frame": "slide_0211.png",
+    "text": "Where the heap shows its magic\nTask Schedulers\nPriority9 | ~*\nCPU\nProcess B\nPriority 3",
+    "title": "Where the heap shows its magic"
+  },
+  {
+    "start": 1089.0,
+    "frame": "slide_0212.png",
+    "text": "GPS Route Recalculation",
+    "title": "GPS Route Recalculation"
+  },
+  {
+    "start": 1096.0,
+    "frame": "slide_0214.png",
+    "text": "Live, Evolving Dataset\nPriority 1 — Critical\nPriority 3 — High\n. ys the most i\nasks arti\n— Priority 5 — Medium ——¥\nPriority 7 — Low\nPriority 10 — Minimal",
+    "title": "Live, Evolving Dataset"
+  },
+  {
+    "start": 1100.0,
+    "frame": "slide_0215.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 1106.0,
+    "frame": "slide_0216.png",
+    "text": "Data Structures\nHeap\nAtree-based priority structure\nStack\nLIFO data structure",
+    "title": "Data Structures"
+  },
+  {
+    "start": 1109.0,
+    "frame": "slide_0217.png",
+    "text": "Data Structures Memory Regions\nHeap Heap\nAtree-based priority structure Dynamic memory allocation area\nStack Stack\nLIFO data structure Function call memory region",
+    "title": "Data Structures Memory Regions"
+  },
+  {
+    "start": 1116.0,
+    "frame": "slide_0218.png",
+    "text": "Da Array ordered items in a row ar\nLinked List chain of individual nodes\nStack / QueUEIFO / FIFO ordered access\nTree parent-child hierarchy\nash Set/Matey lookup in constant time\nAll work well ffor gallections withlgaredi}dividual items.",
+    "title": "Da Array ordered items in a row ar"
+  },
+  {
+    "start": 1122.0,
+    "frame": "slide_0219.png",
+    "text": "But the real world isn't always like that.\n“Elean individual items\nTtem A\nItem B\nItem C\nItem D",
+    "title": "But the real world isn't always like that."
+  },
+  {
+    "start": 1125.0,
+    "frame": "slide_0220.png",
+    "text": "But the real world isn't always like that.\nReal world: a web\nTtem A\nItem B\nItem C\nat\nItem D",
+    "title": "But the real world isn't always like that."
+  },
+  {
+    "start": 1134.0,
+    "frame": "slide_0221.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 1136.0,
+    "frame": "slide_0222.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 1141.0,
+    "frame": "slide_0223.png",
+    "text": "Graphs\nMessy. Chaotic.\nAnd that's what makes them powerful.",
+    "title": "Graphs"
+  },
+  {
+    "start": 1148.0,
+    "frame": "slide_0224.png",
+    "text": "Dots and Lines\nGraphs are just dots and lines.",
+    "title": "Dots and Lines"
+  },
+  {
+    "start": 1156.0,
+    "frame": "slide_0225.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 1158.0,
+    "frame": "slide_0226.png",
+    "text": "You're anode. Your friends are nodes.",
+    "title": "You're anode. Your friends are nodes."
+  },
+  {
+    "start": 1172.0,
+    "frame": "slide_0228.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 1175.0,
+    "frame": "slide_0229.png",
+    "text": "Cities are nodes. Roads are edges.",
+    "title": "Cities are nodes. Roads are edges."
+  },
+  {
+    "start": 1189.0,
+    "frame": "slide_0230.png",
+    "text": "Undirected Graphs\nConnections go both ways\nExample: Facebook friendships",
+    "title": "Undirected Graphs"
+  },
+  {
+    "start": 1197.0,
+    "frame": "slide_0231.png",
+    "text": "Directed Graphs\nEdges have direction\nExample: Twitter follows\nYou follow CelebA — they don't follow you back.",
+    "title": "Directed Graphs"
+  },
+  {
+    "start": 1201.0,
+    "frame": "slide_0232.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 1203.0,
+    "frame": "slide_0233.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 1206.0,
+    "frame": "slide_0234.png",
+    "text": "Storing a Graph",
+    "title": "Storing a Graph"
+  },
+  {
+    "start": 1208.0,
+    "frame": "slide_0235.png",
+    "text": "Storing a Graph\nWay 1 — Adjacency Matrix",
+    "title": "Storing a Graph"
+  },
+  {
+    "start": 1210.0,
+    "frame": "slide_0236.png",
+    "text": "Storing a Graph\nay 1 — Adjacency Matrix",
+    "title": "Storing a Graph"
+  },
+  {
+    "start": 1215.0,
+    "frame": "slide_0237.png",
+    "text": "SLOFNs a Grapn\nay 1 — Adjacency Matrix\nRows and columns are nodes.",
+    "title": "SLOFNs a Grapn"
+  },
+  {
+    "start": 1224.0,
+    "frame": "slide_0238.png",
+    "text": "Storing a Graph\nWay 2 — Adjacency List\nON\naed",
+    "title": "Storing a Graph"
+  },
+  {
+    "start": 1230.0,
+    "frame": "slide_0239.png",
+    "text": "Storing a Graph\nWay 2 — Adjacency List\nY-Be\nB-wOw\nB-Ow\n4B-Be\nEach node stores a list of its neighbours.",
+    "title": "Storing a Graph"
+  },
+  {
+    "start": 1263.0,
+    "frame": "slide_0240.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 1265.0,
+    "frame": "slide_0241.png",
+    "text": "Trie\nPronounced \"try\"",
+    "title": "Trie"
+  },
+  {
+    "start": 1270.0,
+    "frame": "slide_0243.png",
+    "text": "Trie\nPronounced \"try\"\nLegitimately genius.",
+    "title": "Trie"
+  },
+  {
+    "start": 1273.0,
+    "frame": "slide_0244.png",
+    "text": "Autocomplete\nGoogle\n>< (&aAimeae )",
+    "title": "Autocomplete"
+  },
+  {
+    "start": 1283.0,
+    "frame": "slide_0245.png",
+    "text": "Autocomplete\nGoogle\neo, se (QAM)\napple\napplication\nappointment\napp store\nBefore you finished typing — it already knew.",
+    "title": "Autocomplete"
+  },
+  {
+    "start": 1287.0,
+    "frame": "slide_0246.png",
+    "text": "That structure is a\nfo",
+    "title": "That structure is a"
+  },
+  {
+    "start": 1292.0,
+    "frame": "slide_0247.png",
+    "text": "That structure is a\nTrie.",
+    "title": "That structure is a"
+  },
+  {
+    "start": 1298.0,
+    "frame": "slide_0248.png",
+    "text": "One Letter Per Level",
+    "title": "One Letter Per Level"
+  },
+  {
+    "start": 1304.0,
+    "frame": "slide_0249.png",
+    "text": "First letter — one branch\nop",
+    "title": "First letter — one branch"
+  },
+  {
+    "start": 1311.0,
+    "frame": "slide_0250.png",
+    "text": "Fourth letter — tree branches",
+    "title": "Fourth letter — tree branches"
+  },
+  {
+    "start": 1315.0,
+    "frame": "slide_0251.png",
+    "text": "Typing 'a-p-p' narrows everything.\nGOOe",
+    "title": "Typing 'a-p-p' narrows everything."
+  },
+  {
+    "start": 1323.0,
+    "frame": "slide_0252.png",
+    "text": "Hash Map vs Trie\nGreat for exact lookups.\napp _> shortcut\n[ at |} {suite |\napply }—* | verb |",
+    "title": "Hash Map vs Trie"
+  },
+  {
+    "start": 1325.0,
+    "frame": "slide_0253.png",
+    "text": "Hash Map vs Trie\nGreat for exact lookups.\napple |— | fruit\napp _> | shortcut\napt =| | suite\napply |— | verb\nGive it the full key — instant result.",
+    "title": "Hash Map vs Trie"
+  },
+  {
+    "start": 1327.0,
+    "frame": "slide_0254.png",
+    "text": "Hash Map vs Trie\nGreat for exact lookups.\napple |— | fruit\napp _> | shortcut\napt |—| suite\napply |— | — verb\nGive it the full key — instant result.\nBut \"give me everything starting with app\" ?",
+    "title": "Hash Map vs Trie"
+  },
+  {
+    "start": 1356.0,
+    "frame": "slide_0255.png",
+    "text": "Phone Contact SeGcaso 7",
+    "title": "Phone Contact SeGcaso 7"
+  },
+  {
+    "start": 1371.0,
+    "frame": "slide_0256.png",
+    "text": "The Party Problem",
+    "title": "The Party Problem"
+  },
+  {
+    "start": 1383.0,
+    "frame": "slide_0257.png",
+    "text": "Scale to Millions of Users...\nTracing every chain one-by-one is not fast enough.",
+    "title": "Scale to Millions of Users..."
+  },
+  {
+    "start": 1400.0,
+    "frame": "slide_0258.png",
+    "text": "Oneunified group — membership answered instantly!",
+    "title": "Oneunified group — membership answered instantly!"
+  },
+  {
+    "start": 1403.0,
+    "frame": "slide_0259.png",
+    "text": "Every element starts as its own group.",
+    "title": "Every element starts as its own group."
+  },
+  {
+    "start": 1405.0,
+    "frame": "slide_0260.png",
+    "text": "o00e0e 0 ©\nWhen you connect two elements, their groups merge into one.",
+    "title": "o00e0e 0 ©"
+  },
+  {
+    "start": 1411.0,
+    "frame": "slide_0261.png",
+    "text": "Leader Leader Leader\nG©oe@oCe0\nEvery group has a representative — a leader.",
+    "title": "Leader Leader Leader"
+  },
+  {
+    "start": 1414.0,
+    "frame": "slide_0262.png",
+    "text": "Leader Leader Leader\n@©o@oeCeo0\nTo check if two elements share a group — trace to their leaders.",
+    "title": "Leader Leader Leader"
+  },
+  {
+    "start": 1417.0,
+    "frame": "slide_0263.png",
+    "text": "Leader Leader Leader\nG©oe@oCoo0\nDifferent leader > different group. That check is nearly instant.",
+    "title": "Leader Leader Leader"
+  },
+  {
+    "start": 1424.0,
+    "frame": "slide_0264.png",
+    "text": "Path Compression\nRoot\nTracing path to the root: 3 7271-70...",
+    "title": "Path Compression"
+  },
+  {
+    "start": 1429.0,
+    "frame": "slide_0265.png",
+    "text": "Path Compression\nPath compresses — all nodes now point directly to the root.",
+    "title": "Path Compression"
+  },
+  {
+    "start": 1431.0,
+    "frame": "slide_0266.png",
+    "text": "Path Compression\nVly\n~N a\n_®@ Roe\noS -\n“PN “PN\nIt literally gets more efficient as it's used.",
+    "title": "Path Compression"
+  },
+  {
+    "start": 1436.0,
+    "frame": "slide_0267.png",
+    "text": "Network Connectivity\nIs Computer Aon the same network as Computer B?\nQO ©\nComputer A Router Computer B",
+    "title": "Network Connectivity"
+  },
+  {
+    "start": 1442.0,
+    "frame": "slide_0268.png",
+    "text": "Image Processing\nDo these pixels belong to the same object?\nObject 1 Object 2",
+    "title": "Image Processing"
+  },
+  {
+    "start": 1446.0,
+    "frame": "slide_0269.png",
+    "text": "Game World Design\nAre these two () reachable from each other?\nRR\nNS\nForest \\.\nTown ‘ Dungeon",
+    "title": "Game World Design"
+  },
+  {
+    "start": 1448.0,
+    "frame": "slide_0270.png",
+    "text": "Game World Design\nAre these two () reachable from each other?\nRR\nNS\nNot Reachable x D\nTown \\ Dungeon",
+    "title": "Game World Design"
+  },
+  {
+    "start": 1452.0,
+    "frame": "slide_0271.png",
+    "text": "These are the problems\nDisjoint Sets were made for.\n> Network Connectivity\n> Image Processing\n>» Game World Design",
+    "title": "These are the problems"
+  },
+  {
+    "start": 1457.0,
+    "frame": "slide_0272.png",
+    "text": "It's a specialist data structure.\nFor one specific class of problem:\nTracking connected groups that keep evolving.\nO@O®@ OO©@",
+    "title": "It's a specialist data structure."
+  },
+  {
+    "start": 1463.0,
+    "frame": "slide_0273.png",
+    "text": "The Weirdest Data Structure\nI've Ever Learned",
+    "title": "The Weirdest Data Structure"
+  },
+  {
+    "start": 1465.0,
+    "frame": "slide_0274.png",
+    "text": "The Weirdest Data Structure\nI've Ever Learned\nOnce you get it — you'll see it everywhere.",
+    "title": "The Weirdest Data Structure"
+  },
+  {
+    "start": 1471.0,
+    "frame": "slide_0275.png",
+    "text": "What if a data structure...",
+    "title": "What if a data structure..."
+  },
+  {
+    "start": 1474.0,
+    "frame": "slide_0276.png",
+    "text": "What if a data structure...\noe ro sn >\nO(k) lookup Bit array only",
+    "title": "What if a data structure..."
+  },
+  {
+    "start": 1482.0,
+    "frame": "slide_0277.png",
+    "text": "Here's How the Lie Works",
+    "title": "Here's How the Lie Works"
+  },
+  {
+    "start": 1496.0,
+    "frame": "slide_0280.png",
+    "text": "Here's How the Lie Works\nSearch(item)?\nGuaranteed.\n100% not in the set.",
+    "title": "Here's How the Lie Works"
+  },
+  {
+    "start": 1501.0,
+    "frame": "slide_0281.png",
+    "text": "Here's How the Lie Works\nSearch(item)?\nGuaranteed. Probably right.\n100% not in the set. Small chance of a mistake.",
+    "title": "Here's How the Lie Works"
+  },
+  {
+    "start": 1506.0,
+    "frame": "slide_0282.png",
+    "text": "False Positives",
+    "title": "False Positives"
+  },
+  {
+    "start": 1510.0,
+    "frame": "slide_0283.png",
+    "text": "False Positives\nThe filter says YES\nbut the item is NOT actually there.",
+    "title": "False Positives"
+  },
+  {
+    "start": 1512.0,
+    "frame": "slide_0284.png",
+    "text": "False Positives\nThe filter says YES\na the item is NOT overs there.\nitem: \"cat \"cat\" |——>] Bloom Filter |—> [YES x] x",
+    "title": "False Positives"
+  },
+  {
+    "start": 1516.0,
+    "frame": "slide_0285.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 1518.0,
+    "frame": "slide_0286.png",
+    "text": "Mistakes in Only One Direction",
+    "title": "Mistakes in Only One Direction"
+  },
+  {
+    "start": 1520.0,
+    "frame": "slide_0287.png",
+    "text": "Mistakes in Only One Direction\nIt will NEVER say NO\nto something that IS actually there.",
+    "title": "Mistakes in Only One Direction"
+  },
+  {
+    "start": 1526.0,
+    "frame": "slide_0288.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 1534.0,
+    "frame": "slide_0289.png",
+    "text": "Password Checker",
+    "title": "Password Checker"
+  },
+  {
+    "start": 1537.0,
+    "frame": "slide_0290.png",
+    "text": "Password Checker\nBillions of leaked passwords exist.\nStoring them all = gigabytes of data.",
+    "title": "Password Checker"
+  },
+  {
+    "start": 1540.0,
+    "frame": "slide_0291.png",
+    "text": "Password Checker\n~10 GB",
+    "title": "Password Checker"
+  },
+  {
+    "start": 1542.0,
+    "frame": "slide_0292.png",
+    "text": "Password Checker\n~10 GB\nWith Bloom Filter [jj ~4 me",
+    "title": "Password Checker"
+  },
+  {
+    "start": 1545.0,
+    "frame": "slide_0293.png",
+    "text": "Password Checker\n~10 GB\nWith Bloom Filter [jj ~4 ms\nBloom filter compresses billions of passwords into megabytes.",
+    "title": "Password Checker"
+  },
+  {
+    "start": 1548.0,
+    "frame": "slide_0294.png",
+    "text": "Chrome: Safe Browsing\n\"http://sketchy-site.xyz\"",
+    "title": "Chrome: Safe Browsing"
+  },
+  {
+    "start": 1550.0,
+    "frame": "slide_0295.png",
+    "text": "Chrome: Safe Browsing\n\"http: //sketchy- site.xyz\"\nBloom Filter bit array\nCT ee\nSo",
+    "title": "Chrome: Safe Browsing"
+  },
+  {
+    "start": 1556.0,
+    "frame": "slide_0296.png",
+    "text": "Bloom Filters in the Wild\nChrome\nSafe Browsing\nEthereum\nNodes\nSpell Username\nCheckers Availability",
+    "title": "Bloom Filters in the Wild"
+  },
+  {
+    "start": 1566.0,
+    "frame": "slide_0298.png",
+    "text": "Username Availability\n\"cooluser99\"",
+    "title": "Username Availability"
+  },
+  {
+    "start": 1568.0,
+    "frame": "slide_0299.png",
+    "text": "Username Availability\n\"cooluser99\"\nStep 1: Ask the Bloom filter.",
+    "title": "Username Availability"
+  },
+  {
+    "start": 1572.0,
+    "frame": "slide_0300.png",
+    "text": "Username Availability\n\"cooluser99\"\nStep 1: Ask the Bloom filter.\n— Probably taken.\nStep 2: Only then hit the database.\nDatabase read skipped entirely for obvious misses.",
+    "title": "Username Availability"
+  },
+  {
+    "start": 1576.0,
+    "frame": "slide_0301.png",
+    "text": "Smart about what to store.\nSmart about what to throw away.",
+    "title": "Smart about what to store."
+  },
+  {
+    "start": 1578.0,
+    "frame": "slide_0302.png",
+    "text": "Smart about what to store.\nSmart about what to throw away.\nThe last data structure on this list",
+    "title": "Smart about what to store."
+  },
+  {
+    "start": 1586.0,
+    "frame": "slide_0304.png",
+    "text": "LRU\nLeast Recently Used",
+    "title": "LRU"
+  },
+  {
+    "start": 1588.0,
+    "frame": "slide_0305.png",
+    "text": "LRU\nLeast Recently Used\nHow your computer decides what to forget.",
+    "title": "LRU"
+  },
+  {
+    "start": 1601.0,
+    "frame": "slide_0306.png",
+    "text": "Least recently used — evicted!\ntt\nCache (4 slots)",
+    "title": "Least recently used — evicted!"
+  },
+  {
+    "start": 1604.0,
+    "frame": "slide_0307.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 1608.0,
+    "frame": "slide_0308.png",
+    "text": "CPU Memory\nCache\nProcessor pulls: instructions, variables, results...",
+    "title": "CPU Memory"
+  },
+  {
+    "start": 1612.0,
+    "frame": "slide_0309.png",
+    "text": "CPU Memory\ninst_A\nvar_X\nresult\nFrequently accessed data stays right there — instant.",
+    "title": "CPU Memory"
+  },
+  {
+    "start": 1617.0,
+    "frame": "slide_0310.png",
+    "text": "",
+    "title": ""
+  },
+  {
+    "start": 1620.0,
+    "frame": "slide_0311.png",
+    "text": "Space is Limited",
+    "title": "Space is Limited"
+  },
+  {
+    "start": 1623.0,
+    "frame": "slide_0312.png",
+    "text": "Space is Limited\nL* jhe Ile Le Je)",
+    "title": "Space is Limited"
+  },
+  {
+    "start": 1626.0,
+    "frame": "slide_0313.png",
+    "text": "Space is Limited",
+    "title": "Space is Limited"
+  },
+  {
+    "start": 1634.0,
+    "frame": "slide_0314.png",
+    "text": "Least Recently Used — Evict First",
+    "title": "Least Recently Used — Evict First"
+  },
+  {
+    "start": 1636.0,
+    "frame": "slide_0315.png",
+    "text": "Least Recently Used — Evict First\nA B Cc D 1B)\n5 min ago 1 age",
+    "title": "Least Recently Used — Evict First"
+  },
+  {
+    "start": 1641.0,
+    "frame": "slide_0316.png",
+    "text": "Least Recently Used — Evict First\n5 min ago 1 min ago 3 min ago 8 min ago",
+    "title": "Least Recently Used — Evict First"
+  },
+  {
+    "start": 1646.0,
+    "frame": "slide_0317.png",
+    "text": "NS\nSS",
+    "title": ""
+  },
+  {
+    "start": 1651.0,
+    "frame": "slide_0318.png",
+    "text": "Hash Map + Doubly Linked List\nHash Map Doubly Linked List\n[A |p noded MRU LRU\n[ B |-+f noaed A |-| B |=| C |=] D\n(}-Eea\noe\nO(1) lookup",
+    "title": "Hash Map + Doubly Linked List"
+  },
+  {
+    "start": 1655.0,
+    "frame": "slide_0319.png",
+    "text": "Access — Move to Front\nMost Recent Least Recent\n[« J=L2 Jee Jal |",
+    "title": "Access — Move to Front"
+  },
+  {
+    "start": 1659.0,
+    "frame": "slide_0320.png",
+    "text": "Access — Move to Front\nMost Recent Least Recent\nLe Ja——>([ 4 J=L® JL J\nC moved to front",
+    "title": "Access — Move to Front"
+  },
+  {
+    "start": 1662.0,
+    "frame": "slide_0321.png",
+    "text": "Out of Space — Chop the Back\nFULL\nPa -(2 J-Ce +2)",
+    "title": "Out of Space — Chop the Back"
+  },
+  {
+    "start": 1666.0,
+    "frame": "slide_0322.png",
+    "text": "Out of Space — Chop the Back\nFULL\nLe Jaa el Lc J\nEis in. D is gone.",
+    "title": "Out of Space — Chop the Back"
+  },
+  {
+    "start": 1670.0,
+    "frame": "slide_0323.png",
+    "text": "O(1) Get & Put\nget( key ) — put( key, val )\nOd) O(1)",
+    "title": "O(1) Get & Put"
+  },
+  {
+    "start": 1678.0,
+    "frame": "slide_0325.png",
+    "text": "LRU Is Everywhere",
+    "title": "LRU Is Everywhere"
+  },
+  {
+    "start": 1680.0,
+    "frame": "slide_0326.png",
+    "text": "LRU Is Everywhere\n[ Browsers | [ Databases | perating Systems",
+    "title": "LRU Is Everywhere"
+  },
+  {
+    "start": 1683.0,
+    "frame": "slide_0327.png",
+    "text": "LRU Is Everywhere\n[ Browsers | [ Databases | perating Systenis\nAny system that needs to remember things —\nbut can't afford to remember everything —\nalmost always relies on LRU.",
+    "title": "LRU Is Everywhere"
+  },
+  {
+    "start": 1688.0,
+    "frame": "slide_0328.png",
+    "text": "Memory Is Limited",
+    "title": "Memory Is Limited"
+  },
+  {
+    "start": 1692.0,
+    "frame": "slide_0329.png",
+    "text": "Memory Is Limited\nRAM é£(limited slots)\nYour computer is constantly making decisions...",
+    "title": "Memory Is Limited"
+  },
+  {
+    "start": 1694.0,
+    "frame": "slide_0330.png",
+    "text": "Memory Is Limited\nRAM (limited slots)\nYour computer is constantly making decisions...\nquietly letting go of what you haven't used.",
+    "title": "Memory Is Limited"
+  },
+  {
+    "start": 1696.0,
+    "frame": "slide_0331.png",
+    "text": "Memory Is Limited\nThat's nota Haw.",
+    "title": "Memory Is Limited"
+  },
+  {
+    "start": 1698.0,
+    "frame": "slide_0332.png",
+    "text": "Memory Is Limited\nThat's Hts Waw.\n| That's exactly what keeps it fast.",
+    "title": "Memory Is Limited"
+  }
+]

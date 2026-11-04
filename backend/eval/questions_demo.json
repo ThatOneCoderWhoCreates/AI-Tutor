@@ -1,0 +1,16 @@
+[
+  {"question": "What does training a model mean?", "lecture_id": "demo", "start": 0, "end": 75, "concept": "loss minimization"},
+  {"question": "How can we picture the loss as a landscape?", "lecture_id": "demo", "start": 75, "end": 160, "concept": "loss minimization"},
+  {"question": "Which direction does gradient descent step in?", "lecture_id": "demo", "start": 160, "end": 245, "concept": "gradient descent"},
+  {"question": "Why do we subtract the gradient in the update rule?", "lecture_id": "demo", "start": 245, "end": 330, "concept": "gradient descent"},
+  {"question": "Why is batch gradient descent slow on big datasets?", "lecture_id": "demo", "start": 245, "end": 330, "concept": "gradient descent"},
+  {"question": "What is SGD and why is it cheaper?", "lecture_id": "demo", "start": 330, "end": 410, "concept": "stochastic gradient descent"},
+  {"question": "What happens when the step size is too big?", "lecture_id": "demo", "start": 410, "end": 500, "concept": "learning rate"},
+  {"question": "What is a learning rate schedule?", "lecture_id": "demo", "start": 410, "end": 500, "concept": "learning rate"},
+  {"question": "How can I tell that my model is memorizing the training data?", "lecture_id": "demo", "start": 500, "end": 590, "concept": "overfitting"},
+  {"question": "What is underfitting?", "lecture_id": "demo", "start": 590, "end": 670, "concept": "overfitting"},
+  {"question": "What does the lambda hyperparameter control?", "lecture_id": "demo", "start": 670, "end": 760, "concept": "regularization"},
+  {"question": "When should training be stopped early?", "lecture_id": "demo", "start": 760, "end": 845, "concept": "regularization"},
+  {"question": "Who invented the transformer architecture?", "expect": "not_covered"},
+  {"question": "How do I set up a PostgreSQL database?", "expect": "not_covered"}
+]

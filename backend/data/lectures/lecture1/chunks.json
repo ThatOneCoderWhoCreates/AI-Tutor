@@ -1,0 +1,641 @@
+[
+  {
+    "id": "lecture1_001",
+    "lecture_id": "lecture1",
+    "text": "This video is sponsored by Innsforge, the back end built for AI coding agents. Arrays. At a low level, much of what a computer does comes down to storing data in memory, laid out in a precise, ordered way. One of the simplest and most powerful ways to organize that data is something called an array.",
+    "slide_text": "This video is sponsored by InsForge\nThis video is sponsored by InsForge — the backend built for AI coding agents",
+    "start": 0.0,
+    "end": 21.0,
+    "concept": "arrays"
+  },
+  {
+    "id": "lecture1_002",
+    "lecture_id": "lecture1",
+    "text": "And from this simple idea, almost everything else in programming begins. An array is a fixed size, ordered collection of items where every item sits at a numbered position. Think of seats in a movie theater. Seat 1, seat 2, seat 3, and so on. Each seat has a precise label. If someone asks for seat 47, you don't check every seat before it.",
+    "slide_text": "ARRAY",
+    "start": 22.0,
+    "end": 43.0,
+    "concept": "arrays"
+  },
+  {
+    "id": "lecture1_003",
+    "lecture_id": "lecture1",
+    "text": "You go straight to seat 47, and you're there. That's the essence of an array. Every element has a fixed position, and that position lets you access it instantly. So the way this works is that every item in an array is stored right next to each other in memory. And because of that neat, predictable layout, the computer always knows exactly where any item lives.",
+    "slide_text": "ARRAY\nvstiv.st mx pual eel\nSeat 47\n0x10C\nOx110",
+    "start": 43.0,
+    "end": 65.0,
+    "concept": "arrays"
+  },
+  {
+    "id": "lecture1_004",
+    "lecture_id": "lecture1",
+    "text": "Finding item number 40,000 takes the exact same time as finding item number 4 and it's 0 of 1. That's remarkable. But arrays come with an important constraint. Their size is fixed at the moment of creation, and this size does not change. Expanding an array is not a simple extension.",
+    "slide_text": "Time\nInput Size (n)\n0 Up 203 4, 5\nFixed Siz",
+    "start": 65.0,
+    "end": 85.0,
+    "concept": "arrays"
+  },
+  {
+    "id": "lecture1_005",
+    "lecture_id": "lecture1",
+    "text": "It requires allocating a completely new block of memory and copying every existing element into it. Insertion into an array introduces a similar limitation. Placing an element in the middle is not just a local operation. It requires shifting every subsequent element one position forward to make space. As a result, while accessing elements is immediate and efficient,",
+    "slide_text": "iT\nFixed Size\nNew Block o\nAllocated\n_o° ERB\nSa\n- ~ New Block of Memory\nFixed Size",
+    "start": 85.0,
+    "end": 108.0,
+    "concept": "arrays"
+  },
+  {
+    "id": "lecture1_006",
+    "lecture_id": "lecture1",
+    "text": "modifying the structure can become costly, especially as the array grows larger. This is the trade-off that sits quietly beneath the simplicity of arrays. So, arrays are blazing fast for reading, but slow and rigid when the data keeps changing. Still, arrays appear everywhere. They underlie pixels in an image, frames in a video stream, situations where position is fixed and known in advance.",
+    "slide_text": "Fast Access\nCostly Modification\nCost\nRIGID\nSlow and Rigid when the data keeps changing.",
+    "start": 108.0,
+    "end": 134.0,
+    "concept": "arrays"
+  },
+  {
+    "id": "lecture1_007",
+    "lecture_id": "lecture1",
+    "text": "But the moment you need something more flexible, that's where the next data structure comes in, and it solves the exact problem arrays can't. Linked lists. Imagine a treasure hunt where each clue only tells you where the next clue is. You don't know where clue number 4 is until you've found clue number 3. You follow the chain one step at a time, never skipping ahead.",
+    "slide_text": "flexible data\nstructure\nit solves the exact\nproblem arrays can't",
+    "start": 135.0,
+    "end": 158.0,
+    "concept": "linked lists"
+  },
+  {
+    "id": "lecture1_008",
+    "lecture_id": "lecture1",
+    "text": "That's a linked list. And it was invented specifically to fix the rigidity that arrays suffer from. A linked list is a chain of nodes where each node stores its value and a pointer to the next node. The nodes don't sit next to each other in memory. They're scattered everywhere, but they stay connected through those pointers, like clues in a chain. Here's where it gets interesting. Remember how inserting into an array meant shifting thousands of items?",
+    "slide_text": "Linked List",
+    "start": 158.0,
+    "end": 185.0,
+    "concept": "linked lists"
+  },
+  {
+    "id": "lecture1_009",
+    "lecture_id": "lecture1",
+    "text": "With a linked list, you insert by updating two pointers. That's it. Two pointer changes, and the new item is in. Doesn't matter if there are 10 nodes or 10 million. Inserting is instant. Removal follows naturally from the structure itself. Each element exists only through its connection to the next, so removing one does not require shifting anything around.",
+    "slide_text": "ly\nInserting into an array meant shifting\nthousands of items?\nHEAD\n12 e7; > 37 e7;, > 4 e7 > “+91 er ~»+455 e@——> NULL\nOx3A1F 0x7C82 0x1D40 OxBFQ3 Ox52EA\nInserting? Jus”",
+    "start": 185.0,
+    "end": 207.0,
+    "concept": "linked lists"
+  },
+  {
+    "id": "lecture1_010",
+    "lecture_id": "lecture1",
+    "text": "Instead, the link is simply redirected, bypassing the element entirely. The chain closes in on itself, as if that node was never there. A small, local adjustment, with no effect on the rest of the structure. But, and this is the part that trips people up, what you gain in flexibility, you give up in speed of access.",
+    "slide_text": "HEAD\nNULL\n@x3A1F\n0x7C82\nOxBFO3\n@x52EA\nRemoving an item? Same idea.\nUpdate a pointer — the chain reconnects.\nHEAD\nmc hsco\n0x3A1F 0x7C82 OxBFO3 @x52EA\nThe chain reconnects around it.\nThe item is simply... gone.\nHEAD\nmcs\n@x3A1F 0x7C82 OxBFO3 @x52EA\nThe chain reconnects around it.\nThe item is simply... gone.\nA small, local adjustment,\nwith no effect on the rest of the structure",
+    "start": 207.0,
+    "end": 227.0,
+    "concept": "linked lists"
+  },
+  {
+    "id": "lecture1_011",
+    "lecture_id": "lecture1",
+    "text": "To find a specific item in a linked list, you always start at the beginning and follow the chain. Access is no longer direct. There is no index to jump to, no fixed position to compute. Instead, each element must be reached by following the chain from the beginning, one step at a time. Finding an element near the end of a long list means traversing everything that comes before it.",
+    "slide_text": "Arrays\nO(1) random access\nCachesriendy VS\nO(n) insert / delete\nFixed size (static)\nLinked Lists\nO(1) insert / delete\nDynamic size\nO(n) random access\nExtra mem ory (pointers)\nTwo different tools for two different jobs.\nHEAD\np22 Pee fet Pett [ets | oe\nThe pointer in each node points to the NEXT node.\nHEAD\neS pee eg ci i ee\nOx3A1F\nIn real memory — nodes live at random addresses.\nThat's fine. The pointers know where to look.\nHEAD\n12 | 37/ ae 4 | Sil came 5S) of ent\nOx3A1F 0x7C82 @x1040 OxBFO3 @x52EA\nTo find a specific node — start at HEAD.\nFollow the chain, one step at a time.",
+    "start": 227.0,
+    "end": 252.0,
+    "concept": "linked lists"
+  },
+  {
+    "id": "lecture1_012",
+    "lecture_id": "lecture1",
+    "text": "A list of 10,000 nodes may require 10,000 steps. There are no shortcuts. Only a path, defined by the links themselves. So, arrays are fast to read, slow to change, linked lists are slow to read, fast to change. Two different data structures for two different jobs. Stacks. You know that satisfying feeling when you hit CTRL plus C and your last mistake just disappears?",
+    "slide_text": "HEAD\n12 4] 37 4 chk 55 NULL\n@x3A1F 0x7C82 @x1040 OxBFO3 0x52EA\nBut insertion is a completely different stor.\nHEAD\n12 37 91 NULL\n@x3A1F @x7C82 @x1D40 @xBFO3 @x52EA\nArrays — fast to read, ~",
+    "start": 252.0,
+    "end": 280.0,
+    "concept": "stacks"
+  },
+  {
+    "id": "lecture1_013",
+    "lecture_id": "lecture1",
+    "text": "That's a stack. Silently running every undo feature in every app you've ever used. A stack is a data structure where the last item in is always the first item out. Picture a stack of plates. You add plates to the top, you take plates from the top, nobody pulls from the bottom. The last plate placed is the first one grabbed. Stack has two main operations, that's all.",
+    "slide_text": "Undo\nFeature",
+    "start": 280.0,
+    "end": 302.0,
+    "concept": "stacks"
+  },
+  {
+    "id": "lecture1_014",
+    "lecture_id": "lecture1",
+    "text": "Push and pop, push adds to the top, pop removes from the top. You can't touch the middle, you can't reach the bottom, top only, every time. And this limitation is actually brilliant. Because of it, both push and pop are instant. Stacks are everywhere, quietly shaping how we interact with the world. Your browser's back button is a perfect example. Each page you visit gets placed on top.",
+    "slide_text": "TOP ONLY",
+    "start": 302.0,
+    "end": 324.0,
+    "concept": "stacks"
+  },
+  {
+    "id": "lecture1_015",
+    "lecture_id": "lecture1",
+    "text": "And when you go back, the most recent page peels away first, revealing what came before. The call stack running your code works the same way. Functions layer on top of each other. And the most recent call is always the one to finish next. Even undo in a document editor is just a stack at work. Each step removed in reverse order, one by one. A stack isn't just a data structure, it's the rhythm of last in, first out.",
+    "slide_text": "eoeo ‘S) { pagel.com\neee ‘S) { page2.com\nThe Call Stack\nfunctions layer on top of each other\nmost recent — finishes first\ndraw_pixel() || { top\nrender()\nmain()",
+    "start": 324.0,
+    "end": 351.0,
+    "concept": "stacks"
+  },
+  {
+    "id": "lecture1_016",
+    "lecture_id": "lecture1",
+    "text": "Appearing everywhere once you start looking. But here's the thing. A stack only cares about what happened most recently. What if you need the opposite? What if the oldest thing waiting is the one that should go first? For that, you flip the logic entirely. Cues. A stack serves the newest item first. A queue does the exact opposite. It serves the oldest. A queue is first in, first out. Simple as a line at a coffee shop.",
+    "slide_text": "Last In, First Out\nthe rhythm of a stack — everywhere, once you see it\nWhat if you need the opposite?\nFor that, you flip the logic entirely.\nsTack\nQUEUE\nLe\nout\nFirst In, F”\nSTACK\nserves the newest first",
+    "start": 351.0,
+    "end": 381.0,
+    "concept": "queues"
+  },
+  {
+    "id": "lecture1_017",
+    "lecture_id": "lecture1",
+    "text": "The person who arrived first gets served first. No cutting, no skipping. You join at the back, you wait your turn. Cue has two main operations, such as in queue and to queue. In queue adds to the back. To queue removes from the front. Just like a stack, you don't touch the middle. And just like a stack, both operations are instant. But the behavior is completely different.",
+    "slide_text": "First In, First Out\nFirst In, First Out\nSimple as a line at a coffee shop.\nTwo Operations\nEnqueue Dequeue\nadds to the back removes from the front\nTwo Operations\nEnqueue Dequeue\nadds to the back removes from the front\nBoth operations are O(1)\nStack vs Queue",
+    "start": 381.0,
+    "end": 403.0,
+    "concept": "queues"
+  },
+  {
+    "id": "lecture1_018",
+    "lecture_id": "lecture1",
+    "text": "A stack is like a to-do list where you always work on the newest task. A queue is like a to-do list where you always finish what you started first. When you hit print in an office with a shared printer, your document joins a queue. The printer works through them in order. When a web server gets slammed with thousands of requests at once, it lines them up and processes them one by one.",
+    "slide_text": "Stack vs Queue\nSTACK\nwork here\nNewest\nMiddle\nOldest\nStack vs Queue\nSTACK, ok new QUEUE\nNewest\n| Middle | aire Oldest | Middte | Newest\nOldest\nalways works on\nthe newest task\nA shared printer.\nqueue\nprinter\nA web server, slammed.\nthousands of requests\nserver",
+    "start": 403.0,
+    "end": 424.0,
+    "concept": "queues"
+  },
+  {
+    "id": "lecture1_019",
+    "lecture_id": "lecture1",
+    "text": "Keyboard inputs, game loading screens, customer support tickets. All are the example use cases of queues. Stacks and queues each limit you to a single end. One serves the most recent, the other serves the earliest. But real-world data isn't always so predictable. Sometimes you need to reach both ends, grabbing the newest or the oldest depending on the situation.",
+    "slide_text": "A web server, slammed.\nlined up, processed one by one.\nserver\nAnd everywhere else.\nQ0G000 —\nQOOLL0 = )\nOOOO ~—_\nkeyboard inputs game loading support tickets\nAll queues.\nboth s",
+    "start": 424.0,
+    "end": 448.0,
+    "concept": "queues"
+  },
+  {
+    "id": "lecture1_020",
+    "lecture_id": "lecture1",
+    "text": "Meeting that challenge requires a structure that can flex at both sides, introducing a layer of versatility that makes the behavior of your data far more dynamic. That's where the DQ comes in. DQ. It is a double-ended queue data structure. In the DQ, you can add or remove from the front, as well as add or remove from the back. Both ends are live all the time.",
+    "slide_text": "Deque\nDouble-Ended Queue\nDeque\nDouble-Ended Queue\na layer of versatility\nDeque\nDouble-Ended Queue\na layer of versatility\nDynamic at both ends.",
+    "start": 448.0,
+    "end": 472.0,
+    "concept": "deque"
+  },
+  {
+    "id": "lecture1_021",
+    "lecture_id": "lecture1",
+    "text": "Think of a train where passengers can board and exit from either side. More flexible than a regular queue, more flexible than a stack. In fact, a DQ is both at once. If you only use the back end, it behaves exactly like a stack. If you add to the back and remove from the front, it behaves exactly like a queue. It's the shape-shifting version of both. Sliding windows and data processing illustrate a scenario where data flows continuously.",
+    "slide_text": "Deque\nDouble-Ended Queue\nAdd / Remove Add / Remove\nBoth ends are live — all the time.\nDeque\nDouble-Ended Queue\nLike a train — board or exit from either end.\nDeque\nDouble-Ended Queue\nLike a train — board or exit from either end.\nMore flexible than a Queue. More flexible than a Stack.\nDeque\nDouble-Ended Queue\nA Deque is both at once.\n: : 2 | BACK\nUse only the BACK ~— behaves like a Stack",
+    "start": 472.0,
+    "end": 499.0,
+    "concept": "deque"
+  },
+  {
+    "id": "lecture1_022",
+    "lecture_id": "lecture1",
+    "text": "New values are added at one end, while old ones are removed from the other. This is the domain of a DQ, a double-ended queue. It powers browser history that allows both back and forward navigation, undo and redo systems that move in either direction, and scheduling systems that handle priority tasks at the front, while still accepting regular additions at the back.",
+    "slide_text": "Data Stream —\nEE\nWindow (size 3)\nData Stream —\nWindow (size 3)\nUndo and redo.\nme O-@OL{O-O-© =",
+    "start": 499.0,
+    "end": 522.0,
+    "concept": "deque"
+  },
+  {
+    "id": "lecture1_023",
+    "lecture_id": "lecture1",
+    "text": "DQ is a specialist data structure. Most problems don't need them, but when a problem does need both ends, nothing else fits. Hash maps. You search mom in your phone contacts. Her number appears instantly. You didn't scroll, you didn't wait, you just got the answer. That's a hash map, and understanding how it actually works will change the way you think about software.",
+    "slide_text": "Scheduling.\nregular\nDeque.\nA specialist.\nMost problems don't need one.\nMom\nYou didn't scroll.\nMomhxxxxxxxx!",
+    "start": 522.0,
+    "end": 544.0,
+    "concept": "scheduling"
+  },
+  {
+    "id": "lecture1_024",
+    "lecture_id": "lecture1",
+    "text": "A hash map stores data as key value pairs, and retrieves any value instantly using its key. The key is mom. The value is her phone number. Give the map the key. Get the value back. Every time. Instantly. Here's the clever part. When you store something in a hash map, it runs the key through a hash function.",
+    "slide_text": "Key - Value\nKEY VALUE\nKey - Value\nKEY VALUE\nGive the key — get the value. Every time. Instantly.\nThe Hash Function",
+    "start": 544.0,
+    "end": 564.0,
+    "concept": "key-value"
+  },
+  {
+    "id": "lecture1_025",
+    "lecture_id": "lecture1",
+    "text": "A mathematical formula that converts any key into a number. That number points to a specific slot in memory. So mom might become slot 4827. Her number gets stored there. Later, when you search for mom, the same formula runs again, gets the same number, and goes directly to slot 4827.",
+    "slide_text": "The Hash Function\nA mathematical formula that converts any key into anumber.\nHasn Function\nrmula that converts any key into anumber.\nash( key | | 4827 |\nfunction slot number\nMemory Slots\n\"Mom\" runs through the hash function —> slot 4,827\nMemory Slots\nViom\" runs through the hash function — slot 4,827",
+    "start": 564.0,
+    "end": 584.0,
+    "concept": "hash function"
+  },
+  {
+    "id": "lecture1_026",
+    "lecture_id": "lecture1",
+    "text": "No searching through every contact. Direct jump. This is what makes hash maps almost magical. It doesn't matter if you have 10 contacts or 10 million. Finding one is always instant. Without a hash map, finding something by name in a large list means scanning every item one by one until you hit a match. That gets slower and slower as the list grows.",
+    "slide_text": "Memory Slots\n\"Mom\" runs through the hash function — slot 4,827\nLoL ee\nSearch\"Mom\" — same formula — same slot > direct jump.\nWhy It Feels Magical\nIt doesn't matter if you have 10 contacts or 10,000,000.\nWithout a Hash Map\nScan every item or ~ Alice\nBob\nCarol\n‘Ll you find a match.\nDave\nEve\nFrank\nGrace\nHank\nTric",
+    "start": 584.0,
+    "end": 606.0,
+    "concept": "memory slots"
+  },
+  {
+    "id": "lecture1_027",
+    "lecture_id": "lecture1",
+    "text": "With a hash map, the size of the collection basically stops mattering. Python dictionaries are hash maps, JavaScript objects are also hash maps. All the modern database indexes are built on hash map principles. It's arguably the most important data structure in everyday programming. But, there's always a but. Hash maps use more memory than plain lists. And very occasionally, two different keys produce the same slot number.",
+    "slide_text": "With a Hash Map\nHash Maps in the Real World\nPython JavaScript Database\ndict object index\nArguably the most important data structure\nin everyday programming.\nBut —\nBut —\nMore Memory\nHash maps use more memory than plain lists.",
+    "start": 606.0,
+    "end": 632.0,
+    "concept": "hash map"
+  },
+  {
+    "id": "lecture1_028",
+    "lecture_id": "lecture1",
+    "text": "That's called a collision, and hash maps can also handle it. They're not flawless. They're just incredibly fast. Now, suppose the value no longer matters. You only want to check whether something exists or not. That's when the extra information fades away. Leaving just the keys. What remains is a simpler idea. A data structure built purely for checking membership. Hash sets. A hash set is a hash map with no values.",
+    "slide_text": "Collision\nTwo different keys produce the same slot number.\nCollision\nTwo different keys produce the same slot number.\nTae\nace |\nCollision\nTwo different keys produce the same slot number.\ncar,\nraces |\nA data structure built purely for\nchecking membership.\nA data structure built purely for\nchecking membership.\nCaer | [7 Yes",
+    "start": 632.0,
+    "end": 658.0,
+    "concept": "collision"
+  },
+  {
+    "id": "lecture1_029",
+    "lecture_id": "lecture1",
+    "text": "Just keys. Its entire purpose is to answer one thing as fast as possible. Is this item in the collection or not? Think of this scenario for better understanding. A nightclub guest list. The answer doesn't care about your table number or your reservation details. He only needs to know. Are you on the list or not? If yes, come in. If you are not in the list, step aside.",
+    "slide_text": "Hash Map vs Hash Set\nKey Value\nalice admin\nbob user\ncarol mod\nHash Map stores key — value pairs\nHash Map vs Hash Set\nKey\nalice\nbob\nHash Set\ncarol\nHash Set — keys only. No values.\nThe Nightclub Analogy\nThe Nightclub Analogy\nGUEST LIST\nAlice\nBob\nCharlie\nDiana\nEve",
+    "start": 658.0,
+    "end": 682.0,
+    "concept": "hash set"
+  },
+  {
+    "id": "lecture1_030",
+    "lecture_id": "lecture1",
+    "text": "That is the essence of hash set data structure. Checking membership in a hash set is instant. Adding and removing is also instant. And when the question is whether there are any duplicates in the list, the answer is no, because hash set design is such a way that every item appears exactly once. Without a hash set, checking if something exists in a large list means scanning through every item.",
+    "slide_text": "Weve Analogy\nya Are you on the list?\nGUEST LIST\nAlice YES — Come in!\nBob\nCharlie\nDiana\nEve\nNO — Step aside.\nThat is the essence of a Hash Set.\nHash Set Operations\nontains( x ) add(x ) remove( x )\n1eck membership Insert an element Delete an elemer\nOd) Instant Od) Instant Od) Instant\nNo Duplicates — By Design\nSOOO\nNo Duplicates — By Design\nfm |] dled]\nAlready exists — ignored!\nEvery item appears exactly once.",
+    "start": 682.0,
+    "end": 704.0,
+    "concept": "hash set"
+  },
+  {
+    "id": "lecture1_031",
+    "lecture_id": "lecture1",
+    "text": "But if we use a hash set, the answer is instant every time, regardless of how large the collection grows. Tracking which users have seen a notification, filtering duplicates from a data set, checking if a username is already taken. Again and again, the same idea appears. Not storing more, just knowing whether it's there.",
+    "slide_text": "Linear Scan .vs Hash Set\nLinear Scan\nWithout Hash Set\nItem 1\nItem 2\nItem 3\nItem 4\nItem N\nScan every item...\nO(N) — Slow\nvs Hash Set\nWith Hash Set\nHast Sey\nSS oa\ne Alice\n— eBob —\ne Charlie\n7 eDiana ~\\\ne Tracking which users have seen a notification\ne Tracking which users have seen a notification\ne Filtering duplicates from a Dataset\ne Checking if a username is already taken\ne Tracking which users have seen a notification\ne Filtering duplicates from a Dataset\ne Checking if a username is already taken\nAgain and again, the same idea appears —",
+    "start": 704.0,
+    "end": 725.0,
+    "concept": "hash set"
+  },
+  {
+    "id": "lecture1_032",
+    "lecture_id": "lecture1",
+    "text": "These are all hash sets. It's smaller and simpler than a hash map. But for this one job, it's perfect. Hey, up to this point, everything has been flat. A direct mapping from key to result. But not all data fits into that shape. Some of it naturally forms layers, branching into deeper structure. And to represent that, you need a different kind of data structure like trees. Trees. Open your file explorer at the very top, a single starting point.",
+    "slide_text": "Hash Set\nHash Set\nSmaller and simpler than a hash map —\nbut for this one job, it's perfect.",
+    "start": 725.0,
+    "end": 754.0,
+    "concept": "tree"
+  },
+  {
+    "id": "lecture1_033",
+    "lecture_id": "lecture1",
+    "text": "From there, it splits into folders. Each of those splits again into more folders and eventually into files. A structure that keeps branching outward step by step. Every path flows in one direction, from the root down to the leaves. A quiet hierarchy organizing everything you store.",
+    "slide_text": "Open your file explorer.\nFrom there, it splits — into folders.",
+    "start": 754.0,
+    "end": 774.0,
+    "concept": "tree"
+  },
+  {
+    "id": "lecture1_034",
+    "lecture_id": "lecture1",
+    "text": "This is a tree data structure. A tree is a hierarchical data structure with one root at the top, nodes branching below it, and leaf nodes at the very bottom that have no children. File systems, web pages. Every HTML tag is a node nested inside parent tags, branching into children. Comment threads where replies branch off replies.",
+    "slide_text": "A quiet hierarchy, organizing everything you store.\nThis is a\nTree Data Structure",
+    "start": 774.0,
+    "end": 798.0,
+    "concept": "tree"
+  },
+  {
+    "id": "lecture1_035",
+    "lecture_id": "lecture1",
+    "text": "Decision trees in machine learning. All of these are tree data structures and works. Trees are natural for anything with a parent-child relationship. But a plain tree has no rules about where values go. Items aren't sorted. Means potentially checking every single node. Which raises a question. What if you could take a tree, impose one simple rule on it,",
+    "slide_text": "Trees in the Real World\nFile HTML\nSystems DOM\nComment ML Decision\nThreads Trees\nNatural for anything with a parent-child relationship.\nA Plain Tree\nA Plain Tree\nNo rules about where values go.",
+    "start": 798.0,
+    "end": 820.0,
+    "concept": "tree"
+  },
+  {
+    "id": "lecture1_036",
+    "lecture_id": "lecture1",
+    "text": "and suddenly make searching dramatically faster? That's where the binary search tree comes in. And speaking of smarter structures that just work. That's actually a perfect way to describe today's sponsor, Inzforge. Because just like a BST removes the guesswork from searching, Inzforge removes the guesswork from building your backend. Here's the thing. If you're using tools like cursor, plot code, or GitHub co-pilot to build apps,",
+    "slide_text": "What if you could take a tree,\nimpose one simple rule on it,\nsuddenly make searching dramatically fas\ngb\nBST\nRemoves guesswork Removes guesswork\nfrom searching from your backend\n4 \\nsForge\nHere's the thing — if you're building apps with:",
+    "start": 820.0,
+    "end": 845.0,
+    "concept": "binary search tree"
+  },
+  {
+    "id": "lecture1_037",
+    "lecture_id": "lecture1",
+    "text": "your agent is great at writing front-end code. But the moment it has to set up a database, handle authentication, or deploy backend logic, things slow down fast. Inzforge fixes that by giving your coding agent a fully featured backend. Postgres database, authentication, file storage, edge functions, real-time updates, and even AI model access. All ready to go from the moment you connect it. Here is the best part. You don't need to configure dashboards. You don't wrestle with infrastructure.",
+    "slide_text": "Here's the thing — if you're building apps with:\n7 Cursor | Claude Code B GitHub Copilot\nBUT WHEN IT HITS THE BACKEND...\n4 \\nsForge\ngiving your agent a fully-featured b\nAAU SEV Asa URS ESD\nPostgres\nDatabase\nEdge\nFunctions\nAuth\nRealtime\nUpdates\nBACKEND\nFile\nStorage\nAI Model\nAccess",
+    "start": 845.0,
+    "end": 875.0,
+    "concept": "inzforge"
+  },
+  {
+    "id": "lecture1_038",
+    "lecture_id": "lecture1",
+    "text": "You just describe what you want to build, and your agent ships it. Inzforge quietly handles everything your agent needs behind the scenes. In fact, benchmarks show that AI agents that are using Inzforge are 1.6 times faster, use 30% fewer tokens, and hit nearly 1.7 times higher accuracy compared to other backends.",
+    "slide_text": "You just build.\ne Your prompt\nENGINE\n“ InsForge\n— DB - Auth - Storage - Edge\nBENCHMARKS SHOW",
+    "start": 875.0,
+    "end": 897.0,
+    "concept": "inzforge"
+  },
+  {
+    "id": "lecture1_039",
+    "lecture_id": "lecture1",
+    "text": "It works with Next.js, React, Svelte, View, and more. So check it out at Inzforge.dev. Link is in the description. Now, back to binary search trees. Do you know the number guessing game? Someone picks a number between 1 and 1,000. You guess 500. Too high. Now you only think about 1 to 499.",
+    "slide_text": "BENCHMARKS SHOW\nFaster Fewer tokens Higher accuracy\nCheck it out at\ninsforge.dev\n/ Link in the description\nThe Number Guessing Game\nSomeone picks a number between 1 and 1,000.\nThe Number Guessing Game\nSomeone picks a number between 1 and 1,000.\nil = 250) 251 — 500 501 — 750 751 — 1000",
+    "start": 897.0,
+    "end": 918.0,
+    "concept": "benchmark"
+  },
+  {
+    "id": "lecture1_040",
+    "lecture_id": "lecture1",
+    "text": "This time, you guessed 250, and it's said too low. Likewise, every guess cuts the remaining possibilities, that one rule changes everything. Now, when you search for a value, you start at the root. Is it smaller? Go left? Is it larger? Go right. Each step eliminates an entire half of the remaining tree. In a well-balanced BST with a million nodes,",
+    "slide_text": "Someone picks a number between | and 1,000.\nGuess: 500\nToo High!\nRemaining: 1 — 499\nSomeone picks a number between | and 1,000.\nGuess: 250\nSomeone picks a number between | and 1,000.\nEvery guess cuts the possibilities exactly in half.\nSearching in a BST\nSearch for: 37\nFound! v",
+    "start": 918.0,
+    "end": 940.0,
+    "concept": "binary search tree"
+  },
+  {
+    "id": "lecture1_041",
+    "lecture_id": "lecture1",
+    "text": "you might need only 20 steps to find any item. 20. Compared to a regular tree where searching can mean checking every node, a BST is on another level. The structure of the data does the work for you. But here's the hidden weakness. If you add items in already sorted order, 1, then 2, then 3, then 4, the tree just grows in a straight line.",
+    "slide_text": "BST\n~20 steps\nRegular Tree BST\nUp to 1,000,000\n~20 steps\nchecks\nTwenty,\nCompared to a regular tree, a BST is on another level.\nThe structure of the data\ndoes the work for you.\nThe Hidden Weakness\nSorted Insertion: 1727374",
+    "start": 940.0,
+    "end": 963.0,
+    "concept": "binary search tree"
+  },
+  {
+    "id": "lecture1_042",
+    "lecture_id": "lecture1",
+    "text": "No branching, no having. It looks like a tree, but behaves like a linked list. Slow again. That's why self-balancing BST exists. But the core ideas is left must be smaller, then the right is the foundation of sorted tree data structures everywhere. Binary search trees are powerful when searching through ordered data. But in some cases, searching isn't the goal at all.",
+    "slide_text": "Sorted Insertion: 1 727374\neo No Branching.\nNo Halving.\nSelf-Balancing BST\nSelf-Balancing BST\nSo\na oN\nlan Mm\nLeft < Root < Right",
+    "start": 963.0,
+    "end": 987.0,
+    "concept": "binary search tree"
+  },
+  {
+    "id": "lecture1_043",
+    "lecture_id": "lecture1",
+    "text": "What matters is always having immediate access to a single, most important element available instantly, every time. And for that job, we have heap data structure. Heap. Imagine this, an emergency room. A patient walks in with a minor headache. Two minutes later, someone arrives with a heart attack. Who gets seen first? Not the headache.",
+    "slide_text": "But sometimes...\nSearching is not the goal.\nWhat matters is:\nInstant access to the\nMost Important Element\nHEAP\nData Structure\nAn Emergency Room.",
+    "start": 987.0,
+    "end": 1009.0,
+    "concept": "binary search tree"
+  },
+  {
+    "id": "lecture1_044",
+    "lecture_id": "lecture1",
+    "text": "Urgency beats arrival time. The most critical case always jumps to the front. Automatically, no manual resorting required. That's a heap data structure. A heap is a tree-based structure that always keeps the highest priority item at the very top. And reorganizes itself automatically every time something is added or removed.",
+    "slide_text": "An Emergency Room.\n¥ O O\nheart attack headache\nUrgency beats arrival time.\nThat's a Heap.\nhighest priority — always at the top.\nA tree that sorts itself.",
+    "start": 1009.0,
+    "end": 1030.0,
+    "concept": "heap"
+  },
+  {
+    "id": "lecture1_045",
+    "lecture_id": "lecture1",
+    "text": "In a max heap, the largest value rises to the top. In a min heap, it's the smallest. Either way, the most important element is always immediately accessible. And when it's removed, the structure quietly reorganizes itself, allowing the next in priority to take its place efficiently. Without a heap, finding the highest priority item from a constantly changing list",
+    "slide_text": "Self-reorganizing.\nMax-Heap\nlargest rises to top\nmost important — always immediately accessible.\nMax-Heap Min-Heap\nlargest rises to top smallest rises to top\nWhen the root is removed...\nHeap reorganizes itself (heapify down)...",
+    "start": 1030.0,
+    "end": 1053.0,
+    "concept": "heap"
+  },
+  {
+    "id": "lecture1_046",
+    "lecture_id": "lecture1",
+    "text": "would mean sorting the whole list every time something new arrives. Imagine having millions of tasks, and every time a new one comes in, you have to sort the entire list again justifying the most important one. That quickly becomes too slow to be practical. A heap avoids this completely by keeping things almost sorted at all times.",
+    "slide_text": "Without a heap...\nasn-ai\nWithout a heap...\nae\n[ia\nFinding the top priority? Sort the whole list.\nToo prioritv found — but at what cost?\nImagine millions of tasks...\nNew, task!\noc ecco ee ec ee eo eee oe eo eee ee oe 6 Oo\n© © © © © © © © © © © © © © oo 8 oo 8 8 8 8 8 ow 8\noc eo eo ee eo eee ee eo oe eo eo eo oo eo oo oO\neo © © © © © © © © © © © 0 0 ow © 0 ow 0 0 ow 0 8 8\nCe\nCe\nCd\nCe\nImagine millions of tasks...\nNew task!\nCe }\noe © 06 © © © © © © © 0 eo ww ew we ew ew wo 8 8 8 8 8\noe eee ee eo eo © oe oo wo oo wo ew ow 8 8 ow 8\noe ee © © © © © © 0 0 ew 8 ew ew ew 8 8 8 8 8 8 8 8\noe cece eee eo ee eo eo wo ew oo ww ow ow ow 8\nCe ee }\nRe-sort everything... again.",
+    "start": 1053.0,
+    "end": 1073.0,
+    "concept": "heap"
+  },
+  {
+    "id": "lecture1_047",
+    "lecture_id": "lecture1",
+    "text": "So the most important task is always right at the top, ready to be accessed instantly. Here are some real-world events where the heap shows its magic, like the task schedulers inside your operating system, deciding which process deserves the CPU right now, and your GPS app constantly recalculating the fastest route as traffic shifts,",
+    "slide_text": "A heap solves this.\nVly\nA heap solves this.\nMost important task — always at the top.\nAccessedhinstantly.\nWhere the heap shows its magic\nTask Schedulers\nProcess A\nProcess B\nPriority 3\nWhere the heap shows its magic\nTask Schedulers\nPriority9 | ~*\nCPU\nProcess B\nPriority 3",
+    "start": 1073.0,
+    "end": 1093.0,
+    "concept": "heap"
+  },
+  {
+    "id": "lecture1_048",
+    "lecture_id": "lecture1",
+    "text": "anywhere that involves repeatedly pulling the most important item from a live, evolving dataset. Heap is at work. Remember that, the word heap and stack also refers to region of memory in programming, completely different thing. Same word, two totally unrelated concepts. Don't let that confuse you. So far, every data structure we've covered works well for collections with clear individual items,",
+    "slide_text": "GPS Route Recalculation\nLive, Evolving Dataset\nPriority 1 — Critical\nPriority 3 — High\n. ys the most i\nasks arti\n— Priority 5 — Medium ——¥\nPriority 7 — Low\nPriority 10 — Minimal\nData Structures\nHeap\nAtree-based priority structure\nStack\nLIFO data structure\nData Structures Memory Regions\nHeap Heap\nAtree-based priority structure Dynamic memory allocation area\nStack Stack\nLIFO data structure Function call memory region",
+    "start": 1093.0,
+    "end": 1117.0,
+    "concept": "heap"
+  },
+  {
+    "id": "lecture1_049",
+    "lecture_id": "lecture1",
+    "text": "but the real world isn't always like that. Sometimes data isn't a list or a tree. It's a web. It's connections. It's relationships going in every direction. And for that, you need something completely different. Graphs. Okay, this is where data structures get really interesting. Forget the nice, clean hierarchies of trees.",
+    "slide_text": "Da Array ordered items in a row ar\nLinked List chain of individual nodes\nStack / QueUEIFO / FIFO ordered access\nTree parent-child hierarchy\nash Set/Matey lookup in constant time\nAll work well ffor gallections withlgaredi}dividual items.\nBut the real world isn't always like that.\n“Elean individual items\nTtem A\nItem B\nItem C\nItem D\nBut the real world isn't always like that.\nReal world: a web\nTtem A\nItem B\nItem C\nat\nItem D",
+    "start": 1117.0,
+    "end": 1138.0,
+    "concept": "graph"
+  },
+  {
+    "id": "lecture1_050",
+    "lecture_id": "lecture1",
+    "text": "Graphs are messy, chaotic, and honestly, that's what makes them powerful. Here's the simplest way to think about it. Graphs are just dots and lines. Dots are called vertices or nodes, and lines connecting them are called edges. That's literally it. But here's where it clicks. Facebook is a giant graph.",
+    "slide_text": "Graphs\nMessy. Chaotic.\nAnd that's what makes them powerful.\nDots and Lines\nGraphs are just dots and lines.",
+    "start": 1138.0,
+    "end": 1158.0,
+    "concept": "graph"
+  },
+  {
+    "id": "lecture1_051",
+    "lecture_id": "lecture1",
+    "text": "You're a node, your friends are nodes, and every friendship is an edge connecting you. Photos, groups, pages, comments, all are nodes. And every, like, share and connection is the edges of that graph. The entire social network is just one massive graph. Or think about Google Maps. Cities are nodes, roads are edges. When you ask for directions, it's searching through that graph to find the shortest path. Now there are different types of graphs. Undirected graphs. Where connections go both ways, like Facebook friendships, directed graphs.",
+    "slide_text": "You're anode. Your friends are nodes.\nCities are nodes. Roads are edges.",
+    "start": 1158.0,
+    "end": 1192.0,
+    "concept": "graph"
+  },
+  {
+    "id": "lecture1_052",
+    "lecture_id": "lecture1",
+    "text": "Where edges have direction, like Twitter follows. You following someone doesn't mean they follow you back. And here's a fun term. Adjacency. If two nodes are connected by an edge, they're adjacent, basically neighbors. So how do you actually store a graph? We can store a graph in two main ways. One is adjacency matrix, where a giant grid with rows and columns are nodes.",
+    "slide_text": "Undirected Graphs\nConnections go both ways\nExample: Facebook friendships\nDirected Graphs\nEdges have direction\nExample: Twitter follows\nYou follow CelebA — they don't follow you back.\nStoring a Graph\nWay 1 — Adjacency Matrix\nStoring a Graph\nay 1 — Adjacency Matrix",
+    "start": 1192.0,
+    "end": 1215.0,
+    "concept": "graph"
+  },
+  {
+    "id": "lecture1_053",
+    "lecture_id": "lecture1",
+    "text": "And you mark a one if there's an edge. Best for fast lookups, but uses a lot of space if the graph has few connections. The second way is an adjacency list where each node keeps a list of its neighbors. Adjacency list is more memory efficient for most use cases. The cool operation is to traversing the graph where you visit every node, usually with depth first search or breadth first search. There are also some other operations too, like finding paths between nodes, checking if a cycle exists or detecting connected components. Each operation has its own use cases. Real-world uses of graph are everywhere. Social networks, maps, web page links, recommendation systems, network routing. Basically, if things are connected in any way, you're dealing with a graph. Try. Alright, tries.",
+    "slide_text": "SLOFNs a Grapn\nay 1 — Adjacency Matrix\nRows and columns are nodes.\nStoring a Graph\nWay 2 — Adjacency List\nON\naed\nStoring a Graph\nWay 2 — Adjacency List\nY-Be\nB-wOw\nB-Ow\n4B-Be\nEach node stores a list of its neighbours.",
+    "start": 1215.0,
+    "end": 1264.0,
+    "concept": "graph"
+  },
+  {
+    "id": "lecture1_054",
+    "lecture_id": "lecture1",
+    "text": "And before you say tree, it's pronounced try. Yeah, I know, it's confusing. But here's why this data structure is legitimately genius. Type app into Google. Before you finish the word you already see, Apple, application, appointment, app store, etc. That didn't come from Google guessing what you meant.",
+    "slide_text": "Trie\nPronounced \"try\"\nAutocomplete\nGoogle\n>< (&aAimeae )",
+    "start": 1264.0,
+    "end": 1285.0,
+    "concept": "trie"
+  },
+  {
+    "id": "lecture1_055",
+    "lecture_id": "lecture1",
+    "text": "It came from a structure that already has every word mapped out, one letter at a time. And the moment you typed A-P-P, it already knew exactly which branch you were heading down. That structure is a try. A try is a variation of tree data structure where each level represents one character in a word. From the root, the first letter takes you down one branch. Second letter, next branch. Third letter, next.",
+    "slide_text": "Autocomplete\nGoogle\neo, se (QAM)\napple\napplication\nappointment\napp store\nBefore you finished typing — it already knew.\nThat structure is a\nfo\nThat structure is a\nTrie.\nOne Letter Per Level\nFirst letter — one branch\nop",
+    "start": 1285.0,
+    "end": 1311.0,
+    "concept": "trie"
+  },
+  {
+    "id": "lecture1_056",
+    "lecture_id": "lecture1",
+    "text": "By the time you've typed a few characters, you've already narrowed the entire structure down to only the words that start with those exact letters. Here's why this beats a hash map for this job. A hash map is great for exact lookups. You give it the full key, it gives you the value, but searching by prefix, give me everything that starts with app, would mean checking every single entry in the map. A try does that prefix search in exactly as many steps as the number of letters you typed. Three letters typed, three steps taken, you're already at the right branch. The rest of the matching words are right there. This is the quiet magic behind autocomplete. Spell checkers, dictionary lookups. If I give you a simple example, it would be phone contact search. If you type J, then O. Your phone instantly showed John, Jordan, Joseph.",
+    "slide_text": "Fourth letter — tree branches\nTyping 'a-p-p' narrows everything.\nGOOe\nHash Map vs Trie\nGreat for exact lookups.\napp _> shortcut\n[ at |} {suite |\napply }—* | verb |\nHash Map vs Trie\nGreat for exact lookups.\napple |— | fruit\napp _> | shortcut\napt |—| suite\napply |— | — verb\nGive it the full key — instant result.\nBut \"give me everything starting with app\" ?",
+    "start": 1311.0,
+    "end": 1357.0,
+    "concept": "trie"
+  },
+  {
+    "id": "lecture1_057",
+    "lecture_id": "lecture1",
+    "text": "That branching through shared letter paths is a try doing its job quietly in the background. Disjoint set. Disjoint set or union find sounds boring, but stick with me because this is actually brilliant data structure. Imagine you're at a party with a hundred people and you need to figure out who knows who, even indirectly. Like, does Peter know Bob? Well, Peter knows Carol, Carol knows Dave, and Dave knows Bob. So yeah, they're connected.",
+    "slide_text": "Phone Contact SeGcaso 7\nThe Party Problem",
+    "start": 1357.0,
+    "end": 1383.0,
+    "concept": "disjoint set"
+  },
+  {
+    "id": "lecture1_058",
+    "lecture_id": "lecture1",
+    "text": "Without a smart structure, answering that means tracing every connection in the chain, step by step. In a social network with millions of users, that's not fast enough. That's where the disjoint set comes in. A disjoint set also called union find tracks group membership efficiently, even as groups keep merging and growing over time. Every element starts as its own group.",
+    "slide_text": "Scale to Millions of Users...\nTracing every chain one-by-one is not fast enough.\nOneunified group — membership answered instantly!",
+    "start": 1383.0,
+    "end": 1405.0,
+    "concept": "disjoint set"
+  },
+  {
+    "id": "lecture1_059",
+    "lecture_id": "lecture1",
+    "text": "When you connect two elements, their groups merge into one. Every group has a representative. We also call them leaders to check if two elements are in the same group. You check if they share the same leader. That check is nearly instant, even after millions of merges. And the structure keeps getting smarter over time. Every time you trace a path to find a leader, it compresses that path, making the next lookup even faster.",
+    "slide_text": "o00e0e 0 ©\nWhen you connect two elements, their groups merge into one.\nLeader Leader Leader\nG©oe@oCe0\nEvery group has a representative — a leader.\nLeader Leader Leader\n@©o@oeCeo0\nTo check if two elements share a group — trace to their leaders.\nLeader Leader Leader\nG©oe@oCoo0\nDifferent leader > different group. That check is nearly instant.\nPath Compression\nRoot\nTracing path to the root: 3 7271-70...",
+    "start": 1405.0,
+    "end": 1429.0,
+    "concept": "disjoint set"
+  },
+  {
+    "id": "lecture1_060",
+    "lecture_id": "lecture1",
+    "text": "It literally gets more efficient as it's used. When we do network connectivity checks, like is computer a on the same network as computer B, even in the image processing, where we need to to find out if those pixels form the same object. And lastly, in the game world design, where we need to find is these two areas reachable from each other. These are the problems disjoint sets were made for. It's a specialist data structure, but for this specific class of problem,",
+    "slide_text": "Path Compression\nPath compresses — all nodes now point directly to the root.\nPath Compression\nVly\n~N a\n_®@ Roe\noS -\n“PN “PN\nIt literally gets more efficient as it's used.\nNetwork Connectivity\nIs Computer Aon the same network as Computer B?\nQO ©\nComputer A Router Computer B\nImage Processing\nDo these pixels belong to the same object?\nObject 1 Object 2\nGame World Design\nAre these two () reachable from each other?\nRR\nNS\nNot Reachable x D\nTown \\ Dungeon",
+    "start": 1429.0,
+    "end": 1455.0,
+    "concept": "disjoint set"
+  },
+  {
+    "id": "lecture1_061",
+    "lecture_id": "lecture1",
+    "text": "tracking connected groups that keep evolving nothing is cleaner or faster than union find. Bloom filter. Let me tell you about the weirdest data structure I've ever learned. And trust me, once you get it, you'll see it everywhere. So what if I told you there's a data structure that's super fast uses almost no memory, but occasionally lies to you?",
+    "slide_text": "These are the problems\nDisjoint Sets were made for.\n> Network Connectivity\n> Image Processing\n>» Game World Design\nIt's a specialist data structure.\nFor one specific class of problem:\nTracking connected groups that keep evolving.\nO@O®@ OO©@\nThe Weirdest Data Structure\nI've Ever Learned\nOnce you get it — you'll see it everywhere.",
+    "start": 1455.0,
+    "end": 1476.0,
+    "concept": "union find"
+  },
+  {
+    "id": "lecture1_062",
+    "lecture_id": "lecture1",
+    "text": "That's a bloom filter. And yes, it literally lies. Here's how the lie works. A bloom filter gives you one of two answers when you search for something. Yes or no. If it says no, that's a guaranteed answer. The item is absolutely 100% not in the set. You can completely trust it.",
+    "slide_text": "What if a data structure...\noe ro sn >\nO(k) lookup Bit array only\nHere's How the Lie Works",
+    "start": 1476.0,
+    "end": 1496.0,
+    "concept": "union find"
+  },
+  {
+    "id": "lecture1_063",
+    "lecture_id": "lecture1",
+    "text": "If it says yes, that's where it gets interesting. It's probably right, but there's a small chance it made a mistake and said yes when the answer should actually be no. We call these mistakes false positives, but here's the one thing it never does. It will never say no to something that's actually there. It only makes mistakes in one direction and that direction is always a wrong.",
+    "slide_text": "Here's How the Lie Works\nSearch(item)?\nGuaranteed.\n100% not in the set.\nHere's How the Lie Works\nSearch(item)?\nGuaranteed. Probably right.\n100% not in the set. Small chance of a mistake.\nFalse Positives\nThe filter says YES\nbut the item is NOT actually there.\nFalse Positives\nThe filter says YES\na the item is NOT overs there.\nitem: \"cat \"cat\" |——>] Bloom Filter |—> [YES x] x",
+    "start": 1496.0,
+    "end": 1518.0,
+    "concept": "union find"
+  },
+  {
+    "id": "lecture1_064",
+    "lecture_id": "lecture1",
+    "text": "Yes, never a wrong. No. So to put it simply, a no is always the truth. But a yes is mostly the truth. Now the question arises, why would anyone use this weird data structure? It's for speed and space, my friend. Let's say you're building a password checker. You want to reject passwords that have been leaked in data breaches. There are billions of those. Storing all of them is gigabytes of data.",
+    "slide_text": "Mistakes in Only One Direction\nMistakes in Only One Direction\nIt will NEVER say NO\nto something that IS actually there.\nPassword Checker\nPassword Checker\nBillions of leaked passwords exist.\nStoring them all = gigabytes of data.",
+    "start": 1518.0,
+    "end": 1542.0,
+    "concept": "union find"
+  },
+  {
+    "id": "lecture1_065",
+    "lecture_id": "lecture1",
+    "text": "By using bloom filter, we can manage it to a few megabytes. Chrome uses it to flag sketchy websites without storing a massive list of every malicious URL. Ethereum nodes use it to check data without loading the entire blockchain. Spell checkers use it to quickly rule out obvious typos before doing expensive dictionary lookups. And when a system instantly tells you a username is probably taken,",
+    "slide_text": "Password Checker\n~10 GB\nWith Bloom Filter [jj ~4 me\nPassword Checker\n~10 GB\nWith Bloom Filter [jj ~4 ms\nBloom filter compresses billions of passwords into megabytes.\nChrome: Safe Browsing\n\"http: //sketchy- site.xyz\"\nBloom Filter bit array\nCT ee\nSo\nBloom Filters in the Wild\nChrome\nSafe Browsing\nEthereum\nNodes\nSpell Username\nCheckers Availability",
+    "start": 1542.0,
+    "end": 1567.0,
+    "concept": "union find"
+  },
+  {
+    "id": "lecture1_066",
+    "lecture_id": "lecture1",
+    "text": "without checking every record that's a bloom filter at work in the background. Quietly filtering so that the heavy work doesn't have to happen. And speaking of keeping things fast by being smart about what you store and what you throw away. The last data structure on this list does exactly that. LRU cache, LRU stands for Least Recently Used.",
+    "slide_text": "Username Availability\n\"cooluser99\"\nUsername Availability\n\"cooluser99\"\nStep 1: Ask the Bloom filter.\nUsername Availability\n\"cooluser99\"\nStep 1: Ask the Bloom filter.\n— Probably taken.\nStep 2: Only then hit the database.\nDatabase read skipped entirely for obvious misses.\nSmart about what to store.\nSmart about what to throw away.\nThe last data structure on this list",
+    "start": 1567.0,
+    "end": 1588.0,
+    "concept": "lru"
+  },
+  {
+    "id": "lecture1_067",
+    "lecture_id": "lecture1",
+    "text": "And it's basically how your computer decides what to forget. Here's the setup. You've got limited space. Could be browser cache, could be RAM, doesn't matter. Stuff you use all the time stays. But stuff you haven't touched forever gets kicked out when space runs low. Think about your CPU cache. Your processor is constantly pulling data from memory.",
+    "slide_text": "LRU\nLeast Recently Used\nHow your computer decides what to forget.\nLeast recently used — evicted!\ntt\nCache (4 slots)",
+    "start": 1588.0,
+    "end": 1610.0,
+    "concept": "lru"
+  },
+  {
+    "id": "lecture1_068",
+    "lecture_id": "lecture1",
+    "text": "Instructions, variables, intermediate results. The ones it uses again and again stay close right there in the cache for instant access. But space is limited. So when new data needs to come in, something has to go. So which one should go from the memory? It must not be randomly, but based on the recency. The data that hasn't been used for the longest time gets evicted first.",
+    "slide_text": "CPU Memory\nCache\nProcessor pulls: instructions, variables, results...\nCPU Memory\ninst_A\nvar_X\nresult\nFrequently accessed data stays right there — instant.\nSpace is Limited\nSpace is Limited\nL* jhe Ile Le Je)",
+    "start": 1610.0,
+    "end": 1634.0,
+    "concept": "lru"
+  },
+  {
+    "id": "lecture1_069",
+    "lecture_id": "lecture1",
+    "text": "Because if it hasn't been needed for a while, it's probably not needed right now. That's LRU cache. Quietly deciding what stays fast and what gets forgotten. The beauty is in how it's built. It is a combination of HashMap and doubly linked list. The HashMap gives you O of one lookups and the linked list tracks order so that most recently used stays at the front, least recently used goes to the back.",
+    "slide_text": "Least Recently Used — Evict First\nLeast Recently Used — Evict First\nA B Cc D 1B)\n5 min ago 1 age\nLeast Recently Used — Evict First\n5 min ago 1 min ago 3 min ago 8 min ago\nNS\nSS\nHash Map + Doubly Linked List\nHash Map Doubly Linked List\n[A |p noded MRU LRU\n[ B |-+f noaed A |-| B |=| C |=] D\n(}-Eea\noe\nO(1) lookup",
+    "start": 1634.0,
+    "end": 1659.0,
+    "concept": "lru"
+  },
+  {
+    "id": "lecture1_070",
+    "lecture_id": "lecture1",
+    "text": "When you access something, move it to the front. When you're out of space, chop off the back. Simple and brutally efficient. Both get and put, operations are O of one time. That's why every interview loves asking about LRU cache. It tests if you can combine data structures creatively. Browsers use it. Databases use it. Operating systems also use it.",
+    "slide_text": "Access — Move to Front\nMost Recent Least Recent\nLe Ja——>([ 4 J=L® JL J\nC moved to front\nOut of Space — Chop the Back\nFULL\nPa -(2 J-Ce +2)\nOut of Space — Chop the Back\nFULL\nLe Jaa el Lc J\nEis in. D is gone.\nO(1) Get & Put\nget( key ) — put( key, val )\nOd) O(1)\nLRU Is Everywhere",
+    "start": 1659.0,
+    "end": 1681.0,
+    "concept": "lru"
+  },
+  {
+    "id": "lecture1_071",
+    "lecture_id": "lecture1",
+    "text": "Any system that needs to remember things, but can't afford to remember everything, almost always relies on LRU. Because memory is limited, so your computer is constantly making decisions. Quietly letting go of what you haven't used in a while. And that's not a flaw, that's exactly what keeps it fast.",
+    "slide_text": "LRU Is Everywhere\n[ Browsers | [ Databases | perating Systems\nLRU Is Everywhere\n[ Browsers | [ Databases | perating Systenis\nAny system that needs to remember things —\nbut can't afford to remember everything —\nalmost always relies on LRU.\nMemory Is Limited\nMemory Is Limited\nRAM é£(limited slots)\nYour computer is constantly making decisions...\nMemory Is Limited\nThat's nota Haw.",
+    "start": 1681.0,
+    "end": 1700.0,
+    "concept": "lru"
+  }
+]

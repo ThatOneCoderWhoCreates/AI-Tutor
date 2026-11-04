@@ -1,0 +1,2592 @@
+[
+  {
+    "start": 0.0,
+    "end": 5.0,
+    "text": "This video is sponsored by Innsforge, the back end built for AI coding agents."
+  },
+  {
+    "start": 6.0,
+    "end": 15.0,
+    "text": "Arrays. At a low level, much of what a computer does comes down to storing data in memory, laid out in a precise, ordered way."
+  },
+  {
+    "start": 16.0,
+    "end": 21.0,
+    "text": "One of the simplest and most powerful ways to organize that data is something called an array."
+  },
+  {
+    "start": 22.0,
+    "end": 25.0,
+    "text": "And from this simple idea, almost everything else in programming begins."
+  },
+  {
+    "start": 26.0,
+    "end": 31.0,
+    "text": "An array is a fixed size, ordered collection of items where every item sits at a numbered position."
+  },
+  {
+    "start": 32.0,
+    "end": 34.0,
+    "text": "Think of seats in a movie theater."
+  },
+  {
+    "start": 34.0,
+    "end": 37.0,
+    "text": "Seat 1, seat 2, seat 3, and so on."
+  },
+  {
+    "start": 37.0,
+    "end": 39.0,
+    "text": "Each seat has a precise label."
+  },
+  {
+    "start": 39.0,
+    "end": 43.0,
+    "text": "If someone asks for seat 47, you don't check every seat before it."
+  },
+  {
+    "start": 43.0,
+    "end": 46.0,
+    "text": "You go straight to seat 47, and you're there."
+  },
+  {
+    "start": 46.0,
+    "end": 48.0,
+    "text": "That's the essence of an array."
+  },
+  {
+    "start": 48.0,
+    "end": 54.0,
+    "text": "Every element has a fixed position, and that position lets you access it instantly."
+  },
+  {
+    "start": 54.0,
+    "end": 59.0,
+    "text": "So the way this works is that every item in an array is stored right next to each other in memory."
+  },
+  {
+    "start": 60.0,
+    "end": 65.0,
+    "text": "And because of that neat, predictable layout, the computer always knows exactly where any item lives."
+  },
+  {
+    "start": 65.0,
+    "end": 72.0,
+    "text": "Finding item number 40,000 takes the exact same time as finding item number 4 and it's 0 of 1."
+  },
+  {
+    "start": 72.0,
+    "end": 73.0,
+    "text": "That's remarkable."
+  },
+  {
+    "start": 73.0,
+    "end": 76.0,
+    "text": "But arrays come with an important constraint."
+  },
+  {
+    "start": 77.0,
+    "end": 81.0,
+    "text": "Their size is fixed at the moment of creation, and this size does not change."
+  },
+  {
+    "start": 81.0,
+    "end": 85.0,
+    "text": "Expanding an array is not a simple extension."
+  },
+  {
+    "start": 85.0,
+    "end": 91.0,
+    "text": "It requires allocating a completely new block of memory and copying every existing element into it."
+  },
+  {
+    "start": 92.0,
+    "end": 95.0,
+    "text": "Insertion into an array introduces a similar limitation."
+  },
+  {
+    "start": 96.0,
+    "end": 99.0,
+    "text": "Placing an element in the middle is not just a local operation."
+  },
+  {
+    "start": 99.0,
+    "end": 104.0,
+    "text": "It requires shifting every subsequent element one position forward to make space."
+  },
+  {
+    "start": 104.0,
+    "end": 108.0,
+    "text": "As a result, while accessing elements is immediate and efficient,"
+  },
+  {
+    "start": 108.0,
+    "end": 113.0,
+    "text": "modifying the structure can become costly, especially as the array grows larger."
+  },
+  {
+    "start": 114.0,
+    "end": 118.0,
+    "text": "This is the trade-off that sits quietly beneath the simplicity of arrays."
+  },
+  {
+    "start": 118.0,
+    "end": 124.0,
+    "text": "So, arrays are blazing fast for reading, but slow and rigid when the data keeps changing."
+  },
+  {
+    "start": 124.0,
+    "end": 127.0,
+    "text": "Still, arrays appear everywhere."
+  },
+  {
+    "start": 127.0,
+    "end": 134.0,
+    "text": "They underlie pixels in an image, frames in a video stream, situations where position is fixed and known in advance."
+  },
+  {
+    "start": 135.0,
+    "end": 140.0,
+    "text": "But the moment you need something more flexible, that's where the next data structure comes in,"
+  },
+  {
+    "start": 140.0,
+    "end": 143.0,
+    "text": "and it solves the exact problem arrays can't."
+  },
+  {
+    "start": 144.0,
+    "end": 145.0,
+    "text": "Linked lists."
+  },
+  {
+    "start": 145.0,
+    "end": 150.0,
+    "text": "Imagine a treasure hunt where each clue only tells you where the next clue is."
+  },
+  {
+    "start": 150.0,
+    "end": 154.0,
+    "text": "You don't know where clue number 4 is until you've found clue number 3."
+  },
+  {
+    "start": 154.0,
+    "end": 158.0,
+    "text": "You follow the chain one step at a time, never skipping ahead."
+  },
+  {
+    "start": 158.0,
+    "end": 160.0,
+    "text": "That's a linked list."
+  },
+  {
+    "start": 160.0,
+    "end": 165.0,
+    "text": "And it was invented specifically to fix the rigidity that arrays suffer from."
+  },
+  {
+    "start": 165.0,
+    "end": 170.0,
+    "text": "A linked list is a chain of nodes where each node stores its value and a pointer to the next node."
+  },
+  {
+    "start": 170.0,
+    "end": 173.0,
+    "text": "The nodes don't sit next to each other in memory."
+  },
+  {
+    "start": 173.0,
+    "end": 179.0,
+    "text": "They're scattered everywhere, but they stay connected through those pointers, like clues in a chain."
+  },
+  {
+    "start": 179.0,
+    "end": 181.0,
+    "text": "Here's where it gets interesting."
+  },
+  {
+    "start": 181.0,
+    "end": 185.0,
+    "text": "Remember how inserting into an array meant shifting thousands of items?"
+  },
+  {
+    "start": 185.0,
+    "end": 188.0,
+    "text": "With a linked list, you insert by updating two pointers."
+  },
+  {
+    "start": 188.0,
+    "end": 189.0,
+    "text": "That's it."
+  },
+  {
+    "start": 189.0,
+    "end": 192.0,
+    "text": "Two pointer changes, and the new item is in."
+  },
+  {
+    "start": 192.0,
+    "end": 195.0,
+    "text": "Doesn't matter if there are 10 nodes or 10 million."
+  },
+  {
+    "start": 195.0,
+    "end": 197.0,
+    "text": "Inserting is instant."
+  },
+  {
+    "start": 197.0,
+    "end": 200.0,
+    "text": "Removal follows naturally from the structure itself."
+  },
+  {
+    "start": 200.0,
+    "end": 207.0,
+    "text": "Each element exists only through its connection to the next, so removing one does not require shifting anything around."
+  },
+  {
+    "start": 207.0,
+    "end": 212.0,
+    "text": "Instead, the link is simply redirected, bypassing the element entirely."
+  },
+  {
+    "start": 212.0,
+    "end": 216.0,
+    "text": "The chain closes in on itself, as if that node was never there."
+  },
+  {
+    "start": 216.0,
+    "end": 220.0,
+    "text": "A small, local adjustment, with no effect on the rest of the structure."
+  },
+  {
+    "start": 220.0,
+    "end": 227.0,
+    "text": "But, and this is the part that trips people up, what you gain in flexibility, you give up in speed of access."
+  },
+  {
+    "start": 227.0,
+    "end": 233.0,
+    "text": "To find a specific item in a linked list, you always start at the beginning and follow the chain."
+  },
+  {
+    "start": 233.0,
+    "end": 235.0,
+    "text": "Access is no longer direct."
+  },
+  {
+    "start": 235.0,
+    "end": 239.0,
+    "text": "There is no index to jump to, no fixed position to compute."
+  },
+  {
+    "start": 239.0,
+    "end": 245.0,
+    "text": "Instead, each element must be reached by following the chain from the beginning, one step at a time."
+  },
+  {
+    "start": 246.0,
+    "end": 252.0,
+    "text": "Finding an element near the end of a long list means traversing everything that comes before it."
+  },
+  {
+    "start": 252.0,
+    "end": 256.0,
+    "text": "A list of 10,000 nodes may require 10,000 steps."
+  },
+  {
+    "start": 256.0,
+    "end": 258.0,
+    "text": "There are no shortcuts."
+  },
+  {
+    "start": 258.0,
+    "end": 262.0,
+    "text": "Only a path, defined by the links themselves."
+  },
+  {
+    "start": 262.0,
+    "end": 268.0,
+    "text": "So, arrays are fast to read, slow to change, linked lists are slow to read, fast to change."
+  },
+  {
+    "start": 268.0,
+    "end": 271.0,
+    "text": "Two different data structures for two different jobs."
+  },
+  {
+    "start": 272.0,
+    "end": 274.0,
+    "text": "Stacks."
+  },
+  {
+    "start": 274.0,
+    "end": 280.0,
+    "text": "You know that satisfying feeling when you hit CTRL plus C and your last mistake just disappears?"
+  },
+  {
+    "start": 280.0,
+    "end": 281.0,
+    "text": "That's a stack."
+  },
+  {
+    "start": 281.0,
+    "end": 285.0,
+    "text": "Silently running every undo feature in every app you've ever used."
+  },
+  {
+    "start": 285.0,
+    "end": 290.0,
+    "text": "A stack is a data structure where the last item in is always the first item out."
+  },
+  {
+    "start": 290.0,
+    "end": 292.0,
+    "text": "Picture a stack of plates."
+  },
+  {
+    "start": 292.0,
+    "end": 296.0,
+    "text": "You add plates to the top, you take plates from the top, nobody pulls from the bottom."
+  },
+  {
+    "start": 296.0,
+    "end": 299.0,
+    "text": "The last plate placed is the first one grabbed."
+  },
+  {
+    "start": 299.0,
+    "end": 302.0,
+    "text": "Stack has two main operations, that's all."
+  },
+  {
+    "start": 302.0,
+    "end": 305.0,
+    "text": "Push and pop, push adds to the top, pop removes from the top."
+  },
+  {
+    "start": 305.0,
+    "end": 309.0,
+    "text": "You can't touch the middle, you can't reach the bottom, top only, every time."
+  },
+  {
+    "start": 309.0,
+    "end": 312.0,
+    "text": "And this limitation is actually brilliant."
+  },
+  {
+    "start": 312.0,
+    "end": 315.0,
+    "text": "Because of it, both push and pop are instant."
+  },
+  {
+    "start": 315.0,
+    "end": 319.0,
+    "text": "Stacks are everywhere, quietly shaping how we interact with the world."
+  },
+  {
+    "start": 319.0,
+    "end": 322.0,
+    "text": "Your browser's back button is a perfect example."
+  },
+  {
+    "start": 322.0,
+    "end": 324.0,
+    "text": "Each page you visit gets placed on top."
+  },
+  {
+    "start": 324.0,
+    "end": 330.0,
+    "text": "And when you go back, the most recent page peels away first, revealing what came before."
+  },
+  {
+    "start": 330.0,
+    "end": 333.0,
+    "text": "The call stack running your code works the same way."
+  },
+  {
+    "start": 333.0,
+    "end": 335.0,
+    "text": "Functions layer on top of each other."
+  },
+  {
+    "start": 335.0,
+    "end": 338.0,
+    "text": "And the most recent call is always the one to finish next."
+  },
+  {
+    "start": 338.0,
+    "end": 342.0,
+    "text": "Even undo in a document editor is just a stack at work."
+  },
+  {
+    "start": 342.0,
+    "end": 346.0,
+    "text": "Each step removed in reverse order, one by one."
+  },
+  {
+    "start": 346.0,
+    "end": 351.0,
+    "text": "A stack isn't just a data structure, it's the rhythm of last in, first out."
+  },
+  {
+    "start": 351.0,
+    "end": 354.0,
+    "text": "Appearing everywhere once you start looking."
+  },
+  {
+    "start": 354.0,
+    "end": 356.0,
+    "text": "But here's the thing."
+  },
+  {
+    "start": 356.0,
+    "end": 359.0,
+    "text": "A stack only cares about what happened most recently."
+  },
+  {
+    "start": 359.0,
+    "end": 361.0,
+    "text": "What if you need the opposite?"
+  },
+  {
+    "start": 361.0,
+    "end": 364.0,
+    "text": "What if the oldest thing waiting is the one that should go first?"
+  },
+  {
+    "start": 364.0,
+    "end": 368.0,
+    "text": "For that, you flip the logic entirely."
+  },
+  {
+    "start": 368.0,
+    "end": 370.0,
+    "text": "Cues."
+  },
+  {
+    "start": 370.0,
+    "end": 372.0,
+    "text": "A stack serves the newest item first."
+  },
+  {
+    "start": 372.0,
+    "end": 374.0,
+    "text": "A queue does the exact opposite."
+  },
+  {
+    "start": 374.0,
+    "end": 376.0,
+    "text": "It serves the oldest."
+  },
+  {
+    "start": 376.0,
+    "end": 379.0,
+    "text": "A queue is first in, first out."
+  },
+  {
+    "start": 379.0,
+    "end": 381.0,
+    "text": "Simple as a line at a coffee shop."
+  },
+  {
+    "start": 381.0,
+    "end": 383.0,
+    "text": "The person who arrived first gets served first."
+  },
+  {
+    "start": 383.0,
+    "end": 385.0,
+    "text": "No cutting, no skipping."
+  },
+  {
+    "start": 385.0,
+    "end": 387.0,
+    "text": "You join at the back, you wait your turn."
+  },
+  {
+    "start": 387.0,
+    "end": 391.0,
+    "text": "Cue has two main operations, such as in queue and to queue."
+  },
+  {
+    "start": 391.0,
+    "end": 393.0,
+    "text": "In queue adds to the back."
+  },
+  {
+    "start": 393.0,
+    "end": 395.0,
+    "text": "To queue removes from the front."
+  },
+  {
+    "start": 395.0,
+    "end": 397.0,
+    "text": "Just like a stack, you don't touch the middle."
+  },
+  {
+    "start": 397.0,
+    "end": 400.0,
+    "text": "And just like a stack, both operations are instant."
+  },
+  {
+    "start": 400.0,
+    "end": 403.0,
+    "text": "But the behavior is completely different."
+  },
+  {
+    "start": 403.0,
+    "end": 406.0,
+    "text": "A stack is like a to-do list where you always work on the newest task."
+  },
+  {
+    "start": 406.0,
+    "end": 410.0,
+    "text": "A queue is like a to-do list where you always finish what you started first."
+  },
+  {
+    "start": 410.0,
+    "end": 415.0,
+    "text": "When you hit print in an office with a shared printer, your document joins a queue."
+  },
+  {
+    "start": 415.0,
+    "end": 417.0,
+    "text": "The printer works through them in order."
+  },
+  {
+    "start": 417.0,
+    "end": 421.0,
+    "text": "When a web server gets slammed with thousands of requests at once,"
+  },
+  {
+    "start": 421.0,
+    "end": 424.0,
+    "text": "it lines them up and processes them one by one."
+  },
+  {
+    "start": 424.0,
+    "end": 428.0,
+    "text": "Keyboard inputs, game loading screens, customer support tickets."
+  },
+  {
+    "start": 428.0,
+    "end": 431.0,
+    "text": "All are the example use cases of queues."
+  },
+  {
+    "start": 431.0,
+    "end": 434.0,
+    "text": "Stacks and queues each limit you to a single end."
+  },
+  {
+    "start": 434.0,
+    "end": 438.0,
+    "text": "One serves the most recent, the other serves the earliest."
+  },
+  {
+    "start": 438.0,
+    "end": 441.0,
+    "text": "But real-world data isn't always so predictable."
+  },
+  {
+    "start": 441.0,
+    "end": 444.0,
+    "text": "Sometimes you need to reach both ends,"
+  },
+  {
+    "start": 444.0,
+    "end": 448.0,
+    "text": "grabbing the newest or the oldest depending on the situation."
+  },
+  {
+    "start": 448.0,
+    "end": 452.0,
+    "text": "Meeting that challenge requires a structure that can flex at both sides,"
+  },
+  {
+    "start": 452.0,
+    "end": 457.0,
+    "text": "introducing a layer of versatility that makes the behavior of your data far more dynamic."
+  },
+  {
+    "start": 457.0,
+    "end": 459.0,
+    "text": "That's where the DQ comes in."
+  },
+  {
+    "start": 459.0,
+    "end": 460.0,
+    "text": "DQ."
+  },
+  {
+    "start": 460.0,
+    "end": 463.0,
+    "text": "It is a double-ended queue data structure."
+  },
+  {
+    "start": 463.0,
+    "end": 469.0,
+    "text": "In the DQ, you can add or remove from the front, as well as add or remove from the back."
+  },
+  {
+    "start": 469.0,
+    "end": 472.0,
+    "text": "Both ends are live all the time."
+  },
+  {
+    "start": 472.0,
+    "end": 476.0,
+    "text": "Think of a train where passengers can board and exit from either side."
+  },
+  {
+    "start": 476.0,
+    "end": 480.0,
+    "text": "More flexible than a regular queue, more flexible than a stack."
+  },
+  {
+    "start": 480.0,
+    "end": 483.0,
+    "text": "In fact, a DQ is both at once."
+  },
+  {
+    "start": 483.0,
+    "end": 487.0,
+    "text": "If you only use the back end, it behaves exactly like a stack."
+  },
+  {
+    "start": 487.0,
+    "end": 492.0,
+    "text": "If you add to the back and remove from the front, it behaves exactly like a queue."
+  },
+  {
+    "start": 492.0,
+    "end": 494.0,
+    "text": "It's the shape-shifting version of both."
+  },
+  {
+    "start": 494.0,
+    "end": 499.0,
+    "text": "Sliding windows and data processing illustrate a scenario where data flows continuously."
+  },
+  {
+    "start": 499.0,
+    "end": 503.0,
+    "text": "New values are added at one end, while old ones are removed from the other."
+  },
+  {
+    "start": 503.0,
+    "end": 507.0,
+    "text": "This is the domain of a DQ, a double-ended queue."
+  },
+  {
+    "start": 507.0,
+    "end": 511.0,
+    "text": "It powers browser history that allows both back and forward navigation,"
+  },
+  {
+    "start": 511.0,
+    "end": 515.0,
+    "text": "undo and redo systems that move in either direction,"
+  },
+  {
+    "start": 515.0,
+    "end": 519.0,
+    "text": "and scheduling systems that handle priority tasks at the front,"
+  },
+  {
+    "start": 519.0,
+    "end": 522.0,
+    "text": "while still accepting regular additions at the back."
+  },
+  {
+    "start": 522.0,
+    "end": 524.0,
+    "text": "DQ is a specialist data structure."
+  },
+  {
+    "start": 524.0,
+    "end": 528.0,
+    "text": "Most problems don't need them, but when a problem does need both ends,"
+  },
+  {
+    "start": 528.0,
+    "end": 530.0,
+    "text": "nothing else fits."
+  },
+  {
+    "start": 530.0,
+    "end": 531.0,
+    "text": "Hash maps."
+  },
+  {
+    "start": 531.0,
+    "end": 533.0,
+    "text": "You search mom in your phone contacts."
+  },
+  {
+    "start": 533.0,
+    "end": 535.0,
+    "text": "Her number appears instantly."
+  },
+  {
+    "start": 535.0,
+    "end": 538.0,
+    "text": "You didn't scroll, you didn't wait, you just got the answer."
+  },
+  {
+    "start": 538.0,
+    "end": 541.0,
+    "text": "That's a hash map, and understanding how it actually works"
+  },
+  {
+    "start": 541.0,
+    "end": 544.0,
+    "text": "will change the way you think about software."
+  },
+  {
+    "start": 544.0,
+    "end": 547.0,
+    "text": "A hash map stores data as key value pairs,"
+  },
+  {
+    "start": 547.0,
+    "end": 550.0,
+    "text": "and retrieves any value instantly using its key."
+  },
+  {
+    "start": 550.0,
+    "end": 552.0,
+    "text": "The key is mom."
+  },
+  {
+    "start": 552.0,
+    "end": 554.0,
+    "text": "The value is her phone number."
+  },
+  {
+    "start": 554.0,
+    "end": 555.0,
+    "text": "Give the map the key."
+  },
+  {
+    "start": 555.0,
+    "end": 556.0,
+    "text": "Get the value back."
+  },
+  {
+    "start": 556.0,
+    "end": 558.0,
+    "text": "Every time."
+  },
+  {
+    "start": 558.0,
+    "end": 559.0,
+    "text": "Instantly."
+  },
+  {
+    "start": 559.0,
+    "end": 560.0,
+    "text": "Here's the clever part."
+  },
+  {
+    "start": 560.0,
+    "end": 562.0,
+    "text": "When you store something in a hash map,"
+  },
+  {
+    "start": 562.0,
+    "end": 564.0,
+    "text": "it runs the key through a hash function."
+  },
+  {
+    "start": 564.0,
+    "end": 568.0,
+    "text": "A mathematical formula that converts any key into a number."
+  },
+  {
+    "start": 568.0,
+    "end": 571.0,
+    "text": "That number points to a specific slot in memory."
+  },
+  {
+    "start": 571.0,
+    "end": 575.0,
+    "text": "So mom might become slot 4827."
+  },
+  {
+    "start": 575.0,
+    "end": 576.0,
+    "text": "Her number gets stored there."
+  },
+  {
+    "start": 576.0,
+    "end": 578.0,
+    "text": "Later, when you search for mom,"
+  },
+  {
+    "start": 578.0,
+    "end": 580.0,
+    "text": "the same formula runs again,"
+  },
+  {
+    "start": 580.0,
+    "end": 581.0,
+    "text": "gets the same number,"
+  },
+  {
+    "start": 581.0,
+    "end": 584.0,
+    "text": "and goes directly to slot 4827."
+  },
+  {
+    "start": 584.0,
+    "end": 586.0,
+    "text": "No searching through every contact."
+  },
+  {
+    "start": 586.0,
+    "end": 588.0,
+    "text": "Direct jump."
+  },
+  {
+    "start": 588.0,
+    "end": 591.0,
+    "text": "This is what makes hash maps almost magical."
+  },
+  {
+    "start": 591.0,
+    "end": 594.0,
+    "text": "It doesn't matter if you have 10 contacts or 10 million."
+  },
+  {
+    "start": 594.0,
+    "end": 596.0,
+    "text": "Finding one is always instant."
+  },
+  {
+    "start": 596.0,
+    "end": 599.0,
+    "text": "Without a hash map, finding something by name in a large list"
+  },
+  {
+    "start": 599.0,
+    "end": 603.0,
+    "text": "means scanning every item one by one until you hit a match."
+  },
+  {
+    "start": 603.0,
+    "end": 606.0,
+    "text": "That gets slower and slower as the list grows."
+  },
+  {
+    "start": 606.0,
+    "end": 608.0,
+    "text": "With a hash map, the size of the collection"
+  },
+  {
+    "start": 608.0,
+    "end": 610.0,
+    "text": "basically stops mattering."
+  },
+  {
+    "start": 610.0,
+    "end": 612.0,
+    "text": "Python dictionaries are hash maps,"
+  },
+  {
+    "start": 612.0,
+    "end": 614.0,
+    "text": "JavaScript objects are also hash maps."
+  },
+  {
+    "start": 614.0,
+    "end": 618.0,
+    "text": "All the modern database indexes are built on hash map principles."
+  },
+  {
+    "start": 618.0,
+    "end": 622.0,
+    "text": "It's arguably the most important data structure in everyday programming."
+  },
+  {
+    "start": 622.0,
+    "end": 625.0,
+    "text": "But, there's always a but."
+  },
+  {
+    "start": 625.0,
+    "end": 628.0,
+    "text": "Hash maps use more memory than plain lists."
+  },
+  {
+    "start": 628.0,
+    "end": 632.0,
+    "text": "And very occasionally, two different keys produce the same slot number."
+  },
+  {
+    "start": 632.0,
+    "end": 635.0,
+    "text": "That's called a collision, and hash maps can also handle it."
+  },
+  {
+    "start": 635.0,
+    "end": 638.0,
+    "text": "They're not flawless. They're just incredibly fast."
+  },
+  {
+    "start": 638.0,
+    "end": 641.0,
+    "text": "Now, suppose the value no longer matters."
+  },
+  {
+    "start": 641.0,
+    "end": 644.0,
+    "text": "You only want to check whether something exists or not."
+  },
+  {
+    "start": 644.0,
+    "end": 647.0,
+    "text": "That's when the extra information fades away."
+  },
+  {
+    "start": 647.0,
+    "end": 649.0,
+    "text": "Leaving just the keys."
+  },
+  {
+    "start": 649.0,
+    "end": 651.0,
+    "text": "What remains is a simpler idea."
+  },
+  {
+    "start": 651.0,
+    "end": 654.0,
+    "text": "A data structure built purely for checking membership."
+  },
+  {
+    "start": 654.0,
+    "end": 655.0,
+    "text": "Hash sets."
+  },
+  {
+    "start": 655.0,
+    "end": 658.0,
+    "text": "A hash set is a hash map with no values."
+  },
+  {
+    "start": 658.0,
+    "end": 659.0,
+    "text": "Just keys."
+  },
+  {
+    "start": 659.0,
+    "end": 663.0,
+    "text": "Its entire purpose is to answer one thing as fast as possible."
+  },
+  {
+    "start": 663.0,
+    "end": 665.0,
+    "text": "Is this item in the collection or not?"
+  },
+  {
+    "start": 665.0,
+    "end": 668.0,
+    "text": "Think of this scenario for better understanding."
+  },
+  {
+    "start": 668.0,
+    "end": 670.0,
+    "text": "A nightclub guest list."
+  },
+  {
+    "start": 670.0,
+    "end": 674.0,
+    "text": "The answer doesn't care about your table number or your reservation details."
+  },
+  {
+    "start": 674.0,
+    "end": 676.0,
+    "text": "He only needs to know."
+  },
+  {
+    "start": 676.0,
+    "end": 678.0,
+    "text": "Are you on the list or not?"
+  },
+  {
+    "start": 678.0,
+    "end": 679.0,
+    "text": "If yes, come in."
+  },
+  {
+    "start": 679.0,
+    "end": 682.0,
+    "text": "If you are not in the list, step aside."
+  },
+  {
+    "start": 682.0,
+    "end": 685.0,
+    "text": "That is the essence of hash set data structure."
+  },
+  {
+    "start": 685.0,
+    "end": 687.0,
+    "text": "Checking membership in a hash set is instant."
+  },
+  {
+    "start": 687.0,
+    "end": 690.0,
+    "text": "Adding and removing is also instant."
+  },
+  {
+    "start": 690.0,
+    "end": 693.0,
+    "text": "And when the question is whether there are any duplicates in the list,"
+  },
+  {
+    "start": 693.0,
+    "end": 699.0,
+    "text": "the answer is no, because hash set design is such a way that every item appears exactly once."
+  },
+  {
+    "start": 699.0,
+    "end": 704.0,
+    "text": "Without a hash set, checking if something exists in a large list means scanning through every item."
+  },
+  {
+    "start": 704.0,
+    "end": 708.0,
+    "text": "But if we use a hash set, the answer is instant every time,"
+  },
+  {
+    "start": 708.0,
+    "end": 711.0,
+    "text": "regardless of how large the collection grows."
+  },
+  {
+    "start": 711.0,
+    "end": 716.0,
+    "text": "Tracking which users have seen a notification, filtering duplicates from a data set,"
+  },
+  {
+    "start": 716.0,
+    "end": 718.0,
+    "text": "checking if a username is already taken."
+  },
+  {
+    "start": 718.0,
+    "end": 722.0,
+    "text": "Again and again, the same idea appears."
+  },
+  {
+    "start": 722.0,
+    "end": 725.0,
+    "text": "Not storing more, just knowing whether it's there."
+  },
+  {
+    "start": 725.0,
+    "end": 727.0,
+    "text": "These are all hash sets."
+  },
+  {
+    "start": 727.0,
+    "end": 729.0,
+    "text": "It's smaller and simpler than a hash map."
+  },
+  {
+    "start": 729.0,
+    "end": 732.0,
+    "text": "But for this one job, it's perfect."
+  },
+  {
+    "start": 732.0,
+    "end": 734.0,
+    "text": "Hey, up to this point, everything has been flat."
+  },
+  {
+    "start": 734.0,
+    "end": 737.0,
+    "text": "A direct mapping from key to result."
+  },
+  {
+    "start": 737.0,
+    "end": 739.0,
+    "text": "But not all data fits into that shape."
+  },
+  {
+    "start": 739.0,
+    "end": 743.0,
+    "text": "Some of it naturally forms layers, branching into deeper structure."
+  },
+  {
+    "start": 743.0,
+    "end": 749.0,
+    "text": "And to represent that, you need a different kind of data structure like trees."
+  },
+  {
+    "start": 749.0,
+    "end": 750.0,
+    "text": "Trees."
+  },
+  {
+    "start": 750.0,
+    "end": 754.0,
+    "text": "Open your file explorer at the very top, a single starting point."
+  },
+  {
+    "start": 754.0,
+    "end": 756.0,
+    "text": "From there, it splits into folders."
+  },
+  {
+    "start": 756.0,
+    "end": 761.0,
+    "text": "Each of those splits again into more folders and eventually into files."
+  },
+  {
+    "start": 761.0,
+    "end": 765.0,
+    "text": "A structure that keeps branching outward step by step."
+  },
+  {
+    "start": 765.0,
+    "end": 770.0,
+    "text": "Every path flows in one direction, from the root down to the leaves."
+  },
+  {
+    "start": 770.0,
+    "end": 774.0,
+    "text": "A quiet hierarchy organizing everything you store."
+  },
+  {
+    "start": 774.0,
+    "end": 776.0,
+    "text": "This is a tree data structure."
+  },
+  {
+    "start": 776.0,
+    "end": 780.0,
+    "text": "A tree is a hierarchical data structure with one root at the top,"
+  },
+  {
+    "start": 780.0,
+    "end": 785.0,
+    "text": "nodes branching below it, and leaf nodes at the very bottom that have no children."
+  },
+  {
+    "start": 785.0,
+    "end": 788.0,
+    "text": "File systems, web pages."
+  },
+  {
+    "start": 788.0,
+    "end": 794.0,
+    "text": "Every HTML tag is a node nested inside parent tags, branching into children."
+  },
+  {
+    "start": 794.0,
+    "end": 798.0,
+    "text": "Comment threads where replies branch off replies."
+  },
+  {
+    "start": 798.0,
+    "end": 800.0,
+    "text": "Decision trees in machine learning."
+  },
+  {
+    "start": 800.0,
+    "end": 803.0,
+    "text": "All of these are tree data structures and works."
+  },
+  {
+    "start": 803.0,
+    "end": 806.0,
+    "text": "Trees are natural for anything with a parent-child relationship."
+  },
+  {
+    "start": 806.0,
+    "end": 810.0,
+    "text": "But a plain tree has no rules about where values go."
+  },
+  {
+    "start": 810.0,
+    "end": 812.0,
+    "text": "Items aren't sorted."
+  },
+  {
+    "start": 812.0,
+    "end": 815.0,
+    "text": "Means potentially checking every single node."
+  },
+  {
+    "start": 815.0,
+    "end": 817.0,
+    "text": "Which raises a question."
+  },
+  {
+    "start": 817.0,
+    "end": 820.0,
+    "text": "What if you could take a tree, impose one simple rule on it,"
+  },
+  {
+    "start": 820.0,
+    "end": 823.0,
+    "text": "and suddenly make searching dramatically faster?"
+  },
+  {
+    "start": 823.0,
+    "end": 825.0,
+    "text": "That's where the binary search tree comes in."
+  },
+  {
+    "start": 825.0,
+    "end": 828.0,
+    "text": "And speaking of smarter structures that just work."
+  },
+  {
+    "start": 828.0,
+    "end": 832.0,
+    "text": "That's actually a perfect way to describe today's sponsor, Inzforge."
+  },
+  {
+    "start": 832.0,
+    "end": 835.0,
+    "text": "Because just like a BST removes the guesswork from searching,"
+  },
+  {
+    "start": 835.0,
+    "end": 838.0,
+    "text": "Inzforge removes the guesswork from building your backend."
+  },
+  {
+    "start": 838.0,
+    "end": 839.0,
+    "text": "Here's the thing."
+  },
+  {
+    "start": 839.0,
+    "end": 845.0,
+    "text": "If you're using tools like cursor, plot code, or GitHub co-pilot to build apps,"
+  },
+  {
+    "start": 845.0,
+    "end": 847.0,
+    "text": "your agent is great at writing front-end code."
+  },
+  {
+    "start": 847.0,
+    "end": 851.0,
+    "text": "But the moment it has to set up a database, handle authentication,"
+  },
+  {
+    "start": 851.0,
+    "end": 855.0,
+    "text": "or deploy backend logic, things slow down fast."
+  },
+  {
+    "start": 855.0,
+    "end": 859.0,
+    "text": "Inzforge fixes that by giving your coding agent a fully featured backend."
+  },
+  {
+    "start": 859.0,
+    "end": 863.0,
+    "text": "Postgres database, authentication, file storage, edge functions,"
+  },
+  {
+    "start": 863.0,
+    "end": 867.0,
+    "text": "real-time updates, and even AI model access."
+  },
+  {
+    "start": 867.0,
+    "end": 870.0,
+    "text": "All ready to go from the moment you connect it."
+  },
+  {
+    "start": 870.0,
+    "end": 871.0,
+    "text": "Here is the best part."
+  },
+  {
+    "start": 871.0,
+    "end": 873.0,
+    "text": "You don't need to configure dashboards."
+  },
+  {
+    "start": 873.0,
+    "end": 875.0,
+    "text": "You don't wrestle with infrastructure."
+  },
+  {
+    "start": 875.0,
+    "end": 879.0,
+    "text": "You just describe what you want to build, and your agent ships it."
+  },
+  {
+    "start": 879.0,
+    "end": 883.0,
+    "text": "Inzforge quietly handles everything your agent needs behind the scenes."
+  },
+  {
+    "start": 883.0,
+    "end": 889.0,
+    "text": "In fact, benchmarks show that AI agents that are using Inzforge are 1.6 times faster,"
+  },
+  {
+    "start": 889.0,
+    "end": 897.0,
+    "text": "use 30% fewer tokens, and hit nearly 1.7 times higher accuracy compared to other backends."
+  },
+  {
+    "start": 897.0,
+    "end": 901.0,
+    "text": "It works with Next.js, React, Svelte, View, and more."
+  },
+  {
+    "start": 901.0,
+    "end": 904.0,
+    "text": "So check it out at Inzforge.dev."
+  },
+  {
+    "start": 904.0,
+    "end": 906.0,
+    "text": "Link is in the description."
+  },
+  {
+    "start": 906.0,
+    "end": 908.0,
+    "text": "Now, back to binary search trees."
+  },
+  {
+    "start": 908.0,
+    "end": 910.0,
+    "text": "Do you know the number guessing game?"
+  },
+  {
+    "start": 910.0,
+    "end": 913.0,
+    "text": "Someone picks a number between 1 and 1,000."
+  },
+  {
+    "start": 913.0,
+    "end": 914.0,
+    "text": "You guess 500."
+  },
+  {
+    "start": 914.0,
+    "end": 915.0,
+    "text": "Too high."
+  },
+  {
+    "start": 915.0,
+    "end": 918.0,
+    "text": "Now you only think about 1 to 499."
+  },
+  {
+    "start": 918.0,
+    "end": 922.0,
+    "text": "This time, you guessed 250, and it's said too low."
+  },
+  {
+    "start": 922.0,
+    "end": 925.0,
+    "text": "Likewise, every guess cuts the remaining possibilities,"
+  },
+  {
+    "start": 925.0,
+    "end": 928.0,
+    "text": "that one rule changes everything."
+  },
+  {
+    "start": 928.0,
+    "end": 930.0,
+    "text": "Now, when you search for a value, you start at the root."
+  },
+  {
+    "start": 930.0,
+    "end": 931.0,
+    "text": "Is it smaller?"
+  },
+  {
+    "start": 931.0,
+    "end": 932.0,
+    "text": "Go left?"
+  },
+  {
+    "start": 932.0,
+    "end": 933.0,
+    "text": "Is it larger?"
+  },
+  {
+    "start": 933.0,
+    "end": 934.0,
+    "text": "Go right."
+  },
+  {
+    "start": 934.0,
+    "end": 937.0,
+    "text": "Each step eliminates an entire half of the remaining tree."
+  },
+  {
+    "start": 937.0,
+    "end": 940.0,
+    "text": "In a well-balanced BST with a million nodes,"
+  },
+  {
+    "start": 940.0,
+    "end": 943.0,
+    "text": "you might need only 20 steps to find any item."
+  },
+  {
+    "start": 943.0,
+    "end": 944.0,
+    "text": "20."
+  },
+  {
+    "start": 944.0,
+    "end": 948.0,
+    "text": "Compared to a regular tree where searching can mean checking every node,"
+  },
+  {
+    "start": 948.0,
+    "end": 950.0,
+    "text": "a BST is on another level."
+  },
+  {
+    "start": 950.0,
+    "end": 953.0,
+    "text": "The structure of the data does the work for you."
+  },
+  {
+    "start": 953.0,
+    "end": 955.0,
+    "text": "But here's the hidden weakness."
+  },
+  {
+    "start": 955.0,
+    "end": 957.0,
+    "text": "If you add items in already sorted order,"
+  },
+  {
+    "start": 957.0,
+    "end": 963.0,
+    "text": "1, then 2, then 3, then 4, the tree just grows in a straight line."
+  },
+  {
+    "start": 963.0,
+    "end": 965.0,
+    "text": "No branching, no having."
+  },
+  {
+    "start": 965.0,
+    "end": 968.0,
+    "text": "It looks like a tree, but behaves like a linked list."
+  },
+  {
+    "start": 968.0,
+    "end": 969.0,
+    "text": "Slow again."
+  },
+  {
+    "start": 969.0,
+    "end": 972.0,
+    "text": "That's why self-balancing BST exists."
+  },
+  {
+    "start": 972.0,
+    "end": 975.0,
+    "text": "But the core ideas is left must be smaller,"
+  },
+  {
+    "start": 975.0,
+    "end": 979.0,
+    "text": "then the right is the foundation of sorted tree data structures everywhere."
+  },
+  {
+    "start": 979.0,
+    "end": 983.0,
+    "text": "Binary search trees are powerful when searching through ordered data."
+  },
+  {
+    "start": 983.0,
+    "end": 987.0,
+    "text": "But in some cases, searching isn't the goal at all."
+  },
+  {
+    "start": 987.0,
+    "end": 990.0,
+    "text": "What matters is always having immediate access to a single,"
+  },
+  {
+    "start": 990.0,
+    "end": 994.0,
+    "text": "most important element available instantly, every time."
+  },
+  {
+    "start": 994.0,
+    "end": 997.0,
+    "text": "And for that job, we have heap data structure."
+  },
+  {
+    "start": 997.0,
+    "end": 998.0,
+    "text": "Heap."
+  },
+  {
+    "start": 998.0,
+    "end": 1001.0,
+    "text": "Imagine this, an emergency room."
+  },
+  {
+    "start": 1001.0,
+    "end": 1003.0,
+    "text": "A patient walks in with a minor headache."
+  },
+  {
+    "start": 1003.0,
+    "end": 1006.0,
+    "text": "Two minutes later, someone arrives with a heart attack."
+  },
+  {
+    "start": 1006.0,
+    "end": 1008.0,
+    "text": "Who gets seen first?"
+  },
+  {
+    "start": 1008.0,
+    "end": 1009.0,
+    "text": "Not the headache."
+  },
+  {
+    "start": 1009.0,
+    "end": 1011.0,
+    "text": "Urgency beats arrival time."
+  },
+  {
+    "start": 1011.0,
+    "end": 1014.0,
+    "text": "The most critical case always jumps to the front."
+  },
+  {
+    "start": 1014.0,
+    "end": 1017.0,
+    "text": "Automatically, no manual resorting required."
+  },
+  {
+    "start": 1017.0,
+    "end": 1019.0,
+    "text": "That's a heap data structure."
+  },
+  {
+    "start": 1019.0,
+    "end": 1025.0,
+    "text": "A heap is a tree-based structure that always keeps the highest priority item at the very top."
+  },
+  {
+    "start": 1025.0,
+    "end": 1030.0,
+    "text": "And reorganizes itself automatically every time something is added or removed."
+  },
+  {
+    "start": 1030.0,
+    "end": 1033.0,
+    "text": "In a max heap, the largest value rises to the top."
+  },
+  {
+    "start": 1033.0,
+    "end": 1035.0,
+    "text": "In a min heap, it's the smallest."
+  },
+  {
+    "start": 1035.0,
+    "end": 1040.0,
+    "text": "Either way, the most important element is always immediately accessible."
+  },
+  {
+    "start": 1040.0,
+    "end": 1044.0,
+    "text": "And when it's removed, the structure quietly reorganizes itself,"
+  },
+  {
+    "start": 1044.0,
+    "end": 1048.0,
+    "text": "allowing the next in priority to take its place efficiently."
+  },
+  {
+    "start": 1048.0,
+    "end": 1053.0,
+    "text": "Without a heap, finding the highest priority item from a constantly changing list"
+  },
+  {
+    "start": 1053.0,
+    "end": 1057.0,
+    "text": "would mean sorting the whole list every time something new arrives."
+  },
+  {
+    "start": 1057.0,
+    "end": 1061.0,
+    "text": "Imagine having millions of tasks, and every time a new one comes in,"
+  },
+  {
+    "start": 1061.0,
+    "end": 1065.0,
+    "text": "you have to sort the entire list again justifying the most important one."
+  },
+  {
+    "start": 1065.0,
+    "end": 1068.0,
+    "text": "That quickly becomes too slow to be practical."
+  },
+  {
+    "start": 1068.0,
+    "end": 1073.0,
+    "text": "A heap avoids this completely by keeping things almost sorted at all times."
+  },
+  {
+    "start": 1073.0,
+    "end": 1078.0,
+    "text": "So the most important task is always right at the top, ready to be accessed instantly."
+  },
+  {
+    "start": 1078.0,
+    "end": 1082.0,
+    "text": "Here are some real-world events where the heap shows its magic,"
+  },
+  {
+    "start": 1082.0,
+    "end": 1085.0,
+    "text": "like the task schedulers inside your operating system,"
+  },
+  {
+    "start": 1085.0,
+    "end": 1088.0,
+    "text": "deciding which process deserves the CPU right now,"
+  },
+  {
+    "start": 1088.0,
+    "end": 1093.0,
+    "text": "and your GPS app constantly recalculating the fastest route as traffic shifts,"
+  },
+  {
+    "start": 1093.0,
+    "end": 1098.0,
+    "text": "anywhere that involves repeatedly pulling the most important item from a live, evolving dataset."
+  },
+  {
+    "start": 1098.0,
+    "end": 1100.0,
+    "text": "Heap is at work."
+  },
+  {
+    "start": 1100.0,
+    "end": 1106.0,
+    "text": "Remember that, the word heap and stack also refers to region of memory in programming,"
+  },
+  {
+    "start": 1106.0,
+    "end": 1108.0,
+    "text": "completely different thing."
+  },
+  {
+    "start": 1108.0,
+    "end": 1110.0,
+    "text": "Same word, two totally unrelated concepts."
+  },
+  {
+    "start": 1110.0,
+    "end": 1112.0,
+    "text": "Don't let that confuse you."
+  },
+  {
+    "start": 1112.0,
+    "end": 1117.0,
+    "text": "So far, every data structure we've covered works well for collections with clear individual items,"
+  },
+  {
+    "start": 1117.0,
+    "end": 1119.0,
+    "text": "but the real world isn't always like that."
+  },
+  {
+    "start": 1119.0,
+    "end": 1122.0,
+    "text": "Sometimes data isn't a list or a tree."
+  },
+  {
+    "start": 1122.0,
+    "end": 1123.0,
+    "text": "It's a web."
+  },
+  {
+    "start": 1123.0,
+    "end": 1125.0,
+    "text": "It's connections."
+  },
+  {
+    "start": 1125.0,
+    "end": 1127.0,
+    "text": "It's relationships going in every direction."
+  },
+  {
+    "start": 1127.0,
+    "end": 1130.0,
+    "text": "And for that, you need something completely different."
+  },
+  {
+    "start": 1130.0,
+    "end": 1132.0,
+    "text": "Graphs."
+  },
+  {
+    "start": 1132.0,
+    "end": 1135.0,
+    "text": "Okay, this is where data structures get really interesting."
+  },
+  {
+    "start": 1135.0,
+    "end": 1138.0,
+    "text": "Forget the nice, clean hierarchies of trees."
+  },
+  {
+    "start": 1138.0,
+    "end": 1141.0,
+    "text": "Graphs are messy, chaotic, and honestly,"
+  },
+  {
+    "start": 1141.0,
+    "end": 1143.0,
+    "text": "that's what makes them powerful."
+  },
+  {
+    "start": 1143.0,
+    "end": 1145.0,
+    "text": "Here's the simplest way to think about it."
+  },
+  {
+    "start": 1145.0,
+    "end": 1147.0,
+    "text": "Graphs are just dots and lines."
+  },
+  {
+    "start": 1147.0,
+    "end": 1152.0,
+    "text": "Dots are called vertices or nodes, and lines connecting them are called edges."
+  },
+  {
+    "start": 1152.0,
+    "end": 1154.0,
+    "text": "That's literally it."
+  },
+  {
+    "start": 1154.0,
+    "end": 1156.0,
+    "text": "But here's where it clicks."
+  },
+  {
+    "start": 1156.0,
+    "end": 1158.0,
+    "text": "Facebook is a giant graph."
+  },
+  {
+    "start": 1158.0,
+    "end": 1162.0,
+    "text": "You're a node, your friends are nodes, and every friendship is an edge connecting you."
+  },
+  {
+    "start": 1162.0,
+    "end": 1167.0,
+    "text": "Photos, groups, pages, comments, all are nodes."
+  },
+  {
+    "start": 1167.0,
+    "end": 1172.0,
+    "text": "And every, like, share and connection is the edges of that graph."
+  },
+  {
+    "start": 1172.0,
+    "end": 1175.0,
+    "text": "The entire social network is just one massive graph."
+  },
+  {
+    "start": 1175.0,
+    "end": 1177.0,
+    "text": "Or think about Google Maps."
+  },
+  {
+    "start": 1177.0,
+    "end": 1179.0,
+    "text": "Cities are nodes, roads are edges."
+  },
+  {
+    "start": 1179.0,
+    "end": 1184.0,
+    "text": "When you ask for directions, it's searching through that graph to find the shortest path."
+  },
+  {
+    "start": 1184.0,
+    "end": 1186.0,
+    "text": "Now there are different types of graphs."
+  },
+  {
+    "start": 1186.0,
+    "end": 1188.0,
+    "text": "Undirected graphs."
+  },
+  {
+    "start": 1188.0,
+    "end": 1192.0,
+    "text": "Where connections go both ways, like Facebook friendships, directed graphs."
+  },
+  {
+    "start": 1192.0,
+    "end": 1195.0,
+    "text": "Where edges have direction, like Twitter follows."
+  },
+  {
+    "start": 1195.0,
+    "end": 1198.0,
+    "text": "You following someone doesn't mean they follow you back."
+  },
+  {
+    "start": 1198.0,
+    "end": 1200.0,
+    "text": "And here's a fun term."
+  },
+  {
+    "start": 1200.0,
+    "end": 1201.0,
+    "text": "Adjacency."
+  },
+  {
+    "start": 1201.0,
+    "end": 1205.0,
+    "text": "If two nodes are connected by an edge, they're adjacent, basically neighbors."
+  },
+  {
+    "start": 1205.0,
+    "end": 1208.0,
+    "text": "So how do you actually store a graph?"
+  },
+  {
+    "start": 1208.0,
+    "end": 1210.0,
+    "text": "We can store a graph in two main ways."
+  },
+  {
+    "start": 1210.0,
+    "end": 1215.0,
+    "text": "One is adjacency matrix, where a giant grid with rows and columns are nodes."
+  },
+  {
+    "start": 1215.0,
+    "end": 1217.0,
+    "text": "And you mark a one if there's an edge."
+  },
+  {
+    "start": 1217.0,
+    "end": 1222.0,
+    "text": "Best for fast lookups, but uses a lot of space if the graph has few connections."
+  },
+  {
+    "start": 1222.0,
+    "end": 1227.0,
+    "text": "The second way is an adjacency list where each node keeps a list of its neighbors."
+  },
+  {
+    "start": 1227.0,
+    "end": 1231.0,
+    "text": "Adjacency list is more memory efficient for most use cases."
+  },
+  {
+    "start": 1231.0,
+    "end": 1235.0,
+    "text": "The cool operation is to traversing the graph where you visit every node,"
+  },
+  {
+    "start": 1235.0,
+    "end": 1238.0,
+    "text": "usually with depth first search or breadth first search."
+  },
+  {
+    "start": 1238.0,
+    "end": 1243.0,
+    "text": "There are also some other operations too, like finding paths between nodes,"
+  },
+  {
+    "start": 1243.0,
+    "end": 1246.0,
+    "text": "checking if a cycle exists or detecting connected components."
+  },
+  {
+    "start": 1246.0,
+    "end": 1249.0,
+    "text": "Each operation has its own use cases."
+  },
+  {
+    "start": 1249.0,
+    "end": 1252.0,
+    "text": "Real-world uses of graph are everywhere."
+  },
+  {
+    "start": 1252.0,
+    "end": 1256.0,
+    "text": "Social networks, maps, web page links, recommendation systems, network routing."
+  },
+  {
+    "start": 1256.0,
+    "end": 1261.0,
+    "text": "Basically, if things are connected in any way, you're dealing with a graph."
+  },
+  {
+    "start": 1261.0,
+    "end": 1262.0,
+    "text": "Try."
+  },
+  {
+    "start": 1262.0,
+    "end": 1264.0,
+    "text": "Alright, tries."
+  },
+  {
+    "start": 1264.0,
+    "end": 1267.0,
+    "text": "And before you say tree, it's pronounced try."
+  },
+  {
+    "start": 1267.0,
+    "end": 1269.0,
+    "text": "Yeah, I know, it's confusing."
+  },
+  {
+    "start": 1269.0,
+    "end": 1273.0,
+    "text": "But here's why this data structure is legitimately genius."
+  },
+  {
+    "start": 1273.0,
+    "end": 1275.0,
+    "text": "Type app into Google."
+  },
+  {
+    "start": 1275.0,
+    "end": 1278.0,
+    "text": "Before you finish the word you already see,"
+  },
+  {
+    "start": 1278.0,
+    "end": 1282.0,
+    "text": "Apple, application, appointment, app store, etc."
+  },
+  {
+    "start": 1282.0,
+    "end": 1285.0,
+    "text": "That didn't come from Google guessing what you meant."
+  },
+  {
+    "start": 1285.0,
+    "end": 1290.0,
+    "text": "It came from a structure that already has every word mapped out, one letter at a time."
+  },
+  {
+    "start": 1290.0,
+    "end": 1296.0,
+    "text": "And the moment you typed A-P-P, it already knew exactly which branch you were heading down."
+  },
+  {
+    "start": 1296.0,
+    "end": 1298.0,
+    "text": "That structure is a try."
+  },
+  {
+    "start": 1298.0,
+    "end": 1304.0,
+    "text": "A try is a variation of tree data structure where each level represents one character in a word."
+  },
+  {
+    "start": 1304.0,
+    "end": 1307.0,
+    "text": "From the root, the first letter takes you down one branch."
+  },
+  {
+    "start": 1307.0,
+    "end": 1309.0,
+    "text": "Second letter, next branch."
+  },
+  {
+    "start": 1309.0,
+    "end": 1311.0,
+    "text": "Third letter, next."
+  },
+  {
+    "start": 1311.0,
+    "end": 1315.0,
+    "text": "By the time you've typed a few characters, you've already narrowed the entire structure down"
+  },
+  {
+    "start": 1315.0,
+    "end": 1318.0,
+    "text": "to only the words that start with those exact letters."
+  },
+  {
+    "start": 1318.0,
+    "end": 1321.0,
+    "text": "Here's why this beats a hash map for this job."
+  },
+  {
+    "start": 1321.0,
+    "end": 1323.0,
+    "text": "A hash map is great for exact lookups."
+  },
+  {
+    "start": 1323.0,
+    "end": 1327.0,
+    "text": "You give it the full key, it gives you the value, but searching by prefix,"
+  },
+  {
+    "start": 1327.0,
+    "end": 1332.0,
+    "text": "give me everything that starts with app, would mean checking every single entry in the map."
+  },
+  {
+    "start": 1332.0,
+    "end": 1337.0,
+    "text": "A try does that prefix search in exactly as many steps as the number of letters you typed."
+  },
+  {
+    "start": 1337.0,
+    "end": 1341.0,
+    "text": "Three letters typed, three steps taken, you're already at the right branch."
+  },
+  {
+    "start": 1341.0,
+    "end": 1343.0,
+    "text": "The rest of the matching words are right there."
+  },
+  {
+    "start": 1343.0,
+    "end": 1346.0,
+    "text": "This is the quiet magic behind autocomplete."
+  },
+  {
+    "start": 1346.0,
+    "end": 1349.0,
+    "text": "Spell checkers, dictionary lookups."
+  },
+  {
+    "start": 1349.0,
+    "end": 1352.0,
+    "text": "If I give you a simple example, it would be phone contact search."
+  },
+  {
+    "start": 1352.0,
+    "end": 1354.0,
+    "text": "If you type J, then O."
+  },
+  {
+    "start": 1354.0,
+    "end": 1357.0,
+    "text": "Your phone instantly showed John, Jordan, Joseph."
+  },
+  {
+    "start": 1357.0,
+    "end": 1362.0,
+    "text": "That branching through shared letter paths is a try doing its job quietly in the background."
+  },
+  {
+    "start": 1362.0,
+    "end": 1364.0,
+    "text": "Disjoint set."
+  },
+  {
+    "start": 1364.0,
+    "end": 1370.0,
+    "text": "Disjoint set or union find sounds boring, but stick with me because this is actually brilliant data structure."
+  },
+  {
+    "start": 1370.0,
+    "end": 1376.0,
+    "text": "Imagine you're at a party with a hundred people and you need to figure out who knows who, even indirectly."
+  },
+  {
+    "start": 1376.0,
+    "end": 1378.0,
+    "text": "Like, does Peter know Bob?"
+  },
+  {
+    "start": 1378.0,
+    "end": 1381.0,
+    "text": "Well, Peter knows Carol, Carol knows Dave, and Dave knows Bob."
+  },
+  {
+    "start": 1381.0,
+    "end": 1383.0,
+    "text": "So yeah, they're connected."
+  },
+  {
+    "start": 1383.0,
+    "end": 1388.0,
+    "text": "Without a smart structure, answering that means tracing every connection in the chain, step by step."
+  },
+  {
+    "start": 1388.0,
+    "end": 1392.0,
+    "text": "In a social network with millions of users, that's not fast enough."
+  },
+  {
+    "start": 1392.0,
+    "end": 1394.0,
+    "text": "That's where the disjoint set comes in."
+  },
+  {
+    "start": 1394.0,
+    "end": 1402.0,
+    "text": "A disjoint set also called union find tracks group membership efficiently, even as groups keep merging and growing over time."
+  },
+  {
+    "start": 1402.0,
+    "end": 1405.0,
+    "text": "Every element starts as its own group."
+  },
+  {
+    "start": 1405.0,
+    "end": 1409.0,
+    "text": "When you connect two elements, their groups merge into one."
+  },
+  {
+    "start": 1409.0,
+    "end": 1411.0,
+    "text": "Every group has a representative."
+  },
+  {
+    "start": 1411.0,
+    "end": 1415.0,
+    "text": "We also call them leaders to check if two elements are in the same group."
+  },
+  {
+    "start": 1415.0,
+    "end": 1417.0,
+    "text": "You check if they share the same leader."
+  },
+  {
+    "start": 1417.0,
+    "end": 1421.0,
+    "text": "That check is nearly instant, even after millions of merges."
+  },
+  {
+    "start": 1421.0,
+    "end": 1424.0,
+    "text": "And the structure keeps getting smarter over time."
+  },
+  {
+    "start": 1424.0,
+    "end": 1429.0,
+    "text": "Every time you trace a path to find a leader, it compresses that path, making the next lookup even faster."
+  },
+  {
+    "start": 1429.0,
+    "end": 1432.0,
+    "text": "It literally gets more efficient as it's used."
+  },
+  {
+    "start": 1432.0,
+    "end": 1439.0,
+    "text": "When we do network connectivity checks, like is computer a on the same network as computer B, even in the image processing,"
+  },
+  {
+    "start": 1439.0,
+    "end": 1443.0,
+    "text": "where we need to to find out if those pixels form the same object."
+  },
+  {
+    "start": 1443.0,
+    "end": 1448.0,
+    "text": "And lastly, in the game world design, where we need to find is these two areas reachable from each other."
+  },
+  {
+    "start": 1448.0,
+    "end": 1451.0,
+    "text": "These are the problems disjoint sets were made for."
+  },
+  {
+    "start": 1451.0,
+    "end": 1455.0,
+    "text": "It's a specialist data structure, but for this specific class of problem,"
+  },
+  {
+    "start": 1455.0,
+    "end": 1460.0,
+    "text": "tracking connected groups that keep evolving nothing is cleaner or faster than union find."
+  },
+  {
+    "start": 1460.0,
+    "end": 1462.0,
+    "text": "Bloom filter."
+  },
+  {
+    "start": 1462.0,
+    "end": 1466.0,
+    "text": "Let me tell you about the weirdest data structure I've ever learned."
+  },
+  {
+    "start": 1466.0,
+    "end": 1469.0,
+    "text": "And trust me, once you get it, you'll see it everywhere."
+  },
+  {
+    "start": 1469.0,
+    "end": 1476.0,
+    "text": "So what if I told you there's a data structure that's super fast uses almost no memory, but occasionally lies to you?"
+  },
+  {
+    "start": 1476.0,
+    "end": 1478.0,
+    "text": "That's a bloom filter."
+  },
+  {
+    "start": 1478.0,
+    "end": 1480.0,
+    "text": "And yes, it literally lies."
+  },
+  {
+    "start": 1480.0,
+    "end": 1482.0,
+    "text": "Here's how the lie works."
+  },
+  {
+    "start": 1482.0,
+    "end": 1486.0,
+    "text": "A bloom filter gives you one of two answers when you search for something."
+  },
+  {
+    "start": 1486.0,
+    "end": 1488.0,
+    "text": "Yes or no."
+  },
+  {
+    "start": 1488.0,
+    "end": 1491.0,
+    "text": "If it says no, that's a guaranteed answer."
+  },
+  {
+    "start": 1491.0,
+    "end": 1494.0,
+    "text": "The item is absolutely 100% not in the set."
+  },
+  {
+    "start": 1494.0,
+    "end": 1496.0,
+    "text": "You can completely trust it."
+  },
+  {
+    "start": 1496.0,
+    "end": 1499.0,
+    "text": "If it says yes, that's where it gets interesting."
+  },
+  {
+    "start": 1499.0,
+    "end": 1505.0,
+    "text": "It's probably right, but there's a small chance it made a mistake and said yes when the answer should actually be no."
+  },
+  {
+    "start": 1505.0,
+    "end": 1510.0,
+    "text": "We call these mistakes false positives, but here's the one thing it never does."
+  },
+  {
+    "start": 1510.0,
+    "end": 1513.0,
+    "text": "It will never say no to something that's actually there."
+  },
+  {
+    "start": 1513.0,
+    "end": 1518.0,
+    "text": "It only makes mistakes in one direction and that direction is always a wrong."
+  },
+  {
+    "start": 1518.0,
+    "end": 1519.0,
+    "text": "Yes, never a wrong."
+  },
+  {
+    "start": 1519.0,
+    "end": 1520.0,
+    "text": "No."
+  },
+  {
+    "start": 1520.0,
+    "end": 1523.0,
+    "text": "So to put it simply, a no is always the truth."
+  },
+  {
+    "start": 1523.0,
+    "end": 1525.0,
+    "text": "But a yes is mostly the truth."
+  },
+  {
+    "start": 1525.0,
+    "end": 1529.0,
+    "text": "Now the question arises, why would anyone use this weird data structure?"
+  },
+  {
+    "start": 1529.0,
+    "end": 1532.0,
+    "text": "It's for speed and space, my friend."
+  },
+  {
+    "start": 1532.0,
+    "end": 1534.0,
+    "text": "Let's say you're building a password checker."
+  },
+  {
+    "start": 1534.0,
+    "end": 1537.0,
+    "text": "You want to reject passwords that have been leaked in data breaches."
+  },
+  {
+    "start": 1537.0,
+    "end": 1539.0,
+    "text": "There are billions of those."
+  },
+  {
+    "start": 1539.0,
+    "end": 1542.0,
+    "text": "Storing all of them is gigabytes of data."
+  },
+  {
+    "start": 1542.0,
+    "end": 1545.0,
+    "text": "By using bloom filter, we can manage it to a few megabytes."
+  },
+  {
+    "start": 1545.0,
+    "end": 1552.0,
+    "text": "Chrome uses it to flag sketchy websites without storing a massive list of every malicious URL."
+  },
+  {
+    "start": 1552.0,
+    "end": 1557.0,
+    "text": "Ethereum nodes use it to check data without loading the entire blockchain."
+  },
+  {
+    "start": 1557.0,
+    "end": 1563.0,
+    "text": "Spell checkers use it to quickly rule out obvious typos before doing expensive dictionary lookups."
+  },
+  {
+    "start": 1563.0,
+    "end": 1567.0,
+    "text": "And when a system instantly tells you a username is probably taken,"
+  },
+  {
+    "start": 1567.0,
+    "end": 1571.0,
+    "text": "without checking every record that's a bloom filter at work in the background."
+  },
+  {
+    "start": 1571.0,
+    "end": 1575.0,
+    "text": "Quietly filtering so that the heavy work doesn't have to happen."
+  },
+  {
+    "start": 1575.0,
+    "end": 1580.0,
+    "text": "And speaking of keeping things fast by being smart about what you store and what you throw away."
+  },
+  {
+    "start": 1580.0,
+    "end": 1584.0,
+    "text": "The last data structure on this list does exactly that."
+  },
+  {
+    "start": 1584.0,
+    "end": 1588.0,
+    "text": "LRU cache, LRU stands for Least Recently Used."
+  },
+  {
+    "start": 1588.0,
+    "end": 1591.0,
+    "text": "And it's basically how your computer decides what to forget."
+  },
+  {
+    "start": 1591.0,
+    "end": 1593.0,
+    "text": "Here's the setup."
+  },
+  {
+    "start": 1593.0,
+    "end": 1595.0,
+    "text": "You've got limited space."
+  },
+  {
+    "start": 1595.0,
+    "end": 1598.0,
+    "text": "Could be browser cache, could be RAM, doesn't matter."
+  },
+  {
+    "start": 1598.0,
+    "end": 1601.0,
+    "text": "Stuff you use all the time stays."
+  },
+  {
+    "start": 1601.0,
+    "end": 1605.0,
+    "text": "But stuff you haven't touched forever gets kicked out when space runs low."
+  },
+  {
+    "start": 1605.0,
+    "end": 1607.0,
+    "text": "Think about your CPU cache."
+  },
+  {
+    "start": 1607.0,
+    "end": 1610.0,
+    "text": "Your processor is constantly pulling data from memory."
+  },
+  {
+    "start": 1610.0,
+    "end": 1613.0,
+    "text": "Instructions, variables, intermediate results."
+  },
+  {
+    "start": 1613.0,
+    "end": 1619.0,
+    "text": "The ones it uses again and again stay close right there in the cache for instant access."
+  },
+  {
+    "start": 1619.0,
+    "end": 1621.0,
+    "text": "But space is limited."
+  },
+  {
+    "start": 1621.0,
+    "end": 1624.0,
+    "text": "So when new data needs to come in, something has to go."
+  },
+  {
+    "start": 1624.0,
+    "end": 1627.0,
+    "text": "So which one should go from the memory?"
+  },
+  {
+    "start": 1627.0,
+    "end": 1630.0,
+    "text": "It must not be randomly, but based on the recency."
+  },
+  {
+    "start": 1630.0,
+    "end": 1634.0,
+    "text": "The data that hasn't been used for the longest time gets evicted first."
+  },
+  {
+    "start": 1634.0,
+    "end": 1636.0,
+    "text": "Because if it hasn't been needed for a while,"
+  },
+  {
+    "start": 1636.0,
+    "end": 1638.0,
+    "text": "it's probably not needed right now."
+  },
+  {
+    "start": 1638.0,
+    "end": 1640.0,
+    "text": "That's LRU cache."
+  },
+  {
+    "start": 1640.0,
+    "end": 1644.0,
+    "text": "Quietly deciding what stays fast and what gets forgotten."
+  },
+  {
+    "start": 1644.0,
+    "end": 1646.0,
+    "text": "The beauty is in how it's built."
+  },
+  {
+    "start": 1646.0,
+    "end": 1649.0,
+    "text": "It is a combination of HashMap and doubly linked list."
+  },
+  {
+    "start": 1649.0,
+    "end": 1653.0,
+    "text": "The HashMap gives you O of one lookups and the linked list tracks order"
+  },
+  {
+    "start": 1653.0,
+    "end": 1659.0,
+    "text": "so that most recently used stays at the front, least recently used goes to the back."
+  },
+  {
+    "start": 1659.0,
+    "end": 1661.0,
+    "text": "When you access something, move it to the front."
+  },
+  {
+    "start": 1661.0,
+    "end": 1663.0,
+    "text": "When you're out of space, chop off the back."
+  },
+  {
+    "start": 1663.0,
+    "end": 1665.0,
+    "text": "Simple and brutally efficient."
+  },
+  {
+    "start": 1665.0,
+    "end": 1669.0,
+    "text": "Both get and put, operations are O of one time."
+  },
+  {
+    "start": 1669.0,
+    "end": 1673.0,
+    "text": "That's why every interview loves asking about LRU cache."
+  },
+  {
+    "start": 1673.0,
+    "end": 1677.0,
+    "text": "It tests if you can combine data structures creatively."
+  },
+  {
+    "start": 1677.0,
+    "end": 1678.0,
+    "text": "Browsers use it."
+  },
+  {
+    "start": 1678.0,
+    "end": 1679.0,
+    "text": "Databases use it."
+  },
+  {
+    "start": 1679.0,
+    "end": 1681.0,
+    "text": "Operating systems also use it."
+  },
+  {
+    "start": 1681.0,
+    "end": 1686.0,
+    "text": "Any system that needs to remember things, but can't afford to remember everything,"
+  },
+  {
+    "start": 1686.0,
+    "end": 1689.0,
+    "text": "almost always relies on LRU."
+  },
+  {
+    "start": 1689.0,
+    "end": 1693.0,
+    "text": "Because memory is limited, so your computer is constantly making decisions."
+  },
+  {
+    "start": 1693.0,
+    "end": 1696.0,
+    "text": "Quietly letting go of what you haven't used in a while."
+  },
+  {
+    "start": 1696.0,
+    "end": 1700.0,
+    "text": "And that's not a flaw, that's exactly what keeps it fast."
+  }
+]
